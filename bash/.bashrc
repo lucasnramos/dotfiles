@@ -86,6 +86,10 @@ fi
 # colored GCC warnings and errors
 #export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 
+#################################
+# USER CONFIGURATIONS
+#################################
+
 #############
 # ALIASES
 #############
@@ -100,7 +104,15 @@ alias sa='sudo apt'
 alias sag='sudo apt-get'
 alias rbash='source ~/.bashrc'
 alias valias='vim ~/.bash_aliases'
+alias dotfiles='cd ~/dotfiles'
 alias vbash='vim ~/.bashrc'
+
+# VIM MODE
+set -o vi
+# clear screen with <C-l> when in insert mode of bash vi
+bind -m vi-insert "\C-l":clear-screen
+# auto 'cd' by typing the directory only
+shopt -s autocd
 
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
