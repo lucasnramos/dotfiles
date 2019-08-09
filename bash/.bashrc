@@ -57,9 +57,9 @@ if [ -n "$force_color_prompt" ]; then
 fi
 
 if [ "$color_prompt" = yes ]; then
-    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\n\$ '
+	PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\n\$ '
 else
-    PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\n\$ '
+	PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\n\$ '
 fi
 unset color_prompt force_color_prompt
 
@@ -93,22 +93,12 @@ fi
 #############
 # ALIASES
 #############
-alias ll='ls -lsA'
-alias la='ls -A'
-alias l='ls -CF'
-alias gh='cd $WSL_HOME'
-alias proj='cd $WSL_PROJ'
-alias vim='nvim'
-alias v='nvim'
-alias sa='sudo apt'
-alias sag='sudo apt-get'
-alias rbash='source ~/.bashrc'
-alias valias='vim ~/.bash_aliases'
-alias dotfiles='cd ~/dotfiles'
-alias vbash='vim ~/.bashrc'
+if [ -f ~/.bash_aliases ]; then
+     . ~/.bash_aliases
+fi
 
 # VIM MODE
-set -o vi
+# set -o vi
 # clear screen with <C-l> when in insert mode of bash vi
 bind -m vi-insert "\C-l":clear-screen
 # auto 'cd' by typing the directory only
