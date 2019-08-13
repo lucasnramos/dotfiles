@@ -86,24 +86,6 @@ fi
 # colored GCC warnings and errors
 #export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 
-#################################
-# USER CONFIGURATIONS
-#################################
-
-#############
-# ALIASES
-#############
-if [ -f ~/.bash_aliases ]; then
-     . ~/.bash_aliases
-fi
-
-# VIM MODE
-# set -o vi
-# clear screen with <C-l> when in insert mode of bash vi
-bind -m vi-insert "\C-l":clear-screen
-# auto 'cd' by typing the directory only
-shopt -s autocd
-
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
 # sources /etc/bash.bashrc).
@@ -115,6 +97,45 @@ if ! shopt -oq posix; then
   fi
 fi
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+#################################
+# USER CONFIGURATIONS
+#################################
+
+# Check if aliases file is present and loads it
+if [ -f ~/.bash_aliases ]; then
+     . ~/.bash_aliases
+fi
+
+# Enable Vi Mode
+# set -o vi
+
+# clear screen with <C-l> when in insert mode of bash vi
+bind -m vi-insert "\C-l":clear-screen
+
+# auto 'cd' by typing the directory only
+shopt -s autocd
+
+# Set bash to autocomplete like zsh-ish
+bind 'set show-all-if-ambiguous on'
+bind 'TAB:menu-complete'
+
+# export NVM_DIR="$HOME/.nvm"
+# [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+# [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# Defer initialization of nvm until nvm, node or a node-dependent command is
+# run. Ensure this block is only run once if .bashrc gets sourced multiple times
+# by checking whether __init_nvm is a function.
+if [ -s "$HOME/.nvm/nvm.sh" ] && [ ! "$(type -t __init_nvm)" = function ]; then
+  export NVM_DIR="$HOME/.nvm"
+  [ -s "$NVM_DIR/bash_completion" ] && . "$NVM_DIR/bash_completion"
+  declare -a __node_commands=('nvm' 'node' 'npm' 'yarn' 'gulp' 'grunt' 'webpack')
+  function __init_nvm() {
+    for i in "${__node_commands[@]}"; do unalias $i; done
+    . "$NVM_DIR"/nvm.sh
+    unset __node_commands
+    unset -f __init_nvm
+  }
+  for i in "${__node_commands[@]}"; do alias $i='__init_nvm && '$i; done
+fi
+
