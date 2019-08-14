@@ -1,3 +1,7 @@
+# apt-get
+alias agsearch='apt-cache search'
+alias aginstall='sudo apt-get install'
+alias agremove='sudo apt-get remove --purge'
 alias ll='ls -lsA'
 alias la='ls -A'
 alias l='ls -CF'
