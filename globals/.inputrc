@@ -1,4 +1,4 @@
 $include /etc/inputrc
 set completion-ignore-case On
-# set show-mode-in-prompt on
+set show-mode-in-prompt on
 

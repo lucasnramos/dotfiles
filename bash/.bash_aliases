@@ -1,24 +1,19 @@
+# Misc
+alias rbash='source ~/.bashrc'
 # apt-get
+alias sa='sudo apt'
+alias sag='sudo apt-get'
 alias agsearch='apt-cache search'
 alias aginstall='sudo apt-get install'
 alias agremove='sudo apt-get remove --purge'
+# Navigation
 alias ll='ls -lsA'
 alias la='ls -A'
 alias l='ls -CF'
-alias gh='cd $WSL_HOME'
-alias proj='cd $WSL_PROJ'
+alias dotfiles='cd ~/dotfiles'
+# vim & neovim
 alias vim='nvim'
 alias v='vim'
-alias sa='sudo apt'
-alias sag='sudo apt-get'
-alias rbash='source ~/.bashrc'
 alias valias='vim ~/.bash_aliases'
 alias vbash='vim ~/.bashrc'
 alias vprofile='vim ~/.profile'
-alias dotfiles='cd ~/dotfiles'
-# Projects
-alias nextadmin='cd $WSL_PROJ/ICS.NextMobile/ICS.NextMobile.Admin'
-alias nextapi='cd $WSL_PROJ/ICS.NextMobile/ICS.NextMobile.API'
-alias nextapproval='cd $WSL_PROJ/ICS.NextMobile/ICS.NextMobile.ApprovalTrip'
-alias nextchef='cd $WSL_PROJ/ICS.NextMobile/ICS.NextMobile.Chef'
-alias tpmvc='cd $WSL_PROJ/Apter/Portal_TP_Apter/src/ICS.TP.UI.MVC'
