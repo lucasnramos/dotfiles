@@ -8,7 +8,6 @@ case $- in
       *) return;;
 esac
 
-set -o vi
 
 # don't put duplicate lines or lines starting with space in the history.
 # See bash(1) for more options
@@ -102,6 +101,9 @@ fi
 #################################
 # USER CONFIGURATIONS
 #################################
+
+# Vi Mode
+set -o vi
 
 # Check if aliases file is present and loads it
 if [ -f ~/.bash_aliases ]; then
