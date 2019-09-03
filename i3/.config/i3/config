@@ -75,6 +75,7 @@ bindsym $mod+p resize grow width 5 px or 5 ppt
 # [START] Startup
 # ==========================
 exec_always --no-startup-id xrdb -merge ~/.Xresources
+exec --no-startup-id volumeicon
 # ==========================
 # [END] Startup
 # ==========================
@@ -140,6 +141,7 @@ bindsym $mod+Shift+e exec i3exit
 # [START] i3 bar or Polybar
 # ==========================
 bar {
+	font pango:Ubuntu 10
 	position top
         status_command i3blocks -c ~/.config/i3/i3blocks.conf
 }
