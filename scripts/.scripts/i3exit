@@ -1,0 +1,23 @@
+#!/bin/bash
+OPT=$(echo -e "Lock\nExit\nSuspend\nReboot" | dmenu -i -p "i3exit")
+
+# Performs exit options
+case "$OPT" in
+    Lock)
+        blurlock
+        ;;
+    Exit)
+        i3-msg exit
+        ;;
+    Suspend)
+        systemctl suspend
+        ;;
+    Reboot)
+        reboot
+        ;;
+    *)
+        echo "Usage: $0 {lock|logout|suspend|hibernate|reboot|shutdown}"
+        exit 2
+esac
+exit 0
+

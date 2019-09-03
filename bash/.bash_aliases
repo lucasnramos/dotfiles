@@ -1,5 +1,6 @@
 # Misc
 alias rbash='source ~/.bashrc'
+alias rn='ranger'
 # apt-get
 alias sa='sudo apt'
 alias sag='sudo apt-get'
@@ -17,3 +18,4 @@ alias v='vim'
 alias valias='vim ~/.bash_aliases'
 alias vbash='vim ~/.bashrc'
 alias vprofile='vim ~/.profile'
+alias i3conf='vim ~/.config/i3/config'
