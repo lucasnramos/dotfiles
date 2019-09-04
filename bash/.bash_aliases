@@ -18,4 +18,6 @@ alias v='vim'
 alias valias='vim ~/.bash_aliases'
 alias vbash='vim ~/.bashrc'
 alias vprofile='vim ~/.profile'
+# i3 configs
 alias i3conf='vim ~/.config/i3/config'
+alias i3blocksconf="vim ~/.config/i3/i3blocks.conf"

@@ -104,6 +104,8 @@ fi
 
 # Vi Mode
 set -o vi
+# remove timeout when pressing escape
+set keyseq-timeout 50
 
 # Check if aliases file is present and loads it
 if [ -f ~/.bash_aliases ]; then
