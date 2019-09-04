@@ -21,3 +21,8 @@ alias vprofile='vim ~/.profile'
 # i3 configs
 alias i3conf='vim ~/.config/i3/config'
 alias i3blocksconf="vim ~/.config/i3/i3blocks.conf"
+# 
+alias nextapi='cd ~/Projects/ICS.NextMobile/ICS.NextMobile.API'
+alias nextadmin='cd ~/Projects/ICS.NextMobile/ICS.NextMobile.Admin'
+alias nextapproval='cd ~/Projects/ICS.NextMobile/ICS.NextMobile.ApprovalTrip'
+alias nextchef='cd ~/Projects/ICS.NextMobile/ICS.NextMobile.Chef'

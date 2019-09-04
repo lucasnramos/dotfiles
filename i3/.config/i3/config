@@ -66,7 +66,7 @@ bindsym $mod+Shift+Right move right
 bindsym $mod+y resize shrink width 5 px or 5 ppt
 bindsym $mod+u resize grow height 5 px or 5 ppt
 bindsym $mod+i resize shrink height 5 px or 5 ppt
-bindsym $mod+p resize grow width 5 px or 5 ppt
+bindsym $mod+o resize grow width 5 px or 5 ppt
 # ==========================
 # [END] workspaces & Layout
 # ==========================
