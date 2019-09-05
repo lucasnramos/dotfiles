@@ -15,16 +15,9 @@ URxvt*font: xft:monospace:pixelsize=16
 URxvt*boldFont: xft:monospace:bold:pixelsize=16
 URxvt*letterSpace: -1
 URxvt*scrollBar: false
-
 URxvt*scrollBar_right: false
-
 URxvt*scrollstyle: plain
-! And re-bind some keymappings (if you want, below are the defaults):
-URxvt.keysym.C-minus:     resize-font:smaller
-URxvt.keysym.C-plus:      resize-font:bigger
-URxvt.keysym.C-equal:      resize-font:bigger
-URxvt.keysym.C-0:      resize-font:reset
-URxvt.keysym.C-question:  resize-font:show
+URxvt*cursorBlink: true
 ! =====================
 ! [END] URXVT
 ! =====================
