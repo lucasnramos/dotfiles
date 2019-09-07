@@ -107,7 +107,9 @@ for_window [class=".*"] border pixel 2
 gaps inner 15
 smart_borders on
 smart_gaps on
-
+bindsym $mod+z gaps inner current plus 5
+bindsym $mod+Shift+z gaps inner current minus 5
+bindsym $mod+Shift+s gaps inner all set 0
 
 # ==================================
 # [START] Assing apps to workspaces

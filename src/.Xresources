@@ -1,23 +1,26 @@
 ! =====================
 ! [START] URXVT
 ! =====================
-URxvt*foreground: #ffffff
-URxvt*background: #000000
-URxvt.perl-ext-common: default,matcher,resize-font
-URxvt.depth:              32
-URxvt.geometry:           90x30
-URxvt.loginShell:         true
-URxvt.internalBorder:     3
-URxvt.lineSpace:          0
-URxvt*shading: 15
-URxvt*saveLines: 12000
-URxvt*font: xft:monospace:pixelsize=16
-URxvt*boldFont: xft:monospace:bold:pixelsize=16
-URxvt*letterSpace: -1
-URxvt*scrollBar: false
-URxvt*scrollBar_right: false
-URxvt*scrollstyle: plain
-URxvt*cursorBlink: true
+URxvt.perl-ext-common: default,matcher,resize-font,keyboard-select
+URxvt.keysym.M-Escape: perl:keyboard-select:activate
+URxvt.foreground: #ffffff
+URxvt.background: #000000
+URxvt.depth: 32
+URxvt.geometry: 90x30
+URxvt.loginShell: true
+URxvt.internalBorder: 3
+URxvt.lineSpace: 0
+URxvt.shading: 15
+URxvt.saveLines: 12000
+URxvt.font:             xft:inconsolata:pixelsize=22:antialias=true:hinting=true, xft:dejavu sans mono:pixelsize=18:antialias=true,hinting=true
+URxvt.boldFont:         xft:inconsolata:pixelsize=22:antialias=true:hinting=true, xft:dejavu sans mono:pixelsize=18:antialias=true,hinting=true
+URxvt.italicFont:       xft:inconsolata:pixelsize=22:antialias=true:hinting=true, xft:dejavu sans mono:pixelsize=18:antialias=true,hinting=true
+URxvt.bolditalicFont:   xft:inconsolata:pixelsize=22:antialias=true:hinting=true, xft:dejavu sans mono:pixelsize=18:antialias=true,hinting=true
+URxvt.letterSpace: -1
+URxvt.scrollBar: false
+URxvt.scrollBar_right: false
+URxvt.scrollstyle: plain
+URxvt.cursorBlink: true
 ! =====================
 ! [END] URXVT
 ! =====================
