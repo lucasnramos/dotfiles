@@ -1,6 +1,0 @@
-$include /etc/inputrc
-set completion-ignore-case On
-set show-mode-in-prompt on
-# remove escape key timeout
-set keyseq-timeout 50
-
