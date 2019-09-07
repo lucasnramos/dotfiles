@@ -81,6 +81,7 @@ exec_always --no-startup-id xrdb -merge ~/.Xresources
 exec --no-startup-id volumeicon
 exec --no-startup-id nm-applet
 exec --no-startup-id urxvt -name __scratchpad -e tmux
+exec_always --no-startup-id feh --bg-scale ~/Images/wallpaper.*
 # ==========================
 # [END] Startup
 # ==========================
@@ -90,20 +91,56 @@ exec --no-startup-id urxvt -name __scratchpad -e tmux
 # =============================
 bindsym $mod+Return exec i3-sensible-terminal
 bindsym $mod+d exec dmenu_run
-bindsym $mod+r exec i3-sensible-terminal -e ranger
+# bindsym $mod+r exec i3-sensible-terminal -e ranger
+bindsym F2 exec i3-dmenu-desktop
 bindsym F1 scratchpad show
-bindsym $mod+F1 move scratchpad
 bindsym $mod+F2 exec google-chrome-stable
 bindsym $mod+F3 exec code
 # =============================
 # [END] Application Launcher
 # =============================
 
+# ============================
+# [START] i3-gaps
+# ============================
+for_window [class=".*"] border pixel 2
+gaps inner 15
+smart_borders on
+smart_gaps on
+
+
+# ==================================
+# [START] Assing apps to workspaces
+# ==================================
+# Chat apps to WS 10
+assign [class="discord"] $ws10
+assign [class="Skype"] $ws10
+assign [class="Slack"] $ws10
+
+# Text Editors and IDEs
+assign [class="Code"] $ws2
+assign [class="Eclipse"] $ws2
+
+# Gaming
+assign [class="Steam"] $ws9
+assign [class="Lutris"] $ws9
+assign [class="Playonlinux"] $ws9
 
 # ==============================================
 # [START] Setup Floating Windows and Scratchpad
 # ==============================================
 for_window [instance="__scratchpad"] move scratchpad
+# Floating windows
+for_window [instance="xcalc"] floating enable
+for_window [instance="Gparted"] floating enable
+for_window [instance="ranger"] floating enable
+for_window [window_role="pop-up"] floating enable
+for_window [window_role="bubble"] floating enable
+for_window [window_role="task_dialog"] floating enable
+for_window [window_role="Preferences"] floating enable
+for_window [window_type="dialog"] floating enable
+for_window [window_type="menu"] floating enable
+
 # ============================================
 # [END] Setup Floating Windows and Scratchpad
 # ============================================
@@ -157,7 +194,7 @@ bindsym $mod+Shift+e exec i3exit
 # ==========================
 bar {
 	font pango:Ubuntu 10
-	position top
+	#position top
         status_command i3blocks -c ~/.config/i3/i3blocks.conf
 }
 # ==========================
