@@ -196,7 +196,7 @@ bindsym $mod+Shift+e exec i3exit
 # [START] i3 bar or Polybar
 # ==========================
 bar {
-	font pango:Ubuntu 10, FontAwesome 10
+	font pango:Ubuntu 10, FontAwesome 12
 	position top
         status_command i3blocks -c ~/.config/i3/i3blocks.conf
 }
