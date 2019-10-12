@@ -4,13 +4,14 @@ OPT=$(echo -e "Lock\nExit\nSuspend\nReboot" | dmenu -i -p "i3exit")
 # Performs exit options
 case "$OPT" in
     Lock)
-        blurlock
+        # blurlock
+        i3lock-fancy
         ;;
     Exit)
         i3-msg exit
         ;;
     Suspend)
-        systemctl suspend
+        i3lock-fancy && systemctl suspend
         ;;
     Reboot)
         reboot

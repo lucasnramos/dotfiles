@@ -1,4 +1,4 @@
-et nocompatible
+set nocompatible
 syntax on
 set path+=** " fuzzy finder
 set hidden
@@ -24,6 +24,5 @@ set shiftwidth=4
 set softtabstop=4
 set expandtab
 set relativenumber
-execute pathogen#infect()
 filetype indent plugin on
-
+:nmap ç :
