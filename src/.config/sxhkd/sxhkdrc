@@ -1,0 +1,8 @@
+super + d
+    dmenu_run
+super + r
+    rofi -show run
+super + F2
+    emacs
+super + Return
+    $TERMINAL

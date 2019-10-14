@@ -7,6 +7,13 @@ alias sag='sudo apt-get'
 alias agsearch='apt-cache search'
 alias aginstall='sudo apt-get install'
 alias agremove='sudo apt-get remove --purge'
+# Pacman
+alias pac='pacman'
+alias spac='sudo pacman'
+alias pacs='pacman -Ss'
+alias paci='sudo pacman -S'
+alias pacup='sudo pacman -Syu'
+alias pacrm='sudo pacman -Rus'
 # Navigation
 alias ll='ls -lsA'
 alias la='ls -A'
@@ -15,14 +22,6 @@ alias dotfiles='cd ~/dotfiles'
 # vim & neovim
 alias vim='nvim'
 alias v='vim'
-alias valias='vim ~/.bash_aliases'
-alias vbash='vim ~/.bashrc'
-alias vprofile='vim ~/.profile'
-alias vres='vim ~/.Xresources'
-alias vtmux='vim ~/.tmux.conf'
-# i3 configs
-alias i3conf='vim ~/.config/i3/config'
-alias i3blocksconf="vim ~/.config/i3/i3blocks.conf"
 # cd to projects folder
 alias nextapi='cd ~/Projects/ICS.NextMobile/ICS.NextMobile.API'
 alias nextadmin='cd ~/Projects/ICS.NextMobile/ICS.NextMobile.Admin'
