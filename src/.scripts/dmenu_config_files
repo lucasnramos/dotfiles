@@ -1,6 +1,6 @@
 #!/bin/bash
 
-declare -nn options=("bash
+options=("bash
 i3
 i3blocks
 tmux

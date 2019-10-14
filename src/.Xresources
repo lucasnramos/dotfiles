@@ -23,15 +23,15 @@ URxvt.keysym.C-slash:  font-size:show
 
 
 # font testgin
-#URxvt.font:             xft:DejaVu Sans Mono:pixelsize=18:antialias=true,hinting=true
-#URxvt.boldFont:         xft:DejaVu Sans Mono:pixelsize=18:antialias=true,hinting=true
-#URxvt.italicFont:       xft:DejaVu Sans Mono:pixelsize=18:antialias=true,hinting=true
-#URxvt.bolditalicFont:   xft:DejaVu Sans Mono:pixelsize=18:antialias=true,hinting=true
+URxvt.font:             xft:inconsolata:pixelsize=18:antialias=true,hinting=true
+URxvt.boldFont:         xft:inconsolata:pixelsize=18:antialias=true,hinting=true
+URxvt.italicFont:       xft:inconsolata:pixelsize=18:antialias=true,hinting=true
+URxvt.bolditalicFont:   xft:inconsolata:pixelsize=18:antialias=true,hinting=true
 
-URxvt.font:             xft:Ubuntu Mono Nerd Font Mono:pixelsize=22:antialias=true,hinting=true
-URxvt.boldFont:         xft:Ubuntu Mono Nerd Font Mono:pixelsize=22:antialias=true,hinting=true
-URxvt.italicFont:       xft:Ubuntu Mono Nerd Font Mono:pixelsize=22:antialias=true,hinting=true
-URxvt.bolditalicFont:   xft:Ubuntu Mono Nerd Font Mono:pixelsize=22:antialias=true,hinting=true
+# URxvt.font:             xft:Ubuntu Mono Nerd Font Mono:pixelsize=22:antialias=true,hinting=true
+# URxvt.boldFont:         xft:Ubuntu Mono Nerd Font Mono:pixelsize=22:antialias=true,hinting=true
+# URxvt.italicFont:       xft:Ubuntu Mono Nerd Font Mono:pixelsize=22:antialias=true,hinting=true
+# URxvt.bolditalicFont:   xft:Ubuntu Mono Nerd Font Mono:pixelsize=22:antialias=true,hinting=true
 
 URxvt.letterSpace: -1
 URxvt.scrollBar: false
