@@ -82,7 +82,7 @@ exec_always --no-startup-id sxhkd
 exec --no-startup-id volumeicon
 exec --no-startup-id nm-applet
 exec --no-startup-id urxvt -name __scratchpad -e tmux
-exec_always --no-startup-id feh --bg-scale ~/Images/wallpaper.*
+exec_always --no-startup-id feh --bg-scale ~/Pictures/wallpaper.*
 # ==========================
 # [END] Startup
 # ==========================
@@ -92,8 +92,8 @@ exec_always --no-startup-id feh --bg-scale ~/Images/wallpaper.*
 # =============================
 bindsym $mod+Shift+Return exec i3-sensible-terminal
 bindsym $mod+Shift+d exec dmenu_run
-bindsym $mod+Ctrl+c exec dmenu_config_files
-bindsym $mod+Shift+e exec i3exit
+# bindsym $mod+Ctrl+c exec dmenu_config_files
+# bindsym $mod+Shift+e exec i3exit
 # =============================
 # [END] Application Launcher
 # =============================

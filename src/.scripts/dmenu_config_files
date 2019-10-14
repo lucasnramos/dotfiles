@@ -31,7 +31,7 @@ case "$choice" in
         exec $TERMINAL -e $EDITOR ~/.config/sxhkd/sxhkdrc
         ;;
     Xresources)
-        exec $TERMINAL -e $EDITOR ~/.config/sxhkd/sxhkdrc
+        exec $TERMINAL -e $EDITOR ~/.Xresources
         ;;
     profile)
         exec $TERMINAL -e $EDITOR ~/.profile
