@@ -6,8 +6,12 @@ super + F2
     emacs
 super + F3
     code
+super + shift + Return
+    termite
 super + Return
     $TERMINAL
+super + s
+    exec dmenu_config_scripts
 super + c
     exec dmenu_config_files
 super + shift + e

@@ -1,6 +1,7 @@
 # Misc
 alias rbash='source ~/.bashrc'
 alias rn='ranger'
+alias scripts='cd ~/.scripts'
 # apt-get
 alias sa='sudo apt'
 alias sag='sudo apt-get'
@@ -8,6 +9,8 @@ alias agsearch='apt-cache search'
 alias aginstall='sudo apt-get install'
 alias agremove='sudo apt-get remove --purge'
 # Pacman
+alias p='pacman'
+alias sp='sudo pacman'
 alias pac='pacman'
 alias spac='sudo pacman'
 alias pacs='pacman -Ss'
@@ -22,6 +25,8 @@ alias dotfiles='cd ~/dotfiles'
 # vim & neovim
 alias vim='nvim'
 alias v='vim'
+alias valias='vim ~/.bash_aliases'
+alias vprofile='vim ~/.profile'
 # cd to projects folder
 alias nextapi='cd ~/Projects/ICS.NextMobile/ICS.NextMobile.API'
 alias nextadmin='cd ~/Projects/ICS.NextMobile/ICS.NextMobile.Admin'

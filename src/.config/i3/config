@@ -5,16 +5,16 @@ set $mod Mod4
 # ============================
 # [START] workspaces & Layout
 # ============================
-set $ws1  "1"
-set $ws2  "2"
-set $ws3  "3"
-set $ws4  "4"
-set $ws5  "5"
-set $ws6  "6"
-set $ws7  "7"
-set $ws8  "8"
-set $ws9  "9"
-set $ws10 "10"
+set $ws1  " 1 "
+set $ws2  " 2 "
+set $ws3  " 3 "
+set $ws4  " 4 "
+set $ws5  " 5 "
+set $ws6  " 6 "
+set $ws7  " 7 "
+set $ws8  " 8 "
+set $ws9  " 9 "
+set $ws10 " 10 "
 
 # switch to workspace
 bindsym $mod+1 workspace $ws1
@@ -79,6 +79,7 @@ bindsym $mod+o resize grow width 5 px or 5 ppt
 # ==========================
 exec_always --no-startup-id xrdb -merge ~/.Xresources
 exec_always --no-startup-id sxhkd
+exec_always --no-startup-id polybar_start
 exec --no-startup-id volumeicon
 exec --no-startup-id nm-applet
 exec --no-startup-id urxvt -name __scratchpad -e tmux
@@ -90,7 +91,7 @@ exec_always --no-startup-id feh --bg-scale ~/Pictures/wallpaper.*
 # =============================
 # [START] Application Launcher
 # =============================
-bindsym $mod+Shift+Return exec i3-sensible-terminal
+# bindsym $mod+Shift+Return exec i3-sensible-terminal
 bindsym $mod+Shift+d exec dmenu_run
 # bindsym $mod+Ctrl+c exec dmenu_config_files
 # bindsym $mod+Shift+e exec i3exit
@@ -166,7 +167,7 @@ bindsym $mod+v split v
 bindsym $mod+f fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
-bindsym $mod+s layout stacking
+# bindsym $mod+s layout stacking
 bindsym $mod+w layout tabbed
 bindsym $mod+e layout toggle split
 
@@ -192,11 +193,11 @@ bindsym $mod+Shift+r restart
 # ==========================
 # [START] i3 bar or Polybar
 # ==========================
-bar {
-	# font pango:Ubuntu Mono Nerd 12, FontAwesome 12
-	# position top
-        status_command i3blocks -c ~/.config/i3/i3blocks.conf
-}
+# bar {
+# 	# font pango:Ubuntu Mono Nerd 12, FontAwesome 12
+# 	# position top
+#         status_command i3blocks -c ~/.config/i3/i3blocks.conf
+# }
 # ==========================
 # [END] i3 bar or Polybar
 # ==========================

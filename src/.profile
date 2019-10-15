@@ -19,10 +19,10 @@
 # Testing new .bashrc
 source ~/.bashrc
 
-# custom exports
+# Shell Variables
 export EDITOR="nvim"
 export VISUAL="nvim"
-export TERMINAL="urxvt"
+export TERMINAL="st"
 export BROWSER="firefox"
 export SCRIPTS="$HOME/.scripts"
 export ANDROID_HOME="$HOME/Android/Sdk"
