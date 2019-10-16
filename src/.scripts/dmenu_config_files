@@ -18,13 +18,13 @@ choice=$(echo -e "${options[@]}" | dmenu -i -p 'Edit a config file: ')
 
 case "$choice" in
     bash)
-        exec st -e $EDITOR ~/.bashrc
+        exec $TERMINAL -e $EDITOR ~/.bashrc
         ;;
     i3)
-        exec urxvt -e $EDITOR ~/.config/i3/config
+        exec $TERMINAL-e $EDITOR ~/.config/i3/config
         ;;
     i3blocks)
-        exec termite -e $EDITOR ~/.config/i3/i3blocks.conf
+        exec $TERMINAL-e $EDITOR ~/.config/i3/i3blocks.conf
         ;;
     termite)
         exec $TERMINAL -e $EDITOR ~/.config/termite/config
