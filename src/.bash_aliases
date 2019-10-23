@@ -1,6 +1,8 @@
 # Misc
 alias rbash='source ~/.bashrc'
 alias rn='ranger'
+# systemd
+alias sc='sudo systemctl'
 # apt-get
 alias sa='sudo apt'
 alias sag='sudo apt-get'
@@ -24,7 +26,7 @@ alias vtmux='vim ~/.tmux.conf'
 alias i3conf='vim ~/.config/i3/config'
 alias i3blocksconf="vim ~/.config/i3/i3blocks.conf"
 # cd to projects folder
-alias nextapi='cd ~/Projects/ICS.NextMobile/ICS.NextMobile.API'
+alias nextapi='cd ~/Projects/ICS.NextMobile/ICS.NextMobile.API/src'
 alias nextadmin='cd ~/Projects/ICS.NextMobile/ICS.NextMobile.Admin'
 alias nextapproval='cd ~/Projects/ICS.NextMobile/ICS.NextMobile.ApprovalTrip'
 alias nextchef='cd ~/Projects/ICS.NextMobile/ICS.NextMobile.Chef'

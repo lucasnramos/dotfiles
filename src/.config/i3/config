@@ -5,15 +5,15 @@ set $mod Mod4
 # ============================
 # [START] workspaces & Layout
 # ============================
-set $ws1 " 1 "
-set $ws2 " 2 "
-set $ws3 " 3 "
-set $ws4 " 4 "
-set $ws5 " 5 "
-set $ws6 " 6 "
-set $ws7 " 7 "
-set $ws8 " 8 "
-set $ws9 " 9 "
+set $ws1  " 1 "
+set $ws2  " 2 "
+set $ws3  " 3 "
+set $ws4  " 4 "
+set $ws5  " 5 "
+set $ws6  " 6 "
+set $ws7  " 7 "
+set $ws8  " 8 "
+set $ws9  " 9 "
 set $ws10 " 10 "
 
 # switch to workspace
@@ -78,10 +78,13 @@ bindsym $mod+o resize grow width 5 px or 5 ppt
 # [START] Startup
 # ==========================
 exec_always --no-startup-id xrdb -merge ~/.Xresources
+exec_always --no-startup-id sxhkd
+exec_always --no-startup-id compton_start
+exec_always --no-startup-id polybar_start
 exec --no-startup-id volumeicon
 exec --no-startup-id nm-applet
 exec --no-startup-id urxvt -name __scratchpad -e tmux
-exec_always --no-startup-id feh --bg-scale ~/Images/wallpaper.*
+exec_always --no-startup-id feh --bg-scale ~/Pictures/wallpaper.*
 # ==========================
 # [END] Startup
 # ==========================
@@ -89,14 +92,10 @@ exec_always --no-startup-id feh --bg-scale ~/Images/wallpaper.*
 # =============================
 # [START] Application Launcher
 # =============================
-bindsym $mod+Return exec i3-sensible-terminal
-bindsym $mod+d exec dmenu_run
-# bindsym $mod+r exec i3-sensible-terminal -e ranger
-bindsym F2 exec i3-dmenu-desktop
-bindsym F1 scratchpad show
-bindsym $mod+F2 exec google-chrome-stable
-bindsym $mod+F3 exec code
-bindsym $mod+Print exec gnome-screenshot -i
+# bindsym $mod+Shift+Return exec i3-sensible-terminal
+bindsym $mod+Shift+d exec dmenu_run
+# bindsym $mod+Ctrl+c exec dmenu_config_files
+# bindsym $mod+Shift+e exec i3exit
 # =============================
 # [END] Application Launcher
 # =============================
@@ -104,7 +103,7 @@ bindsym $mod+Print exec gnome-screenshot -i
 # ============================
 # [START] i3-gaps
 # ============================
-for_window [class=".*"] border pixel 2
+for_window [class=".*"] border pixel 3
 gaps inner 10
 smart_borders on
 smart_gaps on
@@ -148,7 +147,8 @@ for_window [window_type="menu"] floating enable
 # [END] Setup Floating Windows and Scratchpad
 # ============================================
 # Font for window titles. Will also be used by the bar unless a different font is used in the bar {} block below.
-font pango:Ubuntu 12, FontAwesome 12
+# font pango:Ubuntu Mono Nerd 12, FontAwesome 12
+font pango:Source Code Pro 8
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -168,7 +168,7 @@ bindsym $mod+v split v
 bindsym $mod+f fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
-bindsym $mod+s layout stacking
+# bindsym $mod+s layout stacking
 bindsym $mod+w layout tabbed
 bindsym $mod+e layout toggle split
 
@@ -190,16 +190,15 @@ bindsym $mod+Shift+c reload
 bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
 # bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
-bindsym $mod+Shift+e exec i3exit
 
 # ==========================
 # [START] i3 bar or Polybar
 # ==========================
-bar {
-	font pango:Ubuntu 10, FontAwesome 10
-	#position top
-        status_command i3blocks -c ~/.config/i3/i3blocks.conf
-}
+# bar {
+# 	font pango:Ubuntu Mono Nerd 10, FontAwesome 12
+# 	# position top
+#         status_command i3blocks -c ~/.config/i3/i3blocks.conf
+# }
 # ==========================
 # [END] i3 bar or Polybar
 # ==========================

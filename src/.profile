@@ -22,7 +22,7 @@ source ~/.bashrc
 # custom exports
 export EDITOR="nvim"
 export VISUAL="nvim"
-export TERMINAL="urxvt"
+export TERMINAL="st"
 export BROWSER="google-chrome-stable"
 export SCRIPTS="$HOME/.scripts"
 export ANDROID_HOME="$HOME/Android/Sdk"

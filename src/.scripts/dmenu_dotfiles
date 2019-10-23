@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # find all files in dotfiles directory, but exclude .git
-script=$(echo -e "$(find $HOME/dotfiles -type f -not -path '*/\.git/*')" | dmenu -i -l 20 -p "Edit dotfiles")
+script=$(echo -e "$(find $HOME/dotfiles -type f -not -path '*/\.git/*')" | dmenu -i -p "Edit dotfiles")
 # find dotfiles/ -type f -not -path '*/\.git/*'
 
 echo $script

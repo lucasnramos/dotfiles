@@ -1,0 +1,16 @@
+super + d
+    dmenu_run
+super + r
+    rofi -show run
+super + F2
+    emacs
+super + F3
+    code
+super + shift + Return
+    termite
+super + Return
+    $TERMINAL
+super + c
+    exec dmenu_dotfiles
+super + shift + e
+    exec i3exit
