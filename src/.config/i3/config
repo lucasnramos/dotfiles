@@ -79,6 +79,7 @@ bindsym $mod+o resize grow width 5 px or 5 ppt
 # ==========================
 exec_always --no-startup-id xrdb -merge ~/.Xresources
 exec_always --no-startup-id sxhkd
+exec_always --no-startup-id compton_start
 exec_always --no-startup-id polybar_start
 exec --no-startup-id volumeicon
 exec --no-startup-id nm-applet
