@@ -1,3 +1,59 @@
+! =====================
+! [START] URXVT
+! =====================
+URxvt.perl-ext-common: default,matcher,font-size,keyboard-select
+URxvt.keysym.M-Escape: perl:keyboard-select:activate
+URxvt.foreground: #ffffff
+URxvt.background: #000000
+URxvt.depth: 32
+URxvt.geometry: 90x30
+URxvt.loginShell: true
+URxvt.internalBorder: 3
+URxvt.lineSpace: 0
+URxvt.shading: 15
+URxvt.saveLines: 12000
+
+! Keyboard for font resize
+URxvt.keysym.C-k:      font-size:increase
+URxvt.keysym.C-j:      font-size:decrease
+URxvt.keysym.C-S-k:    font-size:incglobal
+URxvt.keysym.C-S-j:    font-size:decglobal
+URxvt.keysym.C-equal:  font-size:reset
+URxvt.keysym.C-slash:  font-size:show
+URxvt.keyboard-select.clipboard: true
+
+
+# font testgin
+URxvt.font:             xft:inconsolata:pixelsize=18:antialias=true,hinting=true
+URxvt.boldFont:         xft:inconsolata:pixelsize=18:antialias=true,hinting=true
+URxvt.italicFont:       xft:inconsolata:pixelsize=18:antialias=true,hinting=true
+URxvt.bolditalicFont:   xft:inconsolata:pixelsize=18:antialias=true,hinting=true
+
+URxvt.font:             xft:UbuntuMono Nerd Font Mono:pixelsize=18:antialias=true,hinting=true
+URxvt.boldFont:         xft:UbuntuMono Nerd Font Mono:pixelsize=18:antialias=true,hinting=true
+URxvt.italicFont:       xft:UbuntuMono Nerd Font Mono:pixelsize=18:antialias=true,hinting=true
+URxvt.bolditalicFont:   xft:UbuntuMono Nerd Font Mono:pixelsize=18:antialias=true,hinting=true
+
+URxvt.letterSpace: -1
+URxvt.scrollBar: false
+URxvt.scrollBar_right: false
+URxvt.scrollstyle: plain
+URxvt.cursorBlink: true
+! =====================
+! [END] URXVT
+! =====================
+
+
+! =====================
+! [START] Rofi
+! =====================
+rofi.combi-modi:    window,drun,ssh
+rofi.theme:         solarized
+# rofi.font:          UbuntuMono Font Nerd
+rofi.modi:          window,drun,ssh
+! =====================
+! [END] Rofi
+! =====================
 Xft.dpi:             96
 Xft.antialias:       true
 Xft.rgba:            rgb

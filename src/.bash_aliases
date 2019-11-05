@@ -1,6 +1,8 @@
 # Misc
 alias rbash='source ~/.bashrc'
 alias rn='ranger'
+# systemd
+alias sc='sudo systemctl'
 alias scripts='cd ~/.scripts'
 alias arch-grub='sudo grub-mkconfig -o /boot/grub/grub.cfg'
 # systemd
@@ -32,7 +34,7 @@ alias vim='nvim'
 alias valias='vim ~/.bash_aliases'
 alias vprofile='vim ~/.profile'
 # cd to projects folder
-alias nextapi='cd ~/Projects/ICS.NextMobile/ICS.NextMobile.API'
+alias nextapi='cd ~/Projects/ICS.NextMobile/ICS.NextMobile.API/src'
 alias nextadmin='cd ~/Projects/ICS.NextMobile/ICS.NextMobile.Admin'
 alias nextapproval='cd ~/Projects/ICS.NextMobile/ICS.NextMobile.ApprovalTrip'
 alias nextchef='cd ~/Projects/ICS.NextMobile/ICS.NextMobile.Chef'
