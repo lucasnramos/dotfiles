@@ -2,12 +2,14 @@ super + d
     dmenu_run
 super + r
     rofi -show run
+super + F1
+    $BROWSER
 super + F2
     emacs
 super + F3
     code
-super + shift + Return
-    termite
+super + F5
+    pavucontrol
 super + Return
     $TERMINAL
 super + s

@@ -2,6 +2,10 @@
 alias rbash='source ~/.bashrc'
 alias rn='ranger'
 alias scripts='cd ~/.scripts'
+alias arch-grub='sudo grub-mkconfig -o /boot/grub/grub.cfg'
+# systemd
+alias sc="sudo systemctl"
+alias scu="systemctl --user"
 # apt-get
 alias sa='sudo apt'
 alias sag='sudo apt-get'
@@ -23,8 +27,8 @@ alias la='ls -A'
 alias l='ls -CF'
 alias dotfiles='cd ~/dotfiles'
 # vim & neovim
-alias vim='nvim'
 alias v='vim'
+alias vim='nvim'
 alias valias='vim ~/.bash_aliases'
 alias vprofile='vim ~/.profile'
 # cd to projects folder

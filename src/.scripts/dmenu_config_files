@@ -1,16 +1,19 @@
-#!/bin/bash
+#!/bin/env bash
 
 options=("bash
+compton
 i3
 i3blocks
+polybar
+profile
+spacemacs
+st
+sxhkd
 termite
 tmux
-sxhkd
-Xresources
-profile
-polybar
+initrc
 xinputrc
-xinitrc
+Xresources
 zsh
 ")
 
@@ -20,11 +23,32 @@ case "$choice" in
     bash)
         exec $TERMINAL -e $EDITOR ~/.bashrc
         ;;
+    compton)
+        exec $TERMINAL -e $EDITOR ~/.config/compton.conf
+        ;;
     i3)
-        exec $TERMINAL-e $EDITOR ~/.config/i3/config
+        exec $TERMINAL -e $EDITOR ~/.config/i3/config
         ;;
     i3blocks)
-        exec $TERMINAL-e $EDITOR ~/.config/i3/i3blocks.conf
+        exec $TERMINAL -e $EDITOR ~/.config/i3/i3blocks.conf
+        ;;
+    inputrc)
+        exec $TERMINAL -e $EDITOR ~/.inputrc
+        ;;
+    polybar)
+        exec $TERMINAL -e $EDITOR ~/.config/polybar/config
+        ;;
+    profile)
+        exec $TERMINAL -e $EDITOR ~/.profile
+        ;;
+    spacemacs)
+        exec $TERMINAL -e $EDITOR ~/.spacemacs
+        ;;
+    st)
+        exec $TERMINAL -e $EDITOR ~/bin/st/config.h
+        ;;
+    sxhkd)
+        exec $TERMINAL -e $EDITOR  ~/.config/sxhkd/sxhkdrc
         ;;
     termite)
         exec $TERMINAL -e $EDITOR ~/.config/termite/config
@@ -32,23 +56,11 @@ case "$choice" in
     tmux)
         exec $TERMINAL -e $EDITOR ~/.tmux.conf
         ;;
-    sxhkd)
-        exec $TERMINAL -e $EDITOR ~/.config/sxhkd/sxhkdrc
+    xinitrc)
+        exec $TERMINAL -e $EDITOR ~/.xinitrc
         ;;
     Xresources)
         exec $TERMINAL -e $EDITOR ~/.Xresources
-        ;;
-    profile)
-        exec $TERMINAL -e $EDITOR ~/.profile
-        ;;
-    polybar)
-        exec $TERMINAL -e $EDITOR ~/.config/polybar/config
-        ;;
-    xinputrc)
-        exec $TERMINAL -e $EDITOR ~/.xinputrc
-        ;;
-    xinitrc)
-        exec $TERMINAL -e $EDITOR ~/.xinitrc
         ;;
     zsh)
         exec $TERMINAL -e $EDITOR ~/.zshrc

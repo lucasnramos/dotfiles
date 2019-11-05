@@ -1,20 +1,19 @@
 # Mod key can be Mod4 for Super / windows or Mod2 for Alt
-# Variables
-
 set $mod Mod4
+
 # ============================
 # [START] workspaces & Layout
 # ============================
-set $ws1  " 1 "
-set $ws2  " 2 "
-set $ws3  " 3 "
-set $ws4  " 4 "
-set $ws5  " 5 "
-set $ws6  " 6 "
-set $ws7  " 7 "
-set $ws8  " 8 "
-set $ws9  " 9 "
-set $ws10 " 10 "
+set $ws1  "1"
+set $ws2  "2"
+set $ws3  "3"
+set $ws4  "4"
+set $ws5  "5"
+set $ws6  "6"
+set $ws7  "7"
+set $ws8  "8"
+set $ws9  "9"
+set $ws10 "10"
 
 # switch to workspace
 bindsym $mod+1 workspace $ws1
@@ -47,9 +46,9 @@ bindsym $mod+k focus up
 bindsym $mod+l focus right
 
 # alternatively, you can use the cursor keys:
-bindsym $mod+Left focus left
-bindsym $mod+Down focus down
-bindsym $mod+Up focus up
+bindsym $mod+Left  focus left
+bindsym $mod+Down  focus down
+bindsym $mod+Up    focus up
 bindsym $mod+Right focus right
 
 # move focused window
@@ -59,16 +58,16 @@ bindsym $mod+Shift+k move up
 bindsym $mod+Shift+l move right
 
 # alternatively, you can use the cursor keys:
-bindsym $mod+Shift+Left move left
-bindsym $mod+Shift+Down move down
-bindsym $mod+Shift+Up move up
+bindsym $mod+Shift+Left  move left
+bindsym $mod+Shift+Down  move down
+bindsym $mod+Shift+Up    move up
 bindsym $mod+Shift+Right move right
 
 # Resize windows
-bindsym $mod+y resize shrink width 5 px or 5 ppt
-bindsym $mod+u resize grow height 5 px or 5 ppt
-bindsym $mod+i resize shrink height 5 px or 5 ppt
-bindsym $mod+o resize grow width 5 px or 5 ppt
+bindsym $mod+y resize shrink  width   5 px or 5 ppt
+bindsym $mod+u resize grow    height  5 px or 5 ppt
+bindsym $mod+i resize shrink  height  5 px or 5 ppt
+bindsym $mod+o resize grow    width   5 px or 5 ppt
 # ==========================
 # [END] workspaces & Layout
 # ==========================
@@ -79,36 +78,28 @@ bindsym $mod+o resize grow width 5 px or 5 ppt
 # ==========================
 exec_always --no-startup-id xrdb -merge ~/.Xresources
 exec_always --no-startup-id sxhkd
-exec_always --no-startup-id polybar_start
-exec --no-startup-id volumeicon
-exec --no-startup-id nm-applet
-exec --no-startup-id urxvt -name __scratchpad -e tmux
-exec_always --no-startup-id feh --bg-scale ~/Pictures/wallpaper.*
+# exec_always --no-startup-id polybar_start
+exec        --no-startup-id nitrogen --restore
+exec        --no-startup-id volumeicon
+exec        --no-startup-id nm-applet
 # ==========================
 # [END] Startup
 # ==========================
-
-# =============================
-# [START] Application Launcher
-# =============================
-# bindsym $mod+Shift+Return exec i3-sensible-terminal
-bindsym $mod+Shift+d exec dmenu_run
-# bindsym $mod+Ctrl+c exec dmenu_config_files
-# bindsym $mod+Shift+e exec i3exit
-# =============================
-# [END] Application Launcher
-# =============================
 
 # ============================
 # [START] i3-gaps
 # ============================
 for_window [class=".*"] border pixel 3
-gaps inner 10
+gaps inner 20
 smart_borders on
 smart_gaps on
 bindsym $mod+z gaps inner current plus 5
 bindsym $mod+Shift+z gaps inner current minus 5
-bindsym $mod+Shift+s gaps inner all set 0
+bindsym $mod+x gaps inner all set 20
+bindsym $mod+Shift+x gaps inner all set 0
+# ============================
+# [END] i3-gaps
+# ============================
 
 # ==================================
 # [START] Assing apps to workspaces
@@ -121,6 +112,8 @@ assign [class="Slack"] $ws10
 # Text Editors and IDEs
 assign [class="Code"] $ws2
 assign [class="Eclipse"] $ws2
+assign [class="Atom"] $ws2
+assign [class="Emacs"] $ws2
 
 # Gaming
 assign [class="Steam"] $ws9
@@ -132,7 +125,9 @@ assign [class="Playonlinux"] $ws9
 # ==============================================
 for_window [instance="__scratchpad"] move scratchpad
 # Floating windows
-for_window [instance="xcalc"] floating enable
+for_window [class="Xfce4-panel"] floating enable
+for_window [class="Pavucontrol"] floating enable
+for_window [class="xcalc"] floating enable
 for_window [instance="Gparted"] floating enable
 for_window [instance="ranger"] floating enable
 for_window [window_role="pop-up"] floating enable
@@ -141,21 +136,19 @@ for_window [window_role="task_dialog"] floating enable
 for_window [window_role="Preferences"] floating enable
 for_window [window_type="dialog"] floating enable
 for_window [window_type="menu"] floating enable
-
 # ============================================
 # [END] Setup Floating Windows and Scratchpad
 # ============================================
+
 # Font for window titles. Will also be used by the bar unless a different font is used in the bar {} block below.
 # font pango:Ubuntu Mono Nerd 12, FontAwesome 12
-font pango:Source Code Pro 12
+font pango:Source Code Pro 10
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
-
 # kill focused window
 bindsym $mod+q kill
-
 
 # split in horizontal orientation
 bindsym $mod+Shift+v split h
@@ -187,8 +180,6 @@ bindsym $mod+a focus parent
 bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
-# exit i3 (logs you out of your X session)
-# bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
 # ==========================
 # [START] i3 bar or Polybar
@@ -198,6 +189,4 @@ bindsym $mod+Shift+r restart
 # 	# position top
 #         status_command i3blocks -c ~/.config/i3/i3blocks.conf
 # }
-# ==========================
-# [END] i3 bar or Polybar
-# ==========================
+
