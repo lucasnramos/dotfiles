@@ -15,6 +15,6 @@ super + Return
 super + s
     exec dmenu_config_scripts
 super + c
-    exec dmenu_config_files
+    exec dmenu_dotfiles
 super + shift + e
     exec i3exit
