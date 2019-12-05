@@ -8,12 +8,13 @@ alias arch-grub='sudo grub-mkconfig -o /boot/grub/grub.cfg'
 # systemd
 alias sc="sudo systemctl"
 alias scu="systemctl --user"
-# apt-get
+# Aptitude
 alias sa='sudo apt'
 alias sag='sudo apt-get'
 alias agsearch='apt-cache search'
 alias aginstall='sudo apt-get install'
 alias agremove='sudo apt-get remove --purge'
+alias aginfo='apt-cache show'
 # Pacman
 alias p='pacman'
 alias sp='sudo pacman'
@@ -34,8 +35,4 @@ alias vim='nvim'
 alias valias='vim ~/.bash_aliases'
 alias vprofile='vim ~/.profile'
 # cd to projects folder
-alias nextapi='cd ~/Projects/ICS.NextMobile/ICS.NextMobile.API/src'
-alias nextadmin='cd ~/Projects/ICS.NextMobile/ICS.NextMobile.Admin'
-alias nextapproval='cd ~/Projects/ICS.NextMobile/ICS.NextMobile.ApprovalTrip'
-alias nextchef='cd ~/Projects/ICS.NextMobile/ICS.NextMobile.Chef'
 alias proj='cd ~/Projects'

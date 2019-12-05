@@ -80,8 +80,8 @@ fi
 set -o vi
 
 # Check if aliases file is present and loads it
-if [ -f ~/.bash_aliases ]; then
-     . ~/.bash_aliases
+if [ -f ~/.aliases ]; then
+     . ~/.aliases
 fi
 
 # clear screen with <C-l> when in insert mode of bash vi

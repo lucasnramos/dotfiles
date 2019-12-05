@@ -20,4 +20,5 @@ i3blocks
 i3lock | i3lock-fancy
 volumeicon-alsa
 neovim | vim
+fzy >> Fuzzy finder for terminal
 `
