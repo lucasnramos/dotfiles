@@ -78,13 +78,19 @@ bindsym $mod+o resize grow    width   5 px or 5 ppt
 # ==========================
 exec_always --no-startup-id xrdb -merge ~/.Xresources
 exec_always --no-startup-id sxhkd
-# exec_always --no-startup-id polybar_start
+exec_always --no-startup-id polybar_start
 exec        --no-startup-id nitrogen --restore
 exec        --no-startup-id volumeicon
 exec        --no-startup-id nm-applet
-# ==========================
-# [END] Startup
-# ==========================
+
+
+# ====================================
+# [START] Especific shortcuts for i3
+# ====================================
+bindsym $mod+Shift+Return exec --no-startup-id $TERMINAL -name float_term
+bindsym $mod+Shift+e exec --no-startup-id i3exit
+bindsym $mod+Shift+d exec --no-startup-id i3-dmenu-desktop
+
 
 # ============================
 # [START] i3-gaps
@@ -102,7 +108,7 @@ bindsym $mod+Shift+x gaps inner all set 0
 # ============================
 
 # ==================================
-# [START] Assing apps to workspaces
+# [START] Assign apps to workspaces
 # ==================================
 # Chat apps to WS 10
 assign [class="discord"] $ws10
@@ -125,9 +131,11 @@ assign [class="Playonlinux"] $ws9
 # ==============================================
 for_window [instance="__scratchpad"] move scratchpad
 # Floating windows
+for_window [class="URxvt" instance="float_term"] floating enable
 for_window [class="Xfce4-panel"] floating enable
 for_window [class="Pavucontrol"] floating enable
 for_window [class="xcalc"] floating enable
+for_window [class="Lxappearance"] floating enable
 for_window [instance="Gparted"] floating enable
 for_window [instance="ranger"] floating enable
 for_window [window_role="pop-up"] floating enable
@@ -184,9 +192,9 @@ bindsym $mod+Shift+r restart
 # ==========================
 # [START] i3 bar or Polybar
 # ==========================
-bar {
-	font pango:Ubuntu Mono Nerd 12, FontAwesome 12
-	position top
-        status_command i3blocks -c ~/.config/i3/i3blocks.conf
-}
+# bar {
+# 	font pango:Ubuntu Mono Nerd 12, FontAwesome 12
+# 	# position top
+#         status_command i3blocks -c ~/.config/i3/i3blocks.conf
+# }
 

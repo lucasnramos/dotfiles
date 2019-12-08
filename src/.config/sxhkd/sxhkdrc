@@ -1,3 +1,5 @@
+super + Return
+    $TERMINAL
 super + d
     dmenu_run
 super + r
@@ -10,11 +12,7 @@ super + F3
     code
 super + F5
     pavucontrol
-super + Return
-    $TERMINAL
 super + s
     exec dmenu_config_scripts
 super + c
     exec dmenu_dotfiles
-super + shift + e
-    exec i3exit

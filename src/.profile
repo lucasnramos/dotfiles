@@ -8,26 +8,15 @@
 # for ssh logins, install and configure the libpam-umask package.
 #umask 022
 
-#if running bash
-#if [ -n "$BASH_VERSION" ]; then
-#    # include .bashrc if it exists
-#    if [ -f "$HOME/.bashrc" ]; then
-#	. "$HOME/.bashrc"
-#    fi
-#fi
-
-# Testing new .bashrc
-source ~/.bashrc
-
 # Shell Variables
 export EDITOR="nvim"
-export VISUAL="nvim"
+export VISUAL="emacs"
 export TERMINAL="urxvt"
-export BROWSER="google-chrome-stable"
+export BROWSER="firefox"
 export SCRIPTS="$HOME/.scripts"
 export ANDROID_HOME="$HOME/Android/Sdk"
 export ANDROID_SDK_ROOT=$ANDROID_HOME
 export JAVA_HOME="/usr/lib/jvm/java-8-openjdk/"
 
 # set PATH so it includes user's private bin directories
-PATH="$SCRIPTS:$HOME/bin:$HOME/bin/eclipse:$HOME/bin/Postman:$HOME/.local/bin:$HOME/.nvm:$ANDROID_HOME/emulator:$ANDROID_HOME/tools:$ANDROID_HOME/tools/bin:$ANDROID_HOME/platform-tools:$JAVA_HOME/bin:$JAVA_HOME/lib/amd64:$PATH"
+PATH="/snap/bin/:$SCRIPTS:$HOME/bin:$HOME/bin/eclipse:$HOME/bin/Postman:$HOME/.local/bin:$HOME/.nvm:$ANDROID_HOME/emulator:$ANDROID_HOME/tools:$ANDROID_HOME/tools/bin:$ANDROID_HOME/platform-tools:$JAVA_HOME/bin:$JAVA_HOME/lib/amd64:$PATH"
