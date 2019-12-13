@@ -81,7 +81,7 @@ set -o vi
 
 # Check if aliases file is present and loads it
 if [ -f ~/.aliases ]; then
-     . ~/.aliases
+     source ~/.aliases
 fi
 
 # clear screen with <C-l> when in insert mode of bash vi

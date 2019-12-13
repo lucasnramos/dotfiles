@@ -1,5 +1,0 @@
-#!/bin/bash
-options="Add\nSearch\nView Folder"
-choice=$(echo -e options | dmenu -ip "LastPass")
-
-

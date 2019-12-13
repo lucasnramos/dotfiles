@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+killall -q volumeicon
+volumeicon &
+
+killall -q nm-applet
+nm-applet &
+
+killall -q sxhkd
+sxhkd &

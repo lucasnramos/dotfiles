@@ -77,8 +77,8 @@ bindsym $mod+o resize grow    width   5 px or 5 ppt
 # [START] Startup
 # ==========================
 exec_always --no-startup-id xrdb -merge ~/.Xresources
-exec_always --no-startup-id sxhkd
-exec_always --no-startup-id polybar_start
+exec_always --no-startup-id killall -q sxhkd && sxhkd
+#exec_always --no-startup-id polybar-start
 exec        --no-startup-id nitrogen --restore
 exec        --no-startup-id volumeicon
 exec        --no-startup-id nm-applet
@@ -192,9 +192,10 @@ bindsym $mod+Shift+r restart
 # ==========================
 # [START] i3 bar or Polybar
 # ==========================
-# bar {
-# 	font pango:Ubuntu Mono Nerd 12, FontAwesome 12
-# 	# position top
-#         status_command i3blocks -c ~/.config/i3/i3blocks.conf
-# }
+bar {
+	# font pango:Ubuntu Mono Nerd 12, FontAwesome 12
+	position top
+        # status_command i3blocks -c ~/.config/i3/i3blocks.conf
+        status_command ~/bin/bumblebee-status/bumblebee-status -m spotify dnf memory datetime
+}
 

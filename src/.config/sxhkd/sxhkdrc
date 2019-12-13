@@ -1,18 +1,14 @@
 super + Return
     $TERMINAL
-super + d
-    dmenu_run
-super + r
-    rofi -show run
 super + F1
     $BROWSER
 super + F2
-    emacs
-super + F3
     code
 super + F5
     pavucontrol
-super + s
-    exec dmenu_config_scripts
+
+# dmenu shortcuts
 super + c
-    exec dmenu_dotfiles
+    exec dmenu-dotfiles
+super + d
+    dmenu-run

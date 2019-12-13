@@ -2,7 +2,7 @@
 alias rbash='source ~/.bashrc'
 alias rzsh='source ~/.zshrc'
 alias rn='ranger'
-alias conf='$HOME/.scripts/fzy_dotfiles'
+alias conf='$HOME/.scripts/fzy-dotfiles'
 alias sc='sudo systemctl'
 alias arch-grub='sudo grub-mkconfig -o /boot/grub/grub.cfg'
 # systemd

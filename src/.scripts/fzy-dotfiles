@@ -1,7 +1,9 @@
 #!/bin/bash
 
 # find all files in dotfiles directory, but exclude .git
-script=$(echo -e "$(find $HOME/dotfiles -type f -not -path '*/\.git/*')" | fzy -l 20 -p "Edit dotfiles: ")
+# fzy config >> script=$(echo -e "$(find $HOME/dotfiles -type f -not -path '*/\.git/*')" | fzy -l 20 -p "Edit dotfiles: ")
+
+script=$(echo -e "$(find $HOME/dotfiles -type f -not -path '*/\.git/*')" | fzf)
 # find dotfiles/ -type f -not -path '*/\.git/*'
 
 # -n STRING => STRING lenght is > 0

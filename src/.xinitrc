@@ -46,4 +46,6 @@ fi
 #    exec sxhkd &
 #    exec dwm
 #done
-exec i3
+sxhkd &
+polybar_start
+exec bspwm &
