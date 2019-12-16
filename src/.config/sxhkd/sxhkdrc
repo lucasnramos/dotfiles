@@ -7,8 +7,12 @@ super + F2
 super + F5
     pavucontrol
 
-# dmenu shortcuts
-super + c
-    exec dmenu-dotfiles
+# dmenu | rofi shortcuts
 super + d
-    dmenu-run
+    rofi -show drun
+super + c
+    exec rofi-dotfiles
+super + r
+    rofi -show run
+super + w
+    rofi -show window

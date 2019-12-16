@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+xrdb merge $HOME/.Xresources
+
 killall -q volumeicon
 volumeicon &
 

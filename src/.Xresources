@@ -21,12 +21,12 @@ URxvt.keysym.C-S-j:    font-size:decglobal
 URxvt.keysym.C-equal:  font-size:reset
 URxvt.keysym.C-slash:  font-size:show
 URxvt.keyboard-select.clipboard: true
-
-# font testing
-URxvt.font:             xft:inconsolata:pixelsize=18:antialias=true,hinting=true
-URxvt.boldFont:         xft:inconsolata:pixelsize=18:antialias=true,hinting=true
-URxvt.italicFont:       xft:inconsolata:pixelsize=18:antialias=true,hinting=true
-URxvt.bolditalicFont:   xft:inconsolata:pixelsize=18:antialias=true,hinting=true
+ 
+! font testing
+URxvt.font:             xft:Source Code Pro:pixelsize=16:antialias=true,hinting=true
+URxvt.boldFont:         xft:Source Code Pro:pixelsize=16:antialias=true,hinting=true
+URxvt.italicFont:       xft:Source Code Pro:pixelsize=16:antialias=true,hinting=true
+URxvt.bolditalicFont:   xft:Source Code Pro:pixelsize=16:antialias=true,hinting=true
 
 URxvt.letterSpace: -1
 URxvt.scrollBar: false
@@ -43,11 +43,12 @@ URxvt.cursorBlink: true
 ! =====================
 rofi.combi-modi:    window,drun,ssh
 rofi.theme:         solarized
-# rofi.font:          UbuntuMono Font Nerd
-rofi.modi:          window,drun,ssh
+rofi.font:          Source Code Pro 12
+rofi.modi:          window,drun,ssh,run
 ! =====================
 ! [END] Rofi
 ! =====================
+
 Xft.dpi:             96
 Xft.antialias:       true
 Xft.rgba:            rgb
@@ -60,7 +61,6 @@ Xft.hintstyle:       hintslight
 *fadeColor: #002b36
 *pointerColorBackground: #586e75
 *pointerColorForeground: #93a1a1
-*.alpha: 0.8
 
 ! Colors dark/light variant
 ! black
