@@ -44,9 +44,9 @@ fi
 source ~/.scripts/git-prompt.sh
 
 if [ "$color_prompt" = yes ]; then
-    PS1='\h:\[\033[01;34m\] \w \[\033[00m\]$(__git_ps1 "git (%s)")\$ '
+    PS1='\h:\[\033[01;34m\] \w \[\033[00m\]$(__git_ps1 "git (%s)")\n\$ '
 else
-	PS1=' \w $(__git_ps1 " (%s)")\$ '
+	PS1=' \w $(__git_ps1 " (%s)")\n\$ '
 fi
 unset color_prompt force_color_prompt
 

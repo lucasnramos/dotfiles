@@ -26,3 +26,4 @@ set expandtab
 set relativenumber
 filetype indent plugin on
 :nmap ç :
+:nmap ; :
