@@ -12,8 +12,8 @@ source ~/.bashrc
 # Shell Variables
 export EDITOR="nvim"
 export VISUAL="emacs"
-export TERMINAL="st"
-export BROWSER="google-chrome"
+export TERMINAL="urxvt"
+export BROWSER="firefox"
 export SCRIPTS="$HOME/.scripts"
 export ANDROID_HOME="$HOME/Android/Sdk"
 export ANDROID_SDK_ROOT=$ANDROID_HOME
