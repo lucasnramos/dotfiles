@@ -5,13 +5,13 @@ OPT=$(echo -e "Lock\nExit\nSuspend\nReboot" | dmenu -i -p "Select an option:")
 # Performs exit options
 case "$OPT" in
     Lock)
-        blurlock
+        i3-blurlock
         ;;
     Exit)
         i3-msg exit
         ;;
     Suspend)
-        blurlock && systemctl suspend
+        i3-blurlock && systemctl suspend
         ;;
     Reboot)
         reboot

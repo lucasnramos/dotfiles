@@ -27,3 +27,4 @@ set relativenumber
 filetype indent plugin on
 :nmap ç :
 :nmap ; :
+au BufNewFile,BufRead /*.rasi setf css
