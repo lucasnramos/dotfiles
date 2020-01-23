@@ -76,9 +76,7 @@ bindsym $mod+o resize grow    width   5 px or 5 ppt
 # ==========================
 # [START] Startup
 # ==========================
-exec_always --no-startup-id polybar-start
-exec_always --no-startup-id awesome-start
-exec_always --no-startup-id feh --bg-scale ~/.config/wallpaper.*
+exec_always --no-startup-id i3-start
 
 # ====================================
 # [START] Especific shortcuts for i3

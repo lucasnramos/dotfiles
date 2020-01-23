@@ -55,12 +55,12 @@ font-0 = fixed:pixelsize=10;1
 font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
 font-2 = siji:pixelsize=10;1
 
-modules-left = i3 xwindow
-;modules-center = 
-modules-right = xkeyboard filesystem memory cpu date
+modules-left = i3
+modules-center = xwindow
+modules-right = xkeyboard filesystem memory cpu
 
-tray-position = right
-tray-padding = 2
+;tray-position = right
+;tray-padding = 2
 ;tray-background = #0063ff
 
 ;wm-restack = bspwm
@@ -79,7 +79,7 @@ cursor-scroll = ns-resize
 
 [module/xwindow]
 type = internal/xwindow
-label = %title:0:75: [...]%
+;label = %title:0:75: [...]%
 ;label = %title:0:30:...%
 
 [module/xkeyboard]

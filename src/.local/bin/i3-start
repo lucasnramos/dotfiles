@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+xrdb merge $HOME/.Xresources
+
+killall -q sxhkd
+sxhkd &
+
+polybar-start
