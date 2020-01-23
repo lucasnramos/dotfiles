@@ -1,0 +1,17 @@
+#!/bin/bash
+
+# find all files in dotfiles directory, but exclude .git
+script=$(echo -e "$(find $HOME/dotfiles -type f -not -path '*/\.git/*')" | dmenu -i -l 30 -p "Edit dotfiles")
+# find dotfiles/ -type f -not -path '*/\.git/*'
+
+echo $script
+# -n STRING => STRING lenght is > 0
+#if [ -z $script ]
+if [ ! -z $script ]
+then
+    exec $TERMINAL -e $EDITOR $script
+    exit 0
+else
+    echo "false"
+    exit 1
+fi

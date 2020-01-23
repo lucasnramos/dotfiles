@@ -1,0 +1,9 @@
+configuration {
+	modi: "window,drun,ssh,run";
+	font: "Source Code Pro 12";
+	bw: 1;
+	fixed-num-lines: true;
+	show-icons: true;
+	combi-modi: "window,drun,ssh";
+	theme: "Arc-Dark";
+}

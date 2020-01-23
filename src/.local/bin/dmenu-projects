@@ -1,0 +1,7 @@
+#!/bin/bash
+
+project=$( echo -e "$( ls ~/Projects) " | dmenu -i -p "Select a project" )
+
+if [ ! -z $project ]; then
+    exec code --folder-uri ~/Projects/$project
+fi
