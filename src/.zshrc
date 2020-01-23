@@ -12,3 +12,4 @@ zstyle :compinstall filename '/home/drleone/.zshrc'
 autoload -Uz compinit
 compinit
 # End of lines added by compinstall
+

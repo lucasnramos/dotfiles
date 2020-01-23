@@ -1,9 +1,14 @@
+if [ -f $HOME/.config/.aliases ]
+then
+  . $HOME/.config/.aliases
+fi
+
 # Shell Variables
 export EDITOR="nvim"
 export VISUAL="emacs"
 export TERMINAL="urxvt"
 export BROWSER="firefox"
-export SCRIPTS="$HOME/.scripts"
+export SCRIPTS="$HOME/.local/bin"
 export ANDROID_HOME="$HOME/Android/Sdk"
 export ANDROID_SDK_ROOT=$ANDROID_HOME
 export ANDROID_STUDIO="$HOME/Android/studio/bin"
