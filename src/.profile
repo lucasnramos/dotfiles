@@ -1,17 +1,15 @@
-if [ -f $HOME/.config/.aliases ]
-then
-  . $HOME/.config/.aliases
-fi
-
 # Shell Variables
+export ALIASES="$HOME/.config/.aliases"
 export EDITOR="nvim"
 export VISUAL="emacs"
-export TERMINAL="urxvt"
+export TERMINAL="st"
 export BROWSER="firefox"
-export SCRIPTS="$HOME/.local/bin"
-export ANDROID_HOME="$HOME/Android/Sdk"
+export SCRIPTS="$HOME/.local/scripts"
+# Android SDK and Studio
+export ANDROID_BASE="$HOME/.local/Android"
+export ANDROID_HOME="$ANDROID_BASE/Sdk"
 export ANDROID_SDK_ROOT=$ANDROID_HOME
-export ANDROID_STUDIO="$HOME/Android/studio/bin"
+export ANDROID_STUDIO="$ANDROID_BASE/studio/bin"
 export JAVA_HOME="/usr/lib/jvm/java-8-openjdk/"
 
 # set PATH so it includes user's private bin directories

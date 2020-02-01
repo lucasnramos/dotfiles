@@ -14,6 +14,7 @@ HISTCONTROL=ignoreboth
 # for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
 HISTSIZE=1000
 HISTFILESIZE=2000
+HISTFILE=$HOME/.cache/.bash_history
 # append to the history file, don't overwrite it
 shopt -s histappend
 
@@ -41,10 +42,10 @@ if [ -n "$force_color_prompt" ]; then
 fi
 
 # sourcing the git-prompt script
-source ~/.scripts/git-prompt.sh
+source $SCRIPTS/git-prompt.sh
 
 if [ "$color_prompt" = yes ]; then
-    PS1='\h:\[\033[01;34m\] \w \[\033[00m\]$(__git_ps1 "git (%s)")\n\$ '
+    PS1='\h:\u\[\033[01;34m\] \w \[\033[00m\]$(__git_ps1 "git (%s)")\n\$ '
 else
 	PS1=' \w $(__git_ps1 " (%s)")\n\$ '
 fi
@@ -80,8 +81,8 @@ fi
 set -o vi
 
 # Check if aliases file is present and loads it
-if [ -f ~/.aliases ]; then
-     source ~/.aliases
+if [ -f $ALIASES ]; then
+     source $ALIASES
 fi
 
 # clear screen with <C-l> when in insert mode of bash vi
