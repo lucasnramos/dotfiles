@@ -77,17 +77,19 @@ bindsym $mod+o resize grow    width   5 px or 5 ppt
 # ==========================
 set_from_resource $background background #000000
 set_from_resource $foreground foreground #ECEFF4
+set_from_resource $foreground-alt color4 #5294e2
 set_from_resource $darkred color9 #BF616A
 set_from_resource $darkblack color0 #000000
 set_from_resource $darkwhite color7 #D8DEE9
 set_from_resource $white #ffffff
 
 #                       BORDER     		 BACKGROUND  	  TEXT        	INDICATOR   CHILD_BORDER
-client.focused          $background      $background      $darkwhite  	$darkblack  $darkblack
+client.focused          $background      $background      $darkwhite  	$darkblack  $foreground-alt
 client.unfocused        $background      $background      $white      	$darkblack  $darkblack
 client.focused_inactive $background      $background      $white      	$darkblack  $darkblack
 client.urgent           $darkred    	 $darkred    	  $background   $darkred    $darkred
 client.background       $background
+
 # ==========================
 # [START] Startup
 # ==========================
@@ -105,7 +107,7 @@ bindsym $mod+Shift+d exec --no-startup-id i3-dmenu-desktop
 # ============================
 # [START] i3-gaps
 # ============================
-# for_window [class=".*"] border pixel 2
+for_window [class=".*"] border pixel 3
 # gaps inner 10
 # smart_borders on
 # smart_gaps on
