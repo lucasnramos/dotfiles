@@ -2,7 +2,7 @@
 alias rbash='source ~/.bashrc'
 alias rzsh='source ~/.zshrc'
 alias rn='ranger'
-alias conf='$HOME/.scripts/fzy-dotfiles'
+alias conf='$SCRIPTS/term-dotfiles'
 alias sc='sudo systemctl'
 alias arch-grub='sudo grub-mkconfig -o /boot/grub/grub.cfg'
 # systemd
@@ -31,11 +31,11 @@ alias ll='ls -lsA'
 alias la='ls -A'
 alias l='ls -CF'
 alias dotfiles='cd ~/dotfiles'
-alias scripts='cd ~/.scripts'
+alias scripts='cd $SCRIPTS'
 # vim & neovim
 alias v='vim'
 alias vim='nvim'
-alias valias='vim ~/.bash_aliases'
+alias valias='vim $ALIASES'
 alias vprofile='vim ~/.profile'
 # cd to projects folder
 alias proj='cd ~/Projects'
