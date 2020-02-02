@@ -53,6 +53,8 @@
 ! Arc Theme
 *.background: #383c4a
 *.foreground: #D2D2D2
+*.background-alt: #404552
+*.foreground-alt: #5294e2
 
 !black
 *color0: #383c4a
@@ -85,13 +87,14 @@
 !white
 *color7: #CCCCCC
 *color15: #FFFFFF
+
 ! =====================
 ! [START] URXVT
 ! =====================
 URxvt.perl-ext-common: default,matcher,font-size,keyboard-select
 URxvt.keysym.M-Escape: perl:keyboard-select:activate
-URxvt.foreground: nord4
-URxvt.background: nord0
+URxvt.foreground: #5294e2
+URxvt.background: #383c4a
 URxvt.depth: 32
 URxvt.geometry: 90x30
 URxvt.loginShell: true
