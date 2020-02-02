@@ -33,8 +33,8 @@ font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
 font-2 = siji:pixelsize=10;1
 
 modules-left = i3 xwindow
-modules-center = date
-modules-right = xkeyboard filesystem memory cpu alsa
+modules-center = 
+modules-right = xkeyboard filesystem memory cpu alsa date
 
 tray-position = right
 tray-padding = 2
