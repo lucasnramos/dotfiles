@@ -5,6 +5,7 @@ alias rn='ranger'
 alias conf='$SCRIPTS/term-dotfiles'
 alias sc='sudo systemctl'
 alias arch-grub='sudo grub-mkconfig -o /boot/grub/grub.cfg'
+alias G="| grep -i"
 # systemd
 alias sc="sudo systemctl"
 alias scu="systemctl --user"
