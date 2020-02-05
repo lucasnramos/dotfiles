@@ -2,11 +2,18 @@
 ! [START] Colors
 ! =====================
 
+! Nord theme
+! #include ".themes/xcolors/nord.Xresources"
+
 ! solarized theme
 ! #include ".themes/xcolors/base16-solarized-dark-256.Xresources"
 
 ! Arc Dark Theme
-#include ".themes/xcolors/base16-arc-dark.Xresources"
+! #include ".themes/xcolors/base16-arc-dark.Xresources"
+
+
+! Adwaita Theme
+#include ".themes/xcolors/base16-adwaita.Xresources"
 
 ! =====================
 ! [START] URXVT

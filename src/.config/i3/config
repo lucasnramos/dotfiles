@@ -81,12 +81,12 @@ set_from_resource $foreground-alt color4 #5294e2
 set_from_resource $darkred color9 #BF616A
 set_from_resource $darkblack color0 #000000
 set_from_resource $darkwhite color7 #D8DEE9
-set_from_resource $white #ffffff
+set_from_resource $white color15 #ffffff
 
 #                       BORDER     		 BACKGROUND  	  TEXT        	INDICATOR   CHILD_BORDER
-client.focused          $background      $background      $darkwhite  	$darkblack  $foreground-alt
-client.unfocused        $background      $background      $white      	$darkblack  $darkblack
-client.focused_inactive $background      $background      $white      	$darkblack  $darkblack
+client.focused          $background      $background      $white  		$darkblack  $foreground-alt
+client.unfocused        $background      $background      $darkwhite   	$darkblack  $darkblack
+client.focused_inactive $background      $background      $darkwhite   	$darkblack  $darkblack
 client.urgent           $darkred    	 $darkred    	  $background   $darkred    $darkred
 client.background       $background
 

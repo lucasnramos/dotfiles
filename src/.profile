@@ -2,7 +2,7 @@
 export ALIASES="$HOME/.config/.aliases"
 export EDITOR="nvim"
 export VISUAL="emacs"
-export TERMINAL="kitty"
+export TERMINAL="st"
 export BROWSER="firefox"
 export SCRIPTS="$HOME/.local/scripts"
 # Android SDK and Studio

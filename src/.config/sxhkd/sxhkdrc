@@ -6,6 +6,13 @@ super + F2
     code
 super + F5
     pavucontrol
+super + ctrl + p
+    killall -q compton
+XF86AudioRaiseVolume
+    amixer set Master 5%+
+XF86AudioLowerVolume
+    amixer set Master 5%-
+    
 
 # dmenu | rofi shortcuts
 super + d
@@ -14,5 +21,5 @@ super + c
     exec rofi-dotfiles
 super + r
     rofi -show run
-super + w
+super + shift + w
     rofi -show window

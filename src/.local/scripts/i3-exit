@@ -1,6 +1,6 @@
 #!/bin/bash
 
-OPT=$(echo -e "Lock\nExit\nSuspend\nReboot" | dmenu -i -p "Select an option:")
+OPT=$(echo -e "Lock\nExit\nSuspend\nReboot\nShutdown" | rofi -dmenu -i -p "Select an option ")
 
 # Performs exit options
 case "$OPT" in
@@ -15,6 +15,9 @@ case "$OPT" in
         ;;
     Reboot)
         reboot
+        ;;
+    Shutdown)
+        poweroff
         ;;
     *)
         echo "Usage: $0 {lock|logout|suspend|hibernate|reboot|shutdown}"
