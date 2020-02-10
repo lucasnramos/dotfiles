@@ -16,3 +16,9 @@ super + r
     rofi -show run
 super + w
     rofi -show window
+
+# Media Controls
+XF86AudioRaiseVolume
+    amixer set Master 5%+
+XF86AudioLowerVolume
+    amixer set Master 5%-

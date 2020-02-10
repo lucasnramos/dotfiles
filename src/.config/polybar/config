@@ -39,7 +39,7 @@ font-2 = siji:pixelsize=10;1
 
 modules-left = i3 xwindow
 modules-center = date
-modules-right = xkeyboard filesystem memory cpu
+modules-right = xkeyboard filesystem memory cpu alsa
 
 tray-position = right
 tray-padding = 2
