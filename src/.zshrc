@@ -8,7 +8,7 @@ zstyle :compinstall filename '/home/drleone/.zshrc'
 autoload -Uz compinit
 autoload -U colors && colors
 compinit
-
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 PS1="%B%{$fg[red]%}[%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%M %{$fg[magenta]%}%~%{$fg[red]%}]%{$reset_color%}$%b "
 
 source $ALIASES

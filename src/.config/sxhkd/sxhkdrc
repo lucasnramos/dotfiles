@@ -14,12 +14,20 @@ XF86AudioLowerVolume
     amixer set Master 5%-
     
 
-# dmenu | rofi shortcuts
+# dmenu shortcuts
+# super + d
+#     i3-menu-desktop
+# super + c
+#     exec dmenu-dotfiles
+# super + r
+#     dmenu_run
+
+# Rofi shortcuts
+super + shift + w
+    rofi -show window
 super + d
     rofi -show drun
 super + c
     exec rofi-dotfiles
-super + r
-    rofi -show run
-super + shift + w
-    rofi -show window
+super + ctrl + p
+    exec rofi-projects

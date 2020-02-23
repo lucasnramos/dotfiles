@@ -1,4 +1,7 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =2
+let g:netrw_dirhistcnt =5
+let g:netrw_dirhist_5='/home/lucas/dotfiles/src/.local/scripts'
+let g:netrw_dirhist_4='/home/lucas/dotfiles/src/.local'
+let g:netrw_dirhist_3='/home/lucas/dotfiles/src'
 let g:netrw_dirhist_2='/home/drleone/.config/gtk-3.0'
 let g:netrw_dirhist_1='/home/lucas/dotfiles/src/.scripts'

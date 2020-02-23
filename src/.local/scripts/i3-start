@@ -8,6 +8,6 @@ compton &
 killall -q sxhkd
 sxhkd &
 
-polybar-start
+# polybar-start
 
 nitrogen --restore

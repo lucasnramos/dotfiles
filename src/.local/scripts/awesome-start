@@ -2,11 +2,15 @@
 
 xrdb merge $HOME/.Xresources
 
-killall -q volumeicon
+pkill volumeicon
 volumeicon &
 
-killall -q nm-applet
+pkill nm-applet
 nm-applet &
 
-killall -q sxhkd
+pkill sxhkd
 sxhkd &
+
+pkill nitrogen
+nitrogen --restore &
+

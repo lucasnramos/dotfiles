@@ -1,5 +1,6 @@
 configuration {
 	modi: "window,drun,ssh,run";
+	theme: "Arc-Dark";
 /*	width: 50;*/
 /*	lines: 15;*/
 /*	columns: 1;*/
@@ -50,7 +51,6 @@ configuration {
 /*	window-format: "{w}    {i}{c}   {t}";*/
 /*	click-to-exit: true;*/
 /*	show-match: true;*/
-	/*theme: "solarized";*/
 /*	color-normal: ;*/
 /*	color-urgent: ;*/
 /*	color-active: ;*/
