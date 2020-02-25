@@ -1,15 +1,17 @@
 HISTFILE=~/.cache/.histfile
 HISTSIZE=1000
 SAVEHIST=1000
-setopt appendhistory autocd extendedglob nomatch notify
+setopt appendhistory autocd extendedglob nomatch notify PROMPT_SUBST
 unsetopt beep
 zstyle :compinstall filename '/home/drleone/.zshrc'
 autoload -Uz compinit; compinit
 autoload -U colors && colors
+autoload -Uz vcs_info
 
-zstyle ':completion:*' menu select
+precmd() { vcs_info }
+
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
-PS1="%B%{$fg[red]%}[%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%M %{$fg[magenta]%}%~%{$fg[red]%}]%{$reset_color%}$%b "
+PS1="%B%{$fg[red]%}[%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%M %{$fg[magenta]%}%~%{$fg[red]%}]%{$reset_color%}%b$ "
 
 
 # vi mode

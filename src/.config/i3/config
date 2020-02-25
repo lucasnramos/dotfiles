@@ -137,6 +137,7 @@ assign [class="Playonlinux"] $ws9
 for_window [instance="__scratchpad"] move scratchpad
 # Floating windows
 for_window [class="URxvt" instance="float_term"] floating enable
+for_window [class="Float"] floating enable
 for_window [class="Xfce4-panel"] floating enable
 for_window [class="Pavucontrol"] floating enable
 for_window [class="xcalc"] floating enable
@@ -161,8 +162,8 @@ font pango:Montserrat 10, FontAwesome 12
 # ====================================
 # [START] Especific shortcuts for i3
 # ====================================
-bindsym $mod+Shift+Return exec --no-startup-id $TERMINAL -name float_term
-bindsym $mod+Ctrl+e exec --no-startup-id $TERMINAL -name float_term -e ranger
+bindsym $mod+Shift+Return exec --no-startup-id $TERMINAL -n Float
+bindsym $mod+Ctrl+e exec --no-startup-id $TERMINAL -n Float -e ranger
 bindsym $mod+Shift+q exec --no-startup-id i3-exit
 bindsym $mod+Shift+d exec --no-startup-id i3-dmenu-desktop
 

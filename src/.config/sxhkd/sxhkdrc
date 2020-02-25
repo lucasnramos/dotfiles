@@ -8,10 +8,10 @@ super + F5
     pavucontrol
 super + ctrl + p
     killall -q compton
-XF86AudioRaiseVolume
-    amixer set Master 5%+
-XF86AudioLowerVolume
-    amixer set Master 5%-
+# XF86AudioRaiseVolume
+#     amixer set Master 5%+
+# XF86AudioLowerVolume
+#     amixer set Master 5%-
     
 
 # Rofi shortcuts
