@@ -1,10 +1,11 @@
 # Shell Variables
 export ALIASES="$HOME/.config/.aliases"
 export EDITOR="nvim"
-export VISUAL="emacs"
+export VISUAL="nvim"
 export TERMINAL="st"
 export BROWSER="firefox"
 export SCRIPTS="$HOME/.local/scripts"
+
 # Android SDK and Studio
 export ANDROID_BASE="$HOME/.local/Android"
 export ANDROID_HOME="$ANDROID_BASE/Sdk"

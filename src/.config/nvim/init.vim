@@ -1,3 +1,18 @@
+" Test vim-plug
+if empty(glob('~/.local/share/nvim/site/autoload/plug.vim'))
+  silent !curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
+
+call plug#begin()
+Plug 'honza/vim-snippets'
+Plug 'vim-airline/vim-airline'
+Plug 'preservim/nerdtree'
+Plug 'tpope/vim-surround'
+call plug#end()
+
+" Initial sets
 set nocompatible
 syntax on
 set path+=** " fuzzy finder
@@ -24,7 +39,15 @@ set shiftwidth=4
 set softtabstop=4
 set expandtab
 set relativenumber
+set timeoutlen=10
+set ttimeoutlen=1
 filetype indent plugin on
+au BufNewFile,BufRead /*.rasi setf css
+
+" Custon keybidings
 :nmap ç :
 :nmap ; :
-au BufNewFile,BufRead /*.rasi setf css
+
+
+" NERDTree
+let g:NERDTreeShowHidden=1
