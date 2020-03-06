@@ -10,4 +10,4 @@ sxhkd &
 
 # polybar-start
 
-nitrogen --restore
+# nitrogen --restore

@@ -1,6 +1,6 @@
 configuration {
 	modi: "window,drun,ssh,run";
-	theme: "Arc-Dark";
+	theme: "solarized";
 /*	width: 50;*/
 /*	lines: 15;*/
 /*	columns: 1;*/
