@@ -2,7 +2,7 @@
 export ALIASES="$HOME/.config/.aliases"
 export EDITOR="nvim"
 export VISUAL="nvim"
-export TERMINAL="st"
+export TERMINAL="urxvt"
 export BROWSER="firefox"
 export SCRIPTS="$HOME/.local/scripts"
 
