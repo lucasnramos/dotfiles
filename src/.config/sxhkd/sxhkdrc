@@ -15,13 +15,25 @@ super + ctrl + p
     
 
 # Rofi shortcuts
+# super + Tab
+#     rofi -show window
+# super + d
+#     rofi -show run
+# super + r
+#     rofi -show drun
+# super + c
+#     exec rofi-dotfiles
+# super + ctrl + p
+#     exec dmenu-projects
+
+# dmenu
 super + Tab
     rofi -show window
 super + d
-    rofi -show run
+    dmenu_run
 super + r
     rofi -show drun
 super + c
-    exec rofi-dotfiles
+    exec dmenu-dotfiles
 super + ctrl + p
     exec dmenu-projects

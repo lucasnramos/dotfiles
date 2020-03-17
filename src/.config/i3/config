@@ -99,13 +99,13 @@ exec_always --no-startup-id i3-start
 # [START] i3-gaps
 # ============================
 for_window [class=".*"] border pixel 2
-gaps inner 10
-smart_borders on
-smart_gaps on
-bindsym $mod+z gaps inner current plus 5
-bindsym $mod+Shift+z gaps inner current minus 5
-bindsym $mod+x gaps inner all set 20
-bindsym $mod+Shift+x gaps inner all set 0
+#gaps inner 10
+#smart_borders on
+#smart_gaps on
+#bindsym $mod+z gaps inner current plus 5
+#bindsym $mod+Shift+z gaps inner current minus 5
+#bindsym $mod+x gaps inner all set 20
+#bindsym $mod+Shift+x gaps inner all set 0
 # ============================
 # [END] i3-gaps
 # ============================
@@ -220,10 +220,10 @@ bindsym $mod+Shift+r restart
 # ==========================
 # [START] i3 bar or Polybar
 # ==========================
-# bar {
-# 	# font pango:Ubuntu Mono Nerd 12, FontAwesome 12
-# 	position top
-#         status_command i3blocks -c ~/.config/i3/i3blocks.conf
-#         # status_command ~/bin/bumblebee-status/bumblebee-status -m spotify dnf memory datetime
-# }
+ bar {
+    font pango:Ubuntu Mono 12, Font Awesome 12
+    position top
+    status_command i3blocks -c ~/.config/i3/i3blocks.conf
+    # status_command ~/bin/bumblebee-status/bumblebee-status -m spotify dnf memory datetime
+ }
 
