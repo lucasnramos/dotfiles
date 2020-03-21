@@ -9,7 +9,7 @@ alias G="| grep -i"
 # systemd
 alias sc="sudo systemctl"
 alias scu="systemctl --user"
-# Aptitude
+# APT & apt-get
 alias sa='sudo apt'
 alias sag='sudo apt-get'
 alias sup='sudo apt update'
