@@ -10,6 +10,9 @@ Plug 'honza/vim-snippets'
 Plug 'vim-airline/vim-airline'
 Plug 'preservim/nerdtree'
 Plug 'tpope/vim-surround'
+Plug 'neoclide/coc.nvim', { 'branch': 'release' }
+Plug 'leafgarland/typescript-vim'
+Plug 'ctrlpvim/ctrlp.vim'
 call plug#end()
 
 " Initial sets
@@ -44,10 +47,12 @@ set ttimeoutlen=1
 filetype indent plugin on
 au BufNewFile,BufRead /*.rasi setf css
 
-" Custon keybidings
+" Custom keybidings
 :nmap ç :
 :nmap ; :
-
+map <C-b> :NERDTreeToggle<CR>
 
 " NERDTree
 let g:NERDTreeShowHidden=1
+
+" CtrlP

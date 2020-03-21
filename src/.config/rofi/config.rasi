@@ -1,10 +1,10 @@
 configuration {
 	modi: "window,drun,ssh,run";
-	theme: "solarized";
+/*	theme: "default";*/
 /*	width: 50;*/
 /*	lines: 15;*/
 /*	columns: 1;*/
-	font: "Montserrat 12";
+	font: "Ubuntu 12";
 /*	bw: 1;*/
 /*	location: 0;*/
 /*	padding: 5;*/

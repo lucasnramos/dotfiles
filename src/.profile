@@ -3,8 +3,9 @@ export ALIASES="$HOME/.config/.aliases"
 export EDITOR="nvim"
 export VISUAL="nvim"
 export TERMINAL="urxvt"
-export BROWSER="firefox"
+export BROWSER="brave-browser-stable"
 export SCRIPTS="$HOME/.local/scripts"
+export APPIMAGEDIR="$HOME/.local/AppImages"
 
 # Android SDK and Studio
 export ANDROID_BASE="$HOME/.local/Android"
@@ -14,4 +15,4 @@ export ANDROID_STUDIO="$ANDROID_BASE/studio/bin"
 export JAVA_HOME="/usr/lib/jvm/java-8-openjdk/"
 
 # set PATH so it includes user's private bin directories
-PATH="/snap/bin/:$SCRIPTS:$HOME/bin:$ANDROID_STUDIO:$HOME/.local/bin:$HOME/.nvm:$ANDROID_HOME/emulator:$ANDROID_HOME/tools:$ANDROID_HOME/tools/bin:$ANDROID_HOME/platform-tools:$JAVA_HOME/bin:$JAVA_HOME/lib/amd64:$PATH"
+PATH="$APPIMAGEDIR:/snap/bin/:$SCRIPTS:$HOME/bin:$ANDROID_STUDIO:$HOME/.local/bin:$HOME/.nvm:$ANDROID_HOME/emulator:$ANDROID_HOME/tools:$ANDROID_HOME/tools/bin:$ANDROID_HOME/platform-tools:$JAVA_HOME/bin:$JAVA_HOME/lib/amd64:$PATH"

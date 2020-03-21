@@ -5,23 +5,22 @@
 ! Nord theme
 ! #include ".themes/xcolors/nord.Xresources"
 
-! solarized theme
+! Solarized theme
 ! #include ".themes/xcolors/base16-solarized-dark-256.Xresources"
 
 ! Arc Dark Theme
-! #include ".themes/xcolors/base16-arc-dark.Xresources"
-
+#include ".themes/xcolors/base16-arc-dark.Xresources"
 
 ! Adwaita Theme
-#include ".themes/xcolors/base16-adwaita.Xresources"
+! #include ".themes/xcolors/base16-adwaita.Xresources"
 
 ! =====================
 ! [START] URXVT
 ! =====================
 URxvt.perl-ext-common: default,matcher,font-size,keyboard-select
 URxvt.keysym.M-Escape: perl:keyboard-select:activate
-! URxvt.foreground: #5294e2
-! URxvt.background: #383c4a
+URxvt.foreground: #D8DEE9
+URxvt.background: #222222
 URxvt.depth: 32
 URxvt.geometry: 90x30
 URxvt.loginShell: true

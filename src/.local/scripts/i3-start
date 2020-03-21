@@ -2,12 +2,12 @@
 
 xrdb merge $HOME/.Xresources
 
-# killall -q compton
-# compton &
+killall -q compton
+compton &
 
 killall -q sxhkd
 sxhkd &
 
-# polybar-start
+polybar-start
 
-# nitrogen --restore
+nitrogen --restore
