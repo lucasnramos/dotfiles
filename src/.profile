@@ -3,7 +3,7 @@ export ALIASES="$HOME/.config/.aliases"
 export EDITOR="nvim"
 export VISUAL="nvim"
 export TERMINAL="urxvt"
-export BROWSER="brave-browser-stable"
+export BROWSER="firefox"
 export SCRIPTS="$HOME/.local/scripts"
 export APPIMAGEDIR="$HOME/.local/AppImages"
 

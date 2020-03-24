@@ -13,9 +13,11 @@ Plug 'tpope/vim-surround'
 Plug 'neoclide/coc.nvim', { 'branch': 'release' }
 Plug 'leafgarland/typescript-vim'
 Plug 'ctrlpvim/ctrlp.vim'
+Plug 'arcticicestudio/nord-vim'
 call plug#end()
 
 " Initial sets
+colorscheme nord
 set nocompatible
 syntax on
 set path+=** " fuzzy finder
