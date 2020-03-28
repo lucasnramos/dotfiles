@@ -25,3 +25,7 @@ super + c
     exec dmenu-dotfiles
 super + ctrl + p
     exec dmenu-projects
+super + r
+    rofi -show run
+super + w
+    rofi -show window
