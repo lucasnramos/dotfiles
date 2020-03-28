@@ -17,7 +17,7 @@ Plug 'arcticicestudio/nord-vim'
 call plug#end()
 
 " Initial sets
-colorscheme nord
+" colorscheme nord
 set nocompatible
 syntax on
 set path+=** " fuzzy finder

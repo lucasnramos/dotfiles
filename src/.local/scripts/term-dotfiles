@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 # find all files in dotfiles directory, but exclude .git
 script=$(echo -e "$(find $HOME/dotfiles -type f -not -path '*/\.git/*')" | fzy )
