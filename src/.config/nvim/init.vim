@@ -11,9 +11,10 @@ Plug 'vim-airline/vim-airline'
 Plug 'preservim/nerdtree'
 Plug 'tpope/vim-surround'
 Plug 'neoclide/coc.nvim', { 'branch': 'release' }
-Plug 'leafgarland/typescript-vim'
-Plug 'ctrlpvim/ctrlp.vim'
+" Plug 'leafgarland/typescript-vim'
+" Plug 'ctrlpvim/ctrlp.vim'
 Plug 'arcticicestudio/nord-vim'
+Plug 'sheerun/vim-polyglot'
 call plug#end()
 
 " Initial sets

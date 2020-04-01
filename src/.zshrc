@@ -1,4 +1,4 @@
-HISTFILE=~/.cache/.histfile
+HISTFILE=$HOME/.cache/.histfile
 HISTSIZE=1000
 SAVEHIST=1000
 setopt appendhistory autocd extendedglob nomatch notify PROMPT_SUBST
@@ -11,8 +11,9 @@ autoload -Uz vcs_info
 precmd() { vcs_info }
 
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
-PS1="%B%{$fg[red]%}[%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%M %{$fg[magenta]%}%~%{$fg[red]%}]%{$reset_color%}%b$ "
+# PS1="%B%{$fg[red]%}[%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%M %{$fg[magenta]%}%~%{$fg[red]%}]%{$reset_color%}%b$ "
 
+PROMPT='%F{green}%n@%m %F{yellow}[%~]%f$ '
 
 # vi mode
 bindkey -v
