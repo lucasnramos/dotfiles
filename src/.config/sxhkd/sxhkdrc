@@ -1,7 +1,5 @@
-super + return
-    $TERMINAL
 super + Return
-    $TERMINAL
+    urxvtc
 super + F1
     $BROWSER
 super + F2
@@ -10,14 +8,21 @@ super + F5
     pavucontrol
 super + ctrl + p
     killall -q compton
-XF86AudioRaiseVolume
-    amixer set Master 5%+
-XF86AudioLowerVolume
-    amixer set Master 5%-
-super + shift + e
-    spacefm
-    
+super + shift + q
+    dmenu-exit
 
+# Toggle mute
+XF86AudioMute
+    pulseaudio-ctl mute
+
+# Toggle mic mute
+XF86AudioMicMute
+    pulseaudio-ctl mute-input
+
+# Change volume
+XF86Audio{Raise,Lower}Volume
+    pulseaudio-ctl {up,down} 10
+    
 # dmenu
 super + {d,p}
     dmenu_run
@@ -29,3 +34,4 @@ super + r
     rofi -show run
 super + w
     rofi -show window
+

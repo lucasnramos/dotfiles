@@ -36,7 +36,7 @@ fi
 
 XRANDR_TXT="$(xrandr)" || exit $?
 
-function opt () {
+function () {
   typeset opt
   typeset output
   typeset help_msg="usage: xrandr-dmenu [options]
