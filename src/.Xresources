@@ -6,7 +6,10 @@
 ! #include ".themes/xcolors/base16-solarized-dark-256.Xresources"
 
 ! Arc Dark Theme
-#include ".themes/xcolors/base16-arc-dark.Xresources"
+! #include ".themes/xcolors/base16-arc-dark.Xresources"
+
+! Materia
+#include ".themes/xcolors/base16-materia.Xresources"
 
 ! =====================
 ! [START] URXVT
