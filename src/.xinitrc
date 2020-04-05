@@ -43,4 +43,8 @@ fi
 
 sxhkd &
 urxvtd &
-exec dwm
+nitrogen --restore &
+while :; do
+    ssh-agent dwm
+done
+

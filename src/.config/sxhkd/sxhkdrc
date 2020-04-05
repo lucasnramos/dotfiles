@@ -10,24 +10,14 @@ super + ctrl + p
     killall -q compton
 super + shift + q
     dmenu-exit
-
-# Toggle mute
-XF86AudioMute
-    pulseaudio-ctl mute
-
-# Toggle mic mute
-XF86AudioMicMute
-    pulseaudio-ctl mute-input
-
-# Change volume
-XF86Audio{Raise,Lower}Volume
-    pulseaudio-ctl {up,down} 10
     
 # dmenu
 super + {d,p}
     dmenu_run
 super + c
     exec dmenu-dotfiles
+super + control + c
+    exec dmenu-suckless-config
 super + ctrl + p
     exec dmenu-projects
 super + r
