@@ -2,7 +2,7 @@
 export ALIASES="$HOME/.config/.aliases"
 export EDITOR="nvim"
 export VISUAL="nvim"
-export TERMINAL="urxvt"
+export TERMINAL="st"
 export BROWSER="chromium-browser"
 export SCRIPTS="$HOME/.local/scripts"
 export APPIMAGEDIR="$HOME/.local/AppImages"

@@ -16,8 +16,8 @@
 ! =====================
 URxvt.perl-ext-common: default,matcher,font-size,keyboard-select
 URxvt.keysym.M-Escape: perl:keyboard-select:activate
-URxvt.foreground: #D8DEE9
-URxvt.background: #282828
+! URxvt.foreground: #D8DEE9
+! URxvt.background: #282828
 URxvt.depth: 32
 URxvt.geometry: 90x30
 URxvt.loginShell: true
