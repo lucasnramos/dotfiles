@@ -7,11 +7,25 @@ get_date()
 
 get_mem()
 {
-	free -h | awk '/^Mem/ {print $1 " " $3 "/" $2}'
+	free -h | awk '/^Mem/ {printf "%s %s/%s", $1, $3, $2}'
 }
+
+get_cpu() 
+{
+	mpstat | awk '/^.*all/ {printf "CPU: %s%%", 100-$13}'
+}
+
+get_disk_usage()
+{
+	root=$(df -h | awk '/\/$/ {printf "%s: %s\n", $6, $5}')
+	home=$(df -h | awk '/\/home$/ {printf "%s: %s ", $6, $5}')
+
+	printf "[%s %s] " $root $home
+}
+
 
 while true
 do
-	xsetroot -name "$(get_mem) | $(get_date)"
+	xsetroot -name "$(get_disk_usage)[$(get_cpu)] [$(get_mem)] [$(get_date)]"
 	sleep 1
 done

@@ -8,7 +8,7 @@ case "$OPT" in
         blurlock
         ;;
     Exit)
-        pkill X && pkill Xorg
+        pkill Xorg
         ;;
     Suspend)
         i3-blurlock && systemctl suspend

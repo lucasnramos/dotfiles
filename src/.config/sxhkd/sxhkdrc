@@ -1,5 +1,5 @@
 super + Return
-    urxvtc
+    $TERMINAL
 super + F1
     $BROWSER
 super + F2
@@ -12,16 +12,10 @@ super + shift + q
     dmenu-exit
     
 # dmenu
-super + {d,p}
-    dmenu_run
 super + c
     exec dmenu-dotfiles
 super + control + c
     exec dmenu-suckless-config
 super + ctrl + p
     exec dmenu-projects
-super + r
-    rofi -show run
-super + w
-    rofi -show window
 
