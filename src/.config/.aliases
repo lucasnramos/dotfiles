@@ -7,6 +7,10 @@ alias sc='sudo systemctl'
 alias arch-grub='sudo grub-mkconfig -o /boot/grub/grub.cfg'
 alias G="| grep -i"
 alias merge="xrdb merge $HOME/.Xresources"
+# Git
+alias g='git'
+alias gs='git status'
+alias gr='git remote'
 # systemd
 alias sc="sudo systemctl"
 alias scu="systemctl --user"
