@@ -1,9 +1,9 @@
 # Shell Variables
-export ALIASES="$HOME/.config/.aliases"
+export ALIASES="$HOME/.config/aliases"
 export EDITOR="nvim"
 export VISUAL="nvim"
-export TERMINAL="st"
-export BROWSER="chromium-browser"
+export TERMINAL="alacritty"
+export BROWSER="firefox"
 export SCRIPTS="$HOME/.local/scripts"
 export APPIMAGEDIR="$HOME/.local/AppImages"
 

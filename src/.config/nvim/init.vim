@@ -54,6 +54,10 @@ au BufNewFile,BufRead /*.rasi setf css
 :nmap ç :
 :nmap ; :
 map <C-b> :NERDTreeToggle<CR>
+map <leader>y "+y
+map <leader>p "+p
+map <C-y> "*y
+map <C-p> "*p
 
 " NERDTree
 let g:NERDTreeShowHidden=1

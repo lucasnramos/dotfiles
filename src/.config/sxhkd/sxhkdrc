@@ -4,11 +4,15 @@ super + F1
     $BROWSER
 super + F2
     code
+super + shift + e
+    $TERMINAL -e ranger
+super + e
+    thunar
 super + F5
     pavucontrol
 super + ctrl + p
     killall -q compton
-super + shift + q
+super + control + q
     dmenu-exit
     
 # dmenu

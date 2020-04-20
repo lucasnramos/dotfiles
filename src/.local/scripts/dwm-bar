@@ -12,7 +12,7 @@ get_mem()
 
 get_cpu() 
 {
-	mpstat | awk '/^.*all/ {printf "CPU: %s%%", 100-$13}'
+	mpstat | awk '/^.*all/ {printf "CPU: %s%%", 100-$12}'
 }
 
 get_disk_usage()
@@ -20,12 +20,12 @@ get_disk_usage()
 	root=$(df -h | awk '/\/$/ {printf "%s: %s\n", $6, $5}')
 	home=$(df -h | awk '/\/home$/ {printf "%s: %s ", $6, $5}')
 
-	printf "[%s %s] " $root $home
+	printf "%s %s " $root $home
 }
 
 
 while true
 do
-	xsetroot -name "$(get_disk_usage)[$(get_cpu)] [$(get_mem)] [$(get_date)]"
+	xsetroot -name "$(get_disk_usage) | $(get_cpu) | $(get_mem) | $(get_date)"
 	sleep 1
 done
