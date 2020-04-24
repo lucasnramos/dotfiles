@@ -4,12 +4,20 @@ super + F1
     $BROWSER
 super + F2
     code
+super + F3
+    $TERMINAL -e nvim
+super + F4
+    pavucontrol
+super + F5
+    lutris
+super + F6
+    steam
+super + F7
+    retroarch
 super + shift + e
     $TERMINAL -e ranger
 super + e
     thunar
-super + F5
-    pavucontrol
 super + ctrl + p
     killall -q compton
 super + control + q

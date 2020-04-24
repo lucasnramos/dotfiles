@@ -52,5 +52,6 @@ alias v='vim'
 alias vim='nvim'
 alias valias='vim $ALIASES'
 alias vprofile='vim ~/.profile'
+alias vsuck='vim ~/.local/suckless'
 # cd to projects folder
 alias proj='cd ~/Projects'
