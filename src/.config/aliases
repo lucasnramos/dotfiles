@@ -10,6 +10,8 @@ alias G="| grep -i"
 alias L="| less"
 alias tvd="teamviewer daemon"
 alias merge="xrdb merge $HOME/.Xresources"
+alias tx='tmux'
+alias fm='$FILEMANAGER'
 # Git
 alias g='git'
 alias gs='git status'

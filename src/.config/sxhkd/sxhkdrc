@@ -15,9 +15,9 @@ super + F6
 super + F7
     retroarch
 super + shift + e
-    $TERMINAL -e ranger
+    $TERMINAL -e $FILEMANAGER
 super + e
-    thunar
+    $GFM
 super + ctrl + p
     killall -q compton
 super + control + q
