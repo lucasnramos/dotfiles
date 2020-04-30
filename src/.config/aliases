@@ -12,6 +12,7 @@ alias tvd="teamviewer daemon"
 alias merge="xrdb merge $HOME/.Xresources"
 alias tx='tmux'
 alias fm='$FILEMANAGER'
+alias yt='youtube-dl'
 # Git
 alias g='git'
 alias gs='git status'
