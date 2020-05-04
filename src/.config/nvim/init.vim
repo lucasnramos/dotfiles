@@ -13,16 +13,16 @@ Plug 'preservim/nerdtree'
 Plug 'tpope/vim-surround'
 Plug 'neoclide/coc.nvim', { 'branch': 'release' }
 Plug 'leafgarland/typescript-vim'
-Plug 'arcticicestudio/nord-vim'
 Plug 'sheerun/vim-polyglot'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'cloudhead/neovim-fuzzy'
 Plug 'mattn/emmet-vim'
+Plug 'dracula/vim', { 'as': 'dracula' }
 call plug#end()
 
 " Initial sets
-"colorscheme nord
+colo dracula
 set nocompatible
 syntax on
 set hidden                              " Opening a new file on current buffer, hides the previous one instead of closing (keep changes)
@@ -36,10 +36,10 @@ set mouse=a                             " Enable mouse support on different mode
 set cmdheight=2                         " Number of lines allocated for the command line
 set number                              " display line number
 set relativenumber                      " Display relative line numbers 
-set notimeout ttimeout ttimeoutlen=200  " time to wait when using chord commands
+set notimeout ttimeout ttimeoutlen=0    " time to wait when using chord commands
 set pastetoggle=<F11>                   " Keybind for paste toggle
-set shiftwidth=4
-set softtabstop=4
+set shiftwidth=2
+set softtabstop=2
 set expandtab
 set clipboard+=unnamedplus
 set splitbelow splitright               " Split to right and down instead of left and up
@@ -54,7 +54,7 @@ map <leader>p "+p
 map <C-y> "*y
 map <C-p> "*p
 
-nnoremap <leader>c :e $MYVIMRC<CR>
+nnoremap <leader>c :tabnew $MYVIMRC<CR>
 nnoremap <leader>r :so $MYVIMRC<CR>
 
 " Auto close brackets in insert mode
