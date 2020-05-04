@@ -14,13 +14,16 @@ alias tx='tmux'
 alias fm='$FILEMANAGER'
 alias pk='pkill -i'
 alias pkf='pkill -f'
+alias yt='youtube-dl'
 # Git
 alias g='git'
 alias gs='git status'
 alias gr='git remote'
-alias gc='git checkout'
+alias gchk='git checkout'
+alias gpl='git pull'
+alias gps='git push'
 alias gacm='git add . ; git commit -m'
-alias gpod='git pull origin develop'
+alias gac='git add . ; git commit'
 # systemd
 alias sc="sudo systemctl"
 alias scu="systemctl --user"

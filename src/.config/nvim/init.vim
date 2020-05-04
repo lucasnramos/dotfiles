@@ -14,8 +14,6 @@ Plug 'tpope/vim-surround'
 Plug 'neoclide/coc.nvim', { 'branch': 'release' }
 Plug 'leafgarland/typescript-vim'
 Plug 'sheerun/vim-polyglot'
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'junegunn/fzf.vim'
 Plug 'cloudhead/neovim-fuzzy'
 Plug 'mattn/emmet-vim'
 Plug 'dracula/vim', { 'as': 'dracula' }
