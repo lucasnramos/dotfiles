@@ -15,14 +15,13 @@ Plug 'neoclide/coc.nvim', { 'branch': 'release' }
 Plug 'leafgarland/typescript-vim'
 Plug 'arcticicestudio/nord-vim'
 Plug 'sheerun/vim-polyglot'
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'junegunn/fzf.vim'
 Plug 'cloudhead/neovim-fuzzy'
 Plug 'mattn/emmet-vim'
+Plug 'dracula/vim'
 call plug#end()
 
 " Initial sets
-"colorscheme nord
+colo dracula
 set nocompatible
 syntax on
 set hidden                              " Opening a new file on current buffer, hides the previous one instead of closing (keep changes)

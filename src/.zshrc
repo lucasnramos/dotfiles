@@ -8,12 +8,14 @@ autoload -Uz compinit; compinit
 autoload -U colors && colors
 autoload -Uz vcs_info
 
+source $SCRIPTS/git-prompt.sh
 precmd() { vcs_info }
 
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 # PS1="%B%{$fg[red]%}[%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%M %{$fg[magenta]%}%~%{$fg[red]%}]%{$reset_color%}%b$ "
 
-PROMPT='%F{green}%n@%m %F{yellow}[%~]%f$ '
+# PROMPT='%F{green}%n@%m %F{yellow}[%~]%f$ '
+PROMPT='%F{yellow}[%~]%F{blue}$(__git_ps1 " (%s)")%f$ '
 
 # vi mode
 bindkey -v
@@ -48,7 +50,7 @@ echo -ne '\e[5 q' # Use beam shape cursor on startup.
 preexec() { echo -ne '\e[5 q' ;} # Use beam shape cursor for each new prompt.
 
 export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 source $ALIASES
