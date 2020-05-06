@@ -1,7 +1,7 @@
-# Shell Variables
+# Main variables
 export ALIASES="$HOME/.config/aliases"
-export EDITOR="nvim"
-export VISUAL="nvim"
+export EDITOR="micro"
+export VISUAL="micro"
 export TERMINAL="alacritty"
 export FILEMANAGER="nnn"
 export GFM="thunar"

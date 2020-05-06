@@ -20,7 +20,7 @@ Plug 'dracula/vim', { 'as': 'dracula' }
 call plug#end()
 
 " Initial sets
-colo dracula
+" colo dracula
 set nocompatible
 syntax on
 set hidden                              " Opening a new file on current buffer, hides the previous one instead of closing (keep changes)
