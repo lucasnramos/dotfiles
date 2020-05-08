@@ -12,7 +12,7 @@
 ! #include ".themes/xcolors/base16-materia.Xresources"
 
 ! Materia + Suckless
-#include ".themes/xcolors/base16-suckless.Xresources"
+! #include ".themes/xcolors/base16-suckless.Xresources"
 
 ! =====================
 ! [START] URXVT
@@ -57,7 +57,7 @@ URxvt.cursorBlink: true
 ! [START] xterm
 ! =====================
 ! Use a nice truetype font and size by default... 
-xterm*faceName: Ubuntu Mono
+xterm*faceName: Inconsolata Expanded
 xterm*faceSize: 12
 
 ! Every shell is a login shell by default (for inclusion of all necessary environment variables)

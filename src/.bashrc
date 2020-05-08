@@ -31,7 +31,7 @@ source $SCRIPTS/git-prompt.sh
 # PS1 without colors
 # PS1='${debian_chroot:+($debian_chroot)}\u@\h [\w] $(__git_ps1 "(%s)")\n\$ '
 
-PS1='${debian_chroot:+($debian_chroot)}\[\e[32m\]\u@\h \[\e[33m\][\w] \[\e[36m\]$(__git_ps1 "(%s)")\[\e[00m\]\n$ '
+PS1='${debian_chroot:+($debian_chroot)}\[\e[32m\]\u@\h \[\e[35m\][\w] \[\e[36m\]$(__git_ps1 "(%s)")\[\e[00m\]\n$ '
 
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
