@@ -11,16 +11,12 @@ Plug 'honza/vim-snippets'
 Plug 'vim-airline/vim-airline'
 Plug 'preservim/nerdtree'
 Plug 'tpope/vim-surround'
-Plug 'neoclide/coc.nvim', { 'branch': 'release' }
-Plug 'leafgarland/typescript-vim'
 Plug 'sheerun/vim-polyglot'
 Plug 'cloudhead/neovim-fuzzy'
 Plug 'mattn/emmet-vim'
-Plug 'dracula/vim', { 'as': 'dracula' }
 call plug#end()
 
 " Initial sets
-colo dracula
 set nocompatible
 syntax on
 set hidden                              " Opening a new file on current buffer, hides the previous one instead of closing (keep changes)
