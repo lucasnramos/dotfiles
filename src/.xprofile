@@ -1,9 +1,7 @@
 source $HOME/.profile
 
-urxvtd &
 nitrogen --restore &
 sxhkd &
-dwm-bar &
 volumeicon &
 nm-applet &
 ssh-agent &
