@@ -1,6 +1,6 @@
 # software shortcuts
 alias rbash='source ~/.bashrc'
-alias rzsh='source ~/.zshrc'
+alias rzsh='source ~/.config/zsh/.zshrc'
 alias rn='ranger'
 alias conf='$SCRIPTS/term-dotfiles'
 alias suck='$SCRIPTS/term-suckless-config'

@@ -22,39 +22,29 @@ HISTSIZE=1000
 SAVEHIST=500
 WORDCHARS=${WORDCHARS//\/[&.;]}                                 # Don't consider certain characters part of the word
 
-### Keybindings section
-#bindkey -e
-#bindkey '^[[7~' beginning-of-line                               # Home key
-#bindkey '^[[H' beginning-of-line                                # Home key
-#if [[ "${terminfo[khome]}" != "" ]]; then
-#  bindkey "${terminfo[khome]}" beginning-of-line                # [Home] - Go to beginning of line
-#fi
-#bindkey '^[[8~' end-of-line                                     # End key
-#bindkey '^[[F' end-of-line                                     # End key
-#if [[ "${terminfo[kend]}" != "" ]]; then
-#  bindkey "${terminfo[kend]}" end-of-line                       # [End] - Go to end of line
-#fi
-#bindkey '^[[2~' overwrite-mode                                  # Insert key
-#bindkey '^[[3~' delete-char                                     # Delete key
-#bindkey '^[[C'  forward-char                                    # Right key
-#bindkey '^[[D'  backward-char                                   # Left key
-#bindkey '^[[5~' history-beginning-search-backward               # Page up key
-#bindkey '^[[6~' history-beginning-search-forward                # Page down key
-#
-## Navigate words with ctrl+arrow keys
-#bindkey '^[Oc' forward-word                                     #
-#bindkey '^[Od' backward-word                                    #
-#bindkey '^[[1;5D' backward-word                                 #
-#bindkey '^[[1;5C' forward-word                                  #
-#bindkey '^H' backward-kill-word                                 # delete previous word with ctrl+backspace
-#bindkey '^[[Z' undo                                             # Shift+tab undo last action
-#
-## bind UP and DOWN arrow keys to history substring search
-#zmodload zsh/terminfo
-#bindkey "$terminfo[kcuu1]" history-substring-search-up
-#bindkey "$terminfo[kcud1]" history-substring-search-down
-#bindkey '^[[A' history-substring-search-up			
-#bindkey '^[[B' history-substring-search-down
+### vi mode settings
+bindkey -v
+export KEYTIMEOUT=1
+# Change cursor shape for different vi modes.
+function zle-keymap-select {
+  if [[ ${KEYMAP} == vicmd ]] ||
+     [[ $1 = 'block' ]]; then
+    echo -ne '\e[1 q'
+  elif [[ ${KEYMAP} == main ]] ||
+       [[ ${KEYMAP} == viins ]] ||
+       [[ ${KEYMAP} = '' ]] ||
+       [[ $1 = 'beam' ]]; then
+    echo -ne '\e[5 q'
+  fi
+}
+zle -N zle-keymap-select
+zle-line-init() {
+    zle -K viins # initiate `vi insert` as keymap (can be removed if `bindkey -V` has been set elsewhere)
+    echo -ne "\e[5 q"
+}
+zle -N zle-line-init
+echo -ne '\e[5 q' # Use beam shape cursor on startup.
+preexec() { echo -ne '\e[5 q' ;} # Use beam shape cursor for each new prompt.
 
 # Theming section  
 autoload -U compinit colors zcalc
@@ -64,10 +54,7 @@ colors
 # enable substitution for prompt
 setopt prompt_subst
 
-# Prompt (on left side) similar to default bash prompt, or redhat zsh prompt with colors
-PROMPT="%(!.%{$fg[red]%}[%n@%m %1~]%{$reset_color%}# .%{$fg[green]%}[%n@%m %1~]%{$reset_color%}$ "
-# Maia prompt
-# PROMPT="%B%{$fg[cyan]%}%(4~|%-1~/.../%2~|%~)%u%b >%{$fg[cyan]%}>%B%(?.%{$fg[cyan]%}.%{$fg[red]%})>%{$reset_color%}%b " # Print some system information when the shell is first started
+PROMPT="%B%{$fg[red]%}[%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%M %{$fg[magenta]%}%~%{$fg[red]%}]%{$reset_color%}$%b "
 
 ## Prompt on right side:
 #  - shows status of git when in git repository (code adapted from https://techanic.net/2012/12/30/my_git_prompt_for_zsh.html)
