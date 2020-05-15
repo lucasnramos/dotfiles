@@ -16,7 +16,11 @@ Plug 'sheerun/vim-polyglot'
 Plug 'cloudhead/neovim-fuzzy'
 Plug 'mattn/emmet-vim'
 Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
-Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
+"Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
+Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'morhetz/gruvbox'
+Plug 'dracula/vim'
 call plug#end()
 
 " Initial sets
@@ -40,7 +44,9 @@ set softtabstop=2
 set expandtab
 set clipboard=unnamedplus
 set splitbelow splitright               " Split to right and down instead of left and up
+set cursorline                          " Line highlight
 filetype indent plugin on
+""colo gruvbox
 
 " Custom keybidings
 :let mapleader=" "
@@ -52,11 +58,11 @@ nnoremap <leader>c :tabnew $MYVIMRC<CR>
 nnoremap <leader>r :so $MYVIMRC<CR>
 
 " Auto close brackets in insert mode
-inoremap " ""<left>
-inoremap ' ''<left>
-inoremap ( ()<left>
-inoremap [ []<left>
-inoremap { {}<left>
+" inoremap \" \""<left>
+" inoremap ' ''<left>
+" inoremap ( ()<left>
+" inoremap [ []<left>
+" inoremap { {}<left>
 inoremap {<CR> {<CR>}<ESC>O
 inoremap {;<CR> {<CR>};<ESC>O
 
@@ -74,7 +80,9 @@ noremap <silent> <C-Up> :resize +5<CR>
 noremap <silent> <C-Down> :resize -5<CR>
 
 " fzy
-nnoremap <C-p> :FuzzyOpen<CR>
+" nnoremap <C-p> :FuzzyOpen<CR>
+nnoremap <leader>fg :FuzzyGrep<CR>
+nnoremap <leader>fo :FuzzyOpen<CR>
 
 " NERDTree
 let g:NERDTreeShowHidden=1
@@ -93,3 +101,8 @@ nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
 
+" fugitive
+nnoremap <leader>g :G
+
+" Vim plug
+nnoremap <leader>pi :PlugInstall<CR>
