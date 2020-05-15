@@ -7,7 +7,7 @@ super + F2
 super + F3
     $TERMINAL -e nvim
 super + F4
-    pavucontrol
+    emacs
 super + F5
     lutris
 super + F6
