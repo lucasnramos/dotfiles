@@ -2,19 +2,6 @@
 ! [START] Colors
 ! =====================
 
-<<<<<<< HEAD
-=======
-! Solarized theme
-! #include ".themes/xcolors/base16-solarized-dark-256.Xresources"
-
-! Arc Dark Theme
-! #include ".themes/xcolors/base16-arc-dark.Xresources"
-
-! Materia
-! #include ".themes/xcolors/base16-materia.Xresources"
-
-! Materia + Suckless
-! #include ".themes/xcolors/base16-suckless.Xresources"
 
 ! =====================
 ! [START] URXVT
@@ -52,15 +39,10 @@ URxvt.scrollBar_right: false
 URxvt.scrollstyle: plain
 URxvt.cursorBlink: true
 ! =====================
-! [END] URXVT
-! =====================
-
->>>>>>> 16867aa80510a9a3bd9a8462665d5edab21efeef
-! =====================
 ! [START] xterm
 ! =====================
 ! Use a nice truetype font and size by default... 
-xterm*faceName: Inconsolata Expanded
+xterm*faceName: Inconsolata
 xterm*faceSize: 12
 
 ! Every shell is a login shell by default (for inclusion of all necessary environment variables)
@@ -95,10 +77,6 @@ xterm*ScrollBar: false
 ! stop output to terminal from jumping down to bottom of scroll again
 xterm*scrollTtyOutput: false
 
-
-! =====================
-! [END] xterm
-! =====================
 
 Xft.dpi:             96
 Xft.antialias:       true
