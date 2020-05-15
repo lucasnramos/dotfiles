@@ -167,6 +167,10 @@ case $(basename "$(cat "/proc/$PPID/comm")") in
   		ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=8'
     ;;
 esac
+
+eval `ssh-agent -s`
+
+
 #
 ## Sourcing files
 # Use syntax highlighting
