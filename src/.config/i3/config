@@ -17,15 +17,27 @@ set $ws9 "9"
 
 # Monitor
 
-workspace $ws1 output HDMI-A-0
-workspace $ws2 output HDMI-A-0
-workspace $ws3 output HDMI-A-0
-workspace $ws4 output HDMI-A-0
-workspace $ws5 output HDMI-A-0
-workspace $ws6 output DVI-D-0
-workspace $ws7 output DVI-D-0
-workspace $ws8 output DVI-D-0
-workspace $ws9 output DVI-D-0
+## Radeon driver
+workspace $ws1 output HDMI-0
+workspace $ws2 output HDMI-0
+workspace $ws3 output HDMI-0
+workspace $ws4 output HDMI-0
+workspace $ws5 output HDMI-0
+workspace $ws6 output DVI-0
+workspace $ws7 output DVI-0
+workspace $ws8 output DVI-0
+workspace $ws9 output DVI-0
+
+## AMDGPU driver
+# workspace $ws1 output HDMI-A-0
+# workspace $ws2 output HDMI-A-0
+# workspace $ws3 output HDMI-A-0
+# workspace $ws4 output HDMI-A-0
+# workspace $ws5 output HDMI-A-0
+# workspace $ws6 output DVI-D-0
+# workspace $ws7 output DVI-D-0
+# workspace $ws8 output DVI-D-0
+# workspace $ws9 output DVI-D-0
 
 # switch to workspace
 bindsym $mod+1 workspace $ws1
@@ -103,12 +115,17 @@ set_from_resource $white color15 #ffffff
 # ==========================
 # [START] Startup
 # ==========================
-exec_always --no-startup-id i3-start
+## Run only once
+exec --no-startup-id polybar-start
+exec --no-startup-id nitrogen --restore
+
+## Run everytime i3 is reloaded
+exec_always --no-startup-id pkill -i sxhkd && sxhkd &
 
 # ============================
 # [START] i3-gaps
 # ============================
-for_window [class=".*"] border pixel 3
+for_window [class=".*"] border pixel 2
 gaps inner 8
 smart_borders on
 smart_gaps on
@@ -116,9 +133,6 @@ bindsym $mod+z gaps inner current plus 5
 bindsym $mod+Shift+z gaps inner current minus 5
 bindsym $mod+x gaps inner all set 20
 bindsym $mod+Shift+x gaps inner all set 0
-# ============================
-# [END] i3-gaps
-# ============================
 
 # ==================================
 # [START] Assign apps to workspaces
@@ -181,7 +195,7 @@ for_window [class="plasmashell" window_type="notification"] floating enable, bor
 # ============================================
 
 # Font for window titles. Will also be used by the bar unless a different font is used in the bar {} block below.
-font pango:Ubuntu Mono Nerd 12, FontAwesome 12
+font pango:NotoSansNerd 12, FontAwesome 12
 
 # ====================================
 # [START] Especific shortcuts for i3
@@ -227,8 +241,9 @@ bindsym $mod+a focus parent
 
 # reload the configuration file
 # bindsym $mod+Shift+c reload
+
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
-bindsym $mod+Shift+r restart
+bindsym $mod+Control+r restart
 
 # ===============
 # [START] i3 bar

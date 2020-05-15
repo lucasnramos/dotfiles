@@ -19,6 +19,7 @@ Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'morhetz/gruvbox'
 Plug 'dracula/vim'
+Plug 'chrisbra/Colorizer'
 call plug#end()
 
 " Initial sets
@@ -44,7 +45,7 @@ set clipboard=unnamedplus
 set splitbelow splitright               " Split to right and down instead of left and up
 set cursorline                          " Line highlight
 filetype indent plugin on
-colo dracula
+" colo dracula
 
 " Custom keybidings
 :let mapleader=" "

@@ -31,3 +31,6 @@ super + control + c
 super + ctrl + p
     exec dmenu-projects
 
+# Rofi
+super + Tab
+    exec rofi -show window

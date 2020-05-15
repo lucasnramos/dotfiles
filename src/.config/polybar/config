@@ -8,7 +8,7 @@ secondary = #10ff00
 alert = #bd2c40
 
 [bar/i3]
-monitor = ${env:MONITOR:HDMI-A-0}
+monitor = ${env:MONITOR:}
 width = 100%
 height = 26
 fixed-center = true
