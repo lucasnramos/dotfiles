@@ -16,6 +16,7 @@ Plug 'sheerun/vim-polyglot'
 Plug 'cloudhead/neovim-fuzzy'
 Plug 'mattn/emmet-vim'
 Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
+Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
 call plug#end()
 
 " Initial sets
@@ -42,10 +43,11 @@ set splitbelow splitright               " Split to right and down instead of lef
 filetype indent plugin on
 
 " Custom keybidings
+:let mapleader=" "
 :nmap ç :
-:nmap ; :
+:noremap <C-m> ;
+:nnoremap ; :
 map <C-b> :NERDTreeToggle<CR>
-
 nnoremap <leader>c :tabnew $MYVIMRC<CR>
 nnoremap <leader>r :so $MYVIMRC<CR>
 
@@ -76,4 +78,18 @@ nnoremap <C-p> :FuzzyOpen<CR>
 
 " NERDTree
 let g:NERDTreeShowHidden=1
+
+"" COC Config
+" Use <c-space> to trigger completion.
+inoremap <silent><expr> <c-space> coc#refresh()
+
+" Use `[g` and `]g` to navigate diagnostics
+nmap <silent> [g <Plug>(coc-diagnostic-prev)
+nmap <silent> ]g <Plug>(coc-diagnostic-next)
+
+" GoTo code navigation.
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
 
