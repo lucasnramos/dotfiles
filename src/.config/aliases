@@ -16,6 +16,7 @@ alias pk='pkill -i'
 alias pkf='pkill -f'
 alias yt='youtube-dl'
 alias unixfy='find . -type f -print0 | xargs -0 dos2unix'
+alias stcomp='rm -f config.h && sudo make install'
 # Git
 alias g='git'
 alias gs='git status'

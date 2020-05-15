@@ -1,0 +1,7 @@
+[user]
+	name = REAL_NAME
+	email = EMAIL_ADDRESS
+[credential]
+        helper = store
+[core]
+	autocrlf = input

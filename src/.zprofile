@@ -4,7 +4,7 @@
 export ALIASES="$HOME/.config/aliases"
 export EDITOR="nvim"
 export VISUAL="nvim"
-export TERMINAL="alacritty"
+export TERMINAL="st"
 export FILEMANAGER="nnn"
 export GFM="nautilus"
 export BROWSER="firefox"

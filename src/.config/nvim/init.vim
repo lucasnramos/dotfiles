@@ -16,8 +16,6 @@ Plug 'sheerun/vim-polyglot'
 Plug 'cloudhead/neovim-fuzzy'
 Plug 'mattn/emmet-vim'
 Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
-"Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
-Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'morhetz/gruvbox'
 Plug 'dracula/vim'
@@ -46,7 +44,7 @@ set clipboard=unnamedplus
 set splitbelow splitright               " Split to right and down instead of left and up
 set cursorline                          " Line highlight
 filetype indent plugin on
-""colo gruvbox
+colo dracula
 
 " Custom keybidings
 :let mapleader=" "
