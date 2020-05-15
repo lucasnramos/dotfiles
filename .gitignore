@@ -1,5 +1,6 @@
 .uuid
 xmonad-x86_64-linux
 xmonad.o
+xmonad.hi
 plugged/
 .gitconfig
