@@ -43,5 +43,7 @@ fi
 
 sxhkd &
 nitrogen --restore &
-exec ssh-agent awesome
+while :; do
+	ssh-agent dwm
+done
 
