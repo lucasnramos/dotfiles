@@ -4,6 +4,8 @@ alias rzsh='source ~/.config/zsh/.zshrc'
 alias rn='ranger'
 alias conf='$SCRIPTS/term-dotfiles'
 alias suck='$SCRIPTS/term-suckless-config'
+alias cdst='cd $HOME/.local/suckless/dwm'
+alias cddwm='cd $HOME/.local/suckless/dwm'
 alias sc='sudo systemctl'
 alias arch-grub='sudo grub-mkconfig -o /boot/grub/grub.cfg'
 alias G="| grep -i"
@@ -66,3 +68,6 @@ alias vprofile='vim ~/.profile'
 alias vsuck='vim ~/.local/suckless'
 # cd to projects folder
 alias proj='cd ~/Projects'
+# FZY
+alias vf='vim $(find -type f -not -path "*/\.git/*" | fzy)'
+alias cdf='cd $(find -type d -not -path "*/\.git/*" | fzy)'
