@@ -54,8 +54,8 @@ colors
 # enable substitution for prompt
 setopt prompt_subst
 
-# PROMPT="%B%{$fg[red]%}[%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%M %{$fg[magenta]%}%~%{$fg[red]%}]%{$reset_color%}$%b "
-PROMPT="%B%{$fg[green]%}%n@%M %{$fg[blue]%}%~%{$reset_color%}$%b "
+# PROMPT="%B%{$fg[green]%}%n@%M %{$fg[blue]%}%~%{$reset_color%}$%b "
+PROMPT="%B%{$fg[green]%}[%{$fg[yellow]%}%~%{$fg[green]%}]%{$reset_color%}$%b "
 
 ## Prompt on right side:
 #  - shows status of git when in git repository (code adapted from https://techanic.net/2012/12/30/my_git_prompt_for_zsh.html)
@@ -162,8 +162,6 @@ case $(basename "$(cat "/proc/$PPID/comm")") in
 #     ;;
   *)
         RPROMPT='$(git_prompt_string)'
-		# Use autosuggestion
-		source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 		ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE=20
   		ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=8'
     ;;
@@ -175,9 +173,12 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-## Sourcing files
-# Use syntax highlighting
-source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-# Use history substring search
-# source /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
+## Sourcing plugins
+ZSHPLUGINDIR=/usr/share/zsh/plugins
+if [ -n $ZSHPLUGINDIR ]; then
+  ZSHPLUGINDIR=/usr/share
+fi
+
+source $ZSHPLUGINDIR/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source $ZSHPLUGINDIR/zsh-autosuggestions/zsh-autosuggestions.zsh || source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 source $ALIASES

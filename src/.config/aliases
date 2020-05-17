@@ -8,8 +8,8 @@ alias cdst='cd $HOME/.local/suckless/dwm'
 alias cddwm='cd $HOME/.local/suckless/dwm'
 alias sc='sudo systemctl'
 alias arch-grub='sudo grub-mkconfig -o /boot/grub/grub.cfg'
-alias G="| grep -i"
-alias L="| less"
+alias G=" | grep -i"
+alias L=" | less"
 alias tvd="teamviewer daemon"
 alias merge="xrdb merge $HOME/.Xresources"
 alias tx='tmux'
@@ -18,7 +18,7 @@ alias pk='pkill -i'
 alias pkf='pkill -f'
 alias yt='youtube-dl'
 alias unixfy='find . -type f -print0 | xargs -0 dos2unix'
-alias stcomp='rm -f config.h && sudo make install'
+alias scomp='rm -f config.h && sudo make install'
 # Git
 alias g='git'
 alias gs='git status'
@@ -69,5 +69,5 @@ alias vsuck='vim ~/.local/suckless'
 # cd to projects folder
 alias proj='cd ~/Projects'
 # FZY
-alias vf='vim $(find -type f -not -path "*/\.git/*" | fzy)'
-alias cdf='cd $(find -type d -not -path "*/\.git/*" | fzy)'
+alias vf='vim $(find $HOME -type f -not -path "*/\.git/*" -not -path "*/node_modules/*" | fzy)'
+alias cdf='cd $(find $HOME -type d -not -path "*/\.git/*" -not -path "*/node_modules/*" | fzy)'
