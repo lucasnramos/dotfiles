@@ -45,7 +45,7 @@ set clipboard=unnamedplus
 set splitbelow splitright               " Split to right and down instead of left and up
 set cursorline                          " Line highlight
 filetype indent plugin on
-" colo dracula
+colo dracula
 
 " Custom keybidings
 :let mapleader=" "

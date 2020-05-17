@@ -55,7 +55,7 @@ colors
 setopt prompt_subst
 
 # PROMPT="%B%{$fg[red]%}[%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%M %{$fg[magenta]%}%~%{$fg[red]%}]%{$reset_color%}$%b "
-PROMPT="%B%{$fg[green]%}%n@%M %{$fg[magenta]%}%~%{$reset_color%}$%b "
+PROMPT="%B%{$fg[green]%}%n@%M %{$fg[blue]%}%~%{$reset_color%}$%b "
 
 ## Prompt on right side:
 #  - shows status of git when in git repository (code adapted from https://techanic.net/2012/12/30/my_git_prompt_for_zsh.html)

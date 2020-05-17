@@ -3,31 +3,33 @@
 ! =====================
 
 ! Arc darkish pallete
-#define BLACK1 #353945
-#define BLACK2 #7c818c
-#define RED1 #fc4138
-#define RED2 #f04a50
-#define GREEN1 #73d216
-#define GREEN2 #73d216
-#define YELLOW1 #ffe817
-#define YELLOW2 #ffe817
-#define BLUE1 #5294e2
-#define BLUE2 #4dadd4
-#define MAGENTA1 #c61c6f
-#define MAGENTA2 #5956ba
-#define CYAN1 #259286
-#define CYAN2 #819090
-#define WHITE1 #f5f6f7
-#define WHITE2 #ffffff
+#define BLACK1          #353945
+#define BLACK2          #7c818c
+#define RED1            #fc4138
+#define RED2            #f04a50
+#define GREEN1          #73d216
+#define GREEN2          #73d216
+#define YELLOW1         #ffe817
+#define YELLOW2         #ffe817
+#define BLUE1           #5294e2
+#define BLUE2           #4dadd4
+#define MAGENTA1        #c61c6f
+#define MAGENTA2        #5956ba
+#define CYAN1           #259286
+#define CYAN2           #819090
+#define WHITE1          #f5f6f7
+#define WHITE2          #ffffff
 
-#define FOREGROUND			WHITE2
-#define BACKGROUND			BLACK1
-#define SELFOREGROUND		WHITE2
-#define SELBACKGROUND		BLUE1
-
+#define FOREGROUND	WHITE2
+#define BACKGROUND	BLACK1
+#define SELFOREGROUND	WHITE1
+#define SELBACKGROUND	BLUE1
+#define CURSORCOLOR     WHITE2
 
 *.foreground: FOREGROUND
 *.background: BACKGROUND
+
+*.cursorColor: CURSORCOLOR
 
 ! Black
 *.color0:      BLACK1
@@ -61,11 +63,16 @@
 *.color7:      WHITE1
 *.color15:     WHITE2
 
-#define NORMBGCOLOR					BACKGROUND
-#define NORMFGCOLOR					FOREGROUND
-#define SELBGCOLOR					SELBACKGROUND
-#define SELFGCOLOR					SELFGCOLOR
-#define NORMBORDERCOLOR			BACKGROUND
+! Some other colors for st term
+*.color256:      BACKGROUND
+*.color257:      FOREGROUND
+*.color258:      CURSORCOLOR
+
+#define NORMBGCOLOR		BACKGROUND
+#define NORMFGCOLOR	        FOREGROUND
+#define SELBGCOLOR	        SELBACKGROUND
+#define SELFGCOLOR		SELFOREGROUND
+#define NORMBORDERCOLOR		BACKGROUND
 #define SELBORDERCOLOR    	SELBACKGROUND
 
 
@@ -87,18 +94,18 @@ rofi.theme:            solarized
 ! =====================
 ! [START] Suckless
 ! =====================
-dwm.normbordercolor:		NORMBORDERCOLOR
-dwm.normbgcolor:				NORMBGCOLOR
-dwm.normfgcolor:				NORMFGCOLOR
-dwm.selbordercolor:  		SELBORDERCOLOR
-dwm.selbgcolor:					SELBGCOLOR
-dwm.selfgcolor:					SELFGCOLOR
+dwm.normbordercolor:	NORMBORDERCOLOR
+dwm.normbgcolor:	NORMBGCOLOR
+dwm.normfgcolor:	NORMFGCOLOR
+dwm.selbordercolor:  	SELBORDERCOLOR
+dwm.selbgcolor:		SELBGCOLOR
+dwm.selfgcolor:		SELFGCOLOR
 
 !dmenu.font:
-!dmenu.background:
-!dmenu.foreground:
-!dmenu.selbackground:
-!dmenu.selforeground:
+dmenu.background:       NORMBGCOLOR
+dmenu.foreground:       NORMFGCOLOR
+dmenu.selbackground:    SELBGCOLOR
+dmenu.selforeground:    SELFGCOLOR
 
 ! =====================
 ! [START] MISC

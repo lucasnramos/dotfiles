@@ -1,0 +1,13 @@
+#!/bin/sh
+
+
+OPTS="
+dotfiles
+dmenu
+st
+dwm
+ssh"
+
+CONFIGTYPE=$(echo -e "$OPTS" | dmenu -i -p "Choose a config type:")
+
+echo $CONFIGTYPE

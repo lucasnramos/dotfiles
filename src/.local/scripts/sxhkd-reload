@@ -1,4 +1,4 @@
 #!/bin/sh
 
-pkill sxhkd &
+pkill -i sxhkd &
 sxhkd &
