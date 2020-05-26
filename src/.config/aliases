@@ -2,11 +2,8 @@
 alias rbash='source ~/.bashrc'
 alias rzsh='source ~/.config/zsh/.zshrc'
 alias rn='ranger'
-alias conf='$SCRIPTS/term-dotfiles'
-alias suck='$SCRIPTS/term-suckless-config'
-alias cdst='cd $HOME/.local/suckless/dwm'
-alias cddwm='cd $HOME/.local/suckless/dwm'
-alias sc='sudo systemctl'
+alias cnf='$SCRIPTS/term-dotfiles'
+alias sck='$SCRIPTS/term-suckless-config'
 alias arch-grub='sudo grub-mkconfig -o /boot/grub/grub.cfg'
 alias G=" | grep -i"
 alias L=" | less"
@@ -33,11 +30,10 @@ alias sc="sudo systemctl"
 alias scu="systemctl --user"
 # APT & apt-get
 alias sa='sudo apt'
-alias sag='sudo apt-get'
 alias sup='sudo apt update'
 alias supp='sudo apt update && sudo apt upgrade'
-alias ag='apt-get'
 alias sag='sudo apt-get'
+alias ag='apt-get'
 alias ags='apt-cache search'
 alias agi='sudo apt-get install'
 alias agr='sudo apt-get remove --purge'
@@ -56,18 +52,13 @@ alias ll='ls -lsA'
 alias la='ls -A'
 alias l='ls -CF'
 alias gdot='cd $HOME/dotfiles'
-alias conf='$SCRIPTS/term-dotfiles'
 alias gdoc='cd $HOME/Documents'
 alias gscr='cd $SCRIPTS'
 alias gh='cd $HOME'
+alias gproj='cd ~/Projects'
 # vim & neovim
 alias v='vim'
 alias vim='nvim'
 alias valias='vim $ALIASES'
 alias vprofile='vim ~/.profile'
 alias vsuck='vim ~/.local/suckless'
-# cd to projects folder
-alias proj='cd ~/Projects'
-# FZY
-alias vf='vim $(find $HOME -type f -not -path "*/\.git/*" -not -path "*/node_modules/*" | fzy)'
-alias cdf='cd $(find $HOME -type d -not -path "*/\.git/*" -not -path "*/node_modules/*" | fzy)'
