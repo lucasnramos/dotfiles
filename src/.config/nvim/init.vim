@@ -44,6 +44,7 @@ set expandtab
 set clipboard=unnamedplus
 set splitbelow splitright               " Split to right and down instead of left and up
 set cursorline                          " Line highlight
+set nohlsearch                          " Disables search highlight
 filetype indent plugin on
 colo dracula
 
@@ -84,6 +85,7 @@ nnoremap <leader>fo :FuzzyOpen<CR>
 
 " NERDTree
 let g:NERDTreeShowHidden=1
+noremap <C-b> :NERDTreeToggle<CR>
 
 "" COC Config
 " Use <c-space> to trigger completion.

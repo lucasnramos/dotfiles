@@ -54,7 +54,7 @@ alias l='ls -CF'
 alias gdot='cd $HOME/dotfiles'
 alias gdoc='cd $HOME/Documents'
 alias gscr='cd $SCRIPTS'
-alias gh='cd $HOME'
+alias gwh='cd /mnt/c/Users/Lucas'
 alias gproj='cd ~/Projects'
 # vim & neovim
 alias v='vim'
