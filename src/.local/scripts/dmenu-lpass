@@ -1,0 +1,4 @@
+#!/bin/bash
+
+
+  lpass ls --format "%/as%ag - %an (%au) [%ai]" 2>&1 | dmenu -i
