@@ -90,10 +90,7 @@ nnoremap <leader>fo :FuzzyOpen<CR>
 " NERDTree
 let g:NERDTreeShowHidden=1
 noremap <C-b> :NERDTreeToggle<CR>
-<<<<<<< HEAD
-=======
 nnoremap <leader>nr :NERDTreeRefreshRoot<CR>
->>>>>>> c202b02777cc10db7e7361349f24dea8bf865875
 
 "" COC Config
 " Use <c-space> to trigger completion.
