@@ -1,38 +1,26 @@
 super + Escape
-    pkill -USR1 -x sxhkd
+  pkill -USR1 -x sxhkd
 super + Return
-    $TERMINAL
-super + F1
-    $BROWSER
-super + F2
-    code
-super + F3
-    $TERMINAL -e nvim
-super + F4
-    emacs
-super + F5
-    lutris
-super + F6
-    steam
-super + F7
-    retroarch
-super + shift + e
-    $TERMINAL -e $FILEMANAGER
-super + e
-    $GFM
+  $TERMINAL
+super + {_, shift} + F1
+  { google-chrome-stable,firefox }
+super + {_, shift} + e
+  { thunar, $TERMINAL -e ranger }
 super + ctrl + p
-    killall -q compton
+  killall -q compton
 super + control + q
-    dmenu-exit
-    
+  dmenu-exit
+  
 # dmenu
 super + c
-    exec dmenu-dotfiles
+  exec dmenu-dotfiles
 super + control + c
-    exec dmenu-suckless-config
+  exec dmenu-suckless-config
 super + ctrl + p
-    exec dmenu-projects
+  exec dmenu-projects
 
 # Rofi
 super + Tab
-    exec rofi -show window
+  exec rofi -show window
+super + shift + p
+  rofi -modi lpass:rofi-lpass -show lpass

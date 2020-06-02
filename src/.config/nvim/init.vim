@@ -17,36 +17,40 @@ Plug 'cloudhead/neovim-fuzzy'
 Plug 'mattn/emmet-vim'
 Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'morhetz/gruvbox'
 Plug 'dracula/vim'
-Plug 'chrisbra/Colorizer'
 call plug#end()
 
 " Initial sets
 set nocompatible
 syntax on
-set hidden                              " Opening a new file on current buffer, hides the previous one instead of closing (keep changes)
-set wildmenu                            " Improved completion on command line mode
-set smartcase                           " case insensitive search, unless Case is used
-set autoindent                          " indent when creating new lines
-set ruler                               " Show cursor position (line and number)
-set confirm                             " confirm closing files / buffers with unsaved changes
-set visualbell                          " visual feedback instead of beep sound
-set mouse=a                             " Enable mouse support on different modes, 'a' for all modes
-set cmdheight=2                         " Number of lines allocated for the command line
-set number                              " display line number
-set relativenumber                      " Display relative line numbers 
-set notimeout ttimeout ttimeoutlen=0    " time to wait when using chord commands
-set pastetoggle=<F11>                   " Keybind for paste toggle
-set shiftwidth=2
-set softtabstop=2
-set expandtab
-set clipboard=unnamedplus
-set splitbelow splitright               " Split to right and down instead of left and up
-set cursorline                          " Line highlight
-set nohlsearch                          " Disables search highlight
+set noerrorbells
+set hidden                           " Opening a new file on current buffer, hides the previous one instead of closing (keep changes)
+set wildmenu                         " Improved completion on command line mode
+set smartcase                        " case insensitive search, unless Case is used
+set ignorecase
+set autoindent                       " indent when creating new lines
+set ruler                            " Show cursor position (line and number)
+set confirm                          " confirm closing files / buffers with unsaved changes
+set visualbell                       " visual feedback instead of beep sound
+set mouse=a                          " Enable mouse support on different modes, 'a' for all modes
+set cmdheight=2                      " Number of lines allocated for the command line
+set number                           " display line number
+set relativenumber                   " Display relative line numbers 
+set notimeout ttimeout ttimeoutlen=0 " time to wait when using chord commands
+set pastetoggle=<F11>                " Keybind for paste toggle
+set shiftwidth=2                     " Jump two spaces when shift + >
+set softtabstop=2                    " Tabs - 2 width
+set expandtab                        " tabs to spaces
+set clipboard+=unnamedplus           " Neovim only - use system clipboard (depends on xclip or xsel)
+set splitbelow splitright            " Split to right and down instead of left and up
+set cursorline                       " Line highlight
+set cursorcolumn                     " Column highlight
+set noswapfile
 filetype indent plugin on
 colo dracula
+
+" Autocmds
+autocmd InsertEnter * norm zz
 
 " Custom keybidings
 :let mapleader=" "
@@ -57,11 +61,11 @@ nnoremap <leader>c :tabnew $MYVIMRC<CR>
 nnoremap <leader>r :so $MYVIMRC<CR>
 
 " Auto close brackets in insert mode
-" inoremap \" \""<left>
-" inoremap ' ''<left>
-" inoremap ( ()<left>
-" inoremap [ []<left>
-" inoremap { {}<left>
+inoremap \"" \""<left>
+inoremap '' ''<left>
+inoremap (( ()<left>
+inoremap [[ []<left>
+inoremap {{ {}<left>
 inoremap {<CR> {<CR>}<ESC>O
 inoremap {;<CR> {<CR>};<ESC>O
 
@@ -86,6 +90,10 @@ nnoremap <leader>fo :FuzzyOpen<CR>
 " NERDTree
 let g:NERDTreeShowHidden=1
 noremap <C-b> :NERDTreeToggle<CR>
+<<<<<<< HEAD
+=======
+nnoremap <leader>nr :NERDTreeRefreshRoot<CR>
+>>>>>>> c202b02777cc10db7e7361349f24dea8bf865875
 
 "" COC Config
 " Use <c-space> to trigger completion.

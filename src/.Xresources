@@ -72,7 +72,7 @@
 #define NORMFGCOLOR	        FOREGROUND
 #define SELBGCOLOR	        SELBACKGROUND
 #define SELFGCOLOR		SELFOREGROUND
-#define NORMBORDERCOLOR		BACKGROUND
+#define NORMBORDERCOLOR		BLACK2
 #define SELBORDERCOLOR    	SELBACKGROUND
 
 
@@ -87,9 +87,9 @@ rofi.ssh-command:      {terminal} -e "{ssh-client} {host}"
 rofi.opacity:          100
 rofi.width:            50
 rofi.lines:            8
-# rofi.columns:          1
-# rofi.font:             Inconsolata 14
-rofi.theme:            solarized
+rofi.columns:          1
+rofi.font:             Ubuntu 14
+rofi.theme:            Arc-Dark
 
 ! =====================
 ! [START] Suckless

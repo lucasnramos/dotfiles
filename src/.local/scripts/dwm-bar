@@ -26,6 +26,6 @@ get_disk_usage()
 
 while true
 do
-	xsetroot -name "$(get_disk_usage) | $(get_cpu) | $(get_mem) | $(get_date)"
+	xsetroot -name "$(get_disk_usage)| $(get_cpu) | $(get_mem) | $(get_date)"
 	sleep 1
 done

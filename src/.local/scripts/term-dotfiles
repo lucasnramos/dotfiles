@@ -1,13 +1,12 @@
 #!/bin/sh
 
 # find all files in dotfiles directory, but exclude .git
-script=$(echo -e "$(find $HOME/dotfiles -type f -not -path '*/\.git/*')" | fzy )
+FILE=$(find ~/dotfiles ~/.local/suckless -type f -not -path '*/\.git/*' | fzy -p "Choose a file: ")
 
 # -n STRING => STRING lenght is > 0
-#if [ -z $script ]
-if [ ! -z $script ]
+if [ -n $FILE ]
 then
-    exec $EDITOR $script
+    exec $EDITOR $FILE
     exit 0
 else
     exit 1
