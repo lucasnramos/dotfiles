@@ -18,6 +18,7 @@ Plug 'mattn/emmet-vim'
 Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'dracula/vim'
+Plug 'tomasiser/vim-code-dark'
 call plug#end()
 
 " Initial sets
@@ -46,8 +47,10 @@ set splitbelow splitright            " Split to right and down instead of left a
 set cursorline                       " Line highlight
 set cursorcolumn                     " Column highlight
 set noswapfile
+set termguicolors
+
 filetype indent plugin on
-colo dracula
+colo codedark
 
 " Autocmds
 autocmd InsertEnter * norm zz
