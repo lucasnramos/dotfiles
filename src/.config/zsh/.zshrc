@@ -179,6 +179,6 @@ if [ -n $ZSHPLUGINDIR ]; then
   ZSHPLUGINDIR=/usr/share
 fi
 
-source $ZSHPLUGINDIR/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+# source $ZSHPLUGINDIR/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source $ZSHPLUGINDIR/zsh-autosuggestions/zsh-autosuggestions.zsh || source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 source $ALIASES
