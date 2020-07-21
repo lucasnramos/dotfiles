@@ -2,23 +2,41 @@
 ! [START] Colors
 ! =====================
 
+! Gruvbox
+#define BLACK1          #282828
+#define BLACK2          #928374
+#define RED1            #cc241d
+#define RED2            #fb4934
+#define GREEN1          #98971a
+#define GREEN2          #b8bb26
+#define YELLOW1         #d79921
+#define YELLOW2         #fabd2f
+#define BLUE1           #458588
+#define BLUE2           #83a598
+#define MAGENTA1        #b16286
+#define MAGENTA2        #d3869b
+#define CYAN1           #689d6a
+#define CYAN2           #8ec07c
+#define WHITE1          #a89984
+#define WHITE2          #ebdbb2
+
 ! Arc darkish pallete
-#define BLACK1          #353945
-#define BLACK2          #7c818c
-#define RED1            #fc4138
-#define RED2            #f04a50
-#define GREEN1          #73d216
-#define GREEN2          #73d216
-#define YELLOW1         #ffe817
-#define YELLOW2         #ffe817
-#define BLUE1           #5294e2
-#define BLUE2           #4dadd4
-#define MAGENTA1        #c61c6f
-#define MAGENTA2        #5956ba
-#define CYAN1           #259286
-#define CYAN2           #819090
-#define WHITE1          #f5f6f7
-#define WHITE2          #ffffff
+! #define BLACK1          #353945
+! #define BLACK2          #7c818c
+! #define RED1            #fc4138
+! #define RED2            #f04a50
+! #define GREEN1          #73d216
+! #define GREEN2          #73d216
+! #define YELLOW1         #ffe817
+! #define YELLOW2         #ffe817
+! #define BLUE1           #5294e2
+! #define BLUE2           #4dadd4
+! #define MAGENTA1        #c61c6f
+! #define MAGENTA2        #5956ba
+! #define CYAN1           #259286
+! #define CYAN2           #819090
+! #define WHITE1          #f5f6f7
+! #define WHITE2          #ffffff
 
 #define FOREGROUND	WHITE2
 #define BACKGROUND	BLACK1
@@ -90,6 +108,7 @@ rofi.lines:            8
 rofi.columns:          1
 rofi.font:             Ubuntu 14
 rofi.theme:            Arc-Dark
+rofi.show-icons:       true
 
 ! =====================
 ! [START] Suckless
@@ -106,6 +125,47 @@ dmenu.background:       NORMBGCOLOR
 dmenu.foreground:       NORMFGCOLOR
 dmenu.selbackground:    SELBGCOLOR
 dmenu.selforeground:    SELFGCOLOR
+
+
+! =====================
+! [START] URXVT
+! =====================
+URxvt.perl-ext-common: default,matcher,font-size,keyboard-select
+URxvt.keysym.M-Escape: perl:keyboard-select:activate
+URxvt.foreground: FOREGROUND
+URxvt.background: BACKGROUND
+URxvt.depth: 32
+URxvt.geometry: 90x30
+URxvt.loginShell: true
+URxvt.internalBorder: 3
+URxvt.lineSpace: 0
+URxvt.shading: 15
+URxvt.saveLines: 12000
+
+! Keyboard for font resize
+URxvt.keysym.C-k:      font-size:increase
+URxvt.keysym.C-j:      font-size:decrease
+URxvt.keysym.C-S-k:    font-size:incglobal
+URxvt.keysym.C-S-j:    font-size:decglobal
+URxvt.keysym.C-equal:  font-size:reset
+URxvt.keysym.C-slash:  font-size:show
+URxvt.keyboard-select.clipboard: true
+ 
+! font testing
+URxvt.font:             xft:Source Code Pro:pixelsize=16:antialias=true,hinting=true
+URxvt.boldFont:         xft:Source Code Pro:pixelsize=16:antialias=true,hinting=true
+URxvt.italicFont:       xft:Source Code Pro:pixelsize=16:antialias=true,hinting=true
+URxvt.bolditalicFont:   xft:Source Code Pro:pixelsize=16:antialias=true,hinting=true
+
+URxvt.letterSpace: -1
+URxvt.scrollBar: false
+URxvt.scrollBar_right: false
+URxvt.scrollstyle: plain
+URxvt.cursorBlink: true
+! =====================
+! [END] URXVT
+! =====================
+
 
 ! =====================
 ! [START] MISC

@@ -1,12 +1,17 @@
 #!/bin/sh
 
+git_dot() {
+  /usr/bin/git --git-dir=$HOME/.dot/ --work-tree=$HOME ls-tree --name-only -r HEAD 
+}
 # find all files in dotfiles directory, but exclude .git
-FILE=$(find ~/dotfiles ~/.local/suckless -type f -not -path '*/\.git/*' | fzy -p "Choose a file: ")
+
+FILE=$( git_dot | fzf)
 
 # -n STRING => STRING lenght is > 0
-if [ -n $FILE ]
+if [ -n "$FILE" ]
 then
-    exec $EDITOR $FILE
+  echo ~/"$FILE"
+    # exec "$EDITOR" ~/"$FILE"
     exit 0
 else
     exit 1

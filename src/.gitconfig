@@ -1,8 +1,8 @@
 [user]
-	name = REAL_NAME
-	email = EMAIL_ADDRESS
+	name = Lucas Ramos
+	email = lucas.ramos@gft.com
 [credential]
-        helper = store
+	helper = store
 [core]
 	autocrlf = input
 [http]

@@ -42,8 +42,6 @@ if [ -d /etc/X11/xinit/xinitrc.d ] ; then
 fi
 
 sxhkd &
-nitrogen --restore &
-while :; do
-	ssh-agent dwm
-done
-
+# nitrogen --restore &
+exec i3
+xset r rate 660 25

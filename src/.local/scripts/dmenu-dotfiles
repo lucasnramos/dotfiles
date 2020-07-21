@@ -1,7 +1,12 @@
 #!/bin/sh
 
 # find all files in dotfiles directory, but exclude .git
-FILE=$(find "$HOME"/dotfiles "$HOME"/.local/suckless -type f -not -path '*/\.git/*'| dmenu -i -l 10 -p "Edit dotfiles")
+
+git_dot() {
+  git --git-dir=$HOME/.dot/ --work-tree=$HOME ls-tree --name-only -r HEAD
+}
+
+FILE=$( git_dot | dmenu -i -p "Edit dotfiles")
 
 # -n STRING => STRING lenght is > 0
 if [ -n "$FILE" ]
