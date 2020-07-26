@@ -56,7 +56,7 @@ if [ -n "$force_color_prompt" ]; then
     fi
 fi
 
-source ~/bin/git-prompt.sh
+source ~/.local/scripts/git-prompt.sh
 if [ "$color_prompt" = yes ]; then
     PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\] \[\033[01;34m\][\w]\[\033[00m\] $(__git_ps1 "(%s)")\n\$ '
 else
@@ -139,3 +139,9 @@ bind 'TAB:menu-complete'
 # /usr/bin/keychain --nogui $HOME/.ssh/id_rsa
 # source $HOME/.keychain/$HOSTNAME-sh
 
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/home/tuxer/.local/google-cloud-sdk/path.bash.inc' ]; then . '/home/tuxer/.local/google-cloud-sdk/path.bash.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/home/tuxer/.local/google-cloud-sdk/completion.bash.inc' ]; then . '/home/tuxer/.local/google-cloud-sdk/completion.bash.inc'; fi

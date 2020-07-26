@@ -16,6 +16,7 @@ alias pkf='pkill -f'
 alias yt='youtube-dl'
 alias unixfy='find . -type f -print0 | xargs -0 dos2unix'
 alias scomp='rm -f config.h && sudo make install'
+alias ct='contentful'
 # Git
 alias g='git'
 alias gs='git status'
@@ -60,3 +61,4 @@ alias vim='nvim'
 # Fuzzys
 alias fcd='cd $(fnd . d | fzy)'
 alias fvi='vim $(fnd . f | fzy)'
+
