@@ -1,17 +1,11 @@
 #!/bin/sh
 
-git_dot() {
-  /usr/bin/git --git-dir=$HOME/.dot/ --work-tree=$HOME ls-tree --name-only -r HEAD 
-}
-# find all files in dotfiles directory, but exclude .git
-
-FILE=$( git_dot | fzf)
+FILE=$( find ~/dotfiles/src -type f | fzf )
 
 # -n STRING => STRING lenght is > 0
 if [ -n "$FILE" ]
 then
-  echo ~/"$FILE"
-    # exec "$EDITOR" ~/"$FILE"
+    exec "$EDITOR" "$FILE"
     exit 0
 else
     exit 1

@@ -2,11 +2,7 @@
 
 # find all files in dotfiles directory, but exclude .git
 
-git_dot() {
-  git --git-dir=$HOME/.dot/ --work-tree=$HOME ls-tree --name-only -r HEAD
-}
-
-FILE=$( git_dot | dmenu -i -p "Edit dotfiles")
+FILE=$( find ~/dotfiles/src -type f | dmenu -i -l 20 -p "Edit dotfiles")
 
 # -n STRING => STRING lenght is > 0
 if [ -n "$FILE" ]
