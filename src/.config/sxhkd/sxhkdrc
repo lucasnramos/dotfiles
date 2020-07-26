@@ -1,11 +1,11 @@
 super + Escape
   pkill -USR1 -x sxhkd
 super + Return
-  $TERMINAL
+  st
 super + {_, shift} + F1
   { google-chrome-stable,firefox }
 super + {_, shift} + e
-  { thunar, $TERMINAL -e ranger }
+  { nautilus, $TERMINAL -e ranger }
 super + ctrl + p
   killall -q compton
 super + control + q

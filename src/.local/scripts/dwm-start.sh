@@ -1,6 +1,6 @@
 #!/bin/bash
 
-screens.sh &
+~/.screenlayout/screens.sh &
 nitrogen --restore
 sxhkd &
 dwm-bar &
