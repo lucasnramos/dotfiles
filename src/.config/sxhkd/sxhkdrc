@@ -5,7 +5,7 @@ super + Return
 super + {_, shift} + F1
   { google-chrome-stable,firefox }
 super + {_, shift} + e
-  { nautilus, $TERMINAL -e ranger }
+  { spacefm, $TERMINAL -e ranger }
 super + ctrl + p
   killall -q compton
 super + control + q
