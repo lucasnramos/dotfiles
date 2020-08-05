@@ -8,7 +8,7 @@ export TERM="xterm-256color"
 export SCRIPTS="$HOME/.local/scripts"
 
 # Android SDK and Studio
-export ANDROID_BASE="$HOME/bin/android"
+export ANDROID_BASE="$HOME/.local/android"
 export ANDROID_HOME="$ANDROID_BASE/sdk"
 export ANDROID_SDK_ROOT=$ANDROID_HOME
 export ANDROID_STUDIO="$ANDROID_BASE/studio/bin"
