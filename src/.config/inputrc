@@ -1,9 +1,0 @@
-$include /etc/inputrc
-# autocomplete case insensitive
-set completion-ignore-case On
-# show the vi mode in bash prompt
-set show-mode-in-prompt On
-
-# No timeout for the escape key
-set keyseq-timeout 10
-

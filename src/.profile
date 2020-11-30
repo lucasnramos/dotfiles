@@ -6,6 +6,7 @@ export VISUAL="nvim"
 export TERMINAL="st"
 export TERM="xterm-256color"
 export SCRIPTS="$HOME/.local/scripts"
+export ZDOTDIR="${XDG_CONFIG_HOME:-$HOME/.config}/zsh"
 
 # Android SDK and Studio
 export ANDROID_BASE="$HOME/.local/android"
@@ -14,7 +15,7 @@ export ANDROID_SDK_ROOT=$ANDROID_HOME
 export ANDROID_STUDIO="$ANDROID_BASE/studio/bin"
 export JAVA_HOME="/usr/lib/jvm/java-8-openjdk/"
 
-# ~/ Clean-up:
+# XDG directories
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_DATA_HOME="$HOME/.local/share"
 export XDG_CACHE_HOME="$HOME/.cache"
