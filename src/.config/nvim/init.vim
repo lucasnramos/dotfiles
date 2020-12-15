@@ -9,6 +9,7 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'sheerun/vim-polyglot'
 Plug 'preservim/nerdtree' 
 Plug 'Yggdroot/indentLine'
+Plug 'wakatime/vim-wakatime'
 " Themes
 Plug 'dracula/vim'
 Plug 'gruvbox-community/gruvbox'
@@ -240,7 +241,7 @@ nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list.
 nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
 " fugitive
-nnoremap <leader>g :G
+nnoremap <leader>git :G
 
 " Vim plug
 nnoremap <leader>pi :PlugInstall<CR>

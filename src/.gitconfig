@@ -7,3 +7,4 @@
 	autocrlf = input
 [http]
 	cookiefile = /home/lucas/.gitcookies
+	sslVerify = false

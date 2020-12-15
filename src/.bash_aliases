@@ -17,6 +17,7 @@ alias yt='youtube-dl'
 alias unixfy='find . -type f -print0 | xargs -0 dos2unix'
 alias scomp='rm -f config.h && sudo make install'
 alias ct='contentful'
+alias curl='curl -k'
 # Git
 alias g='git'
 alias gs='git status'
