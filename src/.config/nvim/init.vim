@@ -16,21 +16,19 @@ Plug 'gruvbox-community/gruvbox'
 Plug 'tomasiser/vim-code-dark'
 call plug#end()
 
-colo gruvbox
+colo codedark
 
 " Initial sets
-set nocompatible
 syntax on
+set nowrap                          " removes wrapping
+set nocompatible
 set noerrorbells
 set t_vb=                            " Disable all visual blink or bell
 set hidden                           " Opening a new file on current buffer, hides the previous one instead of closing (keep changes)
 set wildmenu                         " Improved completion on command line mode
-set smartcase                        " case insensitive search, unless Case is used
-set ignorecase
 set autoindent                       " indent when creating new lines
 set ruler                            " Show cursor position (line and number)
 set confirm                          " confirm closing files / buffers with unsaved changes
-set visualbell                       " visual feedback instead of beep sound
 set mouse=a                          " Enable mouse support on different modes, 'a' for all modes
 set cmdheight=2                      " Number of lines allocated for the command line
 set number                           " display line number
@@ -43,10 +41,11 @@ set expandtab                        " tabs to spaces
 set clipboard+=unnamedplus           " Neovim only - use system clipboard (depends on xclip or xsel)
 set splitbelow splitright            " Split to right and down instead of left and up
 set cursorline                       " Line highlight
-" set cursorcolumn                     " Column highlight
 set noswapfile
 set termguicolors                    " Full color support
 filetype indent plugin on
+set scrolloff=10                     " Start scrolling screen when N lines to the end
+set signcolumn=yes                   " Shows another column to the left of line numbers
 
 " Autocmds
 autocmd InsertEnter * norm zz
@@ -245,3 +244,6 @@ nnoremap <leader>git :G
 
 " Vim plug
 nnoremap <leader>pi :PlugInstall<CR>
+
+" toggle word wrap
+nnoremap <leader>ww :set nowrap!<CR>
