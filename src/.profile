@@ -12,7 +12,7 @@ export ANDROID_BASE="$HOME/.local/android"
 export ANDROID_HOME="$ANDROID_BASE/sdk"
 export ANDROID_SDK_ROOT=$ANDROID_HOME
 export ANDROID_STUDIO="$ANDROID_BASE/studio/bin"
-export JAVA_HOME="/usr/lib/jvm/java-8-openjdk/"
+# export JAVA_HOME="/usr/lib/jvm/java-8-openjdk/"
 
 # ~/ Clean-up:
 export XDG_CONFIG_HOME="$HOME/.config"

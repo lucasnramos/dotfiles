@@ -150,3 +150,8 @@ if [ -f '/home/tuxer/.local/google-cloud-sdk/path.bash.inc' ]; then . '/home/tux
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/home/tuxer/.local/google-cloud-sdk/completion.bash.inc' ]; then . '/home/tuxer/.local/google-cloud-sdk/completion.bash.inc'; fi
+
+## JAVA HOME from asdf
+if [ -f '~/.asdf/plugins/java/set-java-home.bash' ]; then
+  . ~/.asdf/plugins/java/set-java-home.bash
+fi
