@@ -1,9 +1,10 @@
 [user]
 	name = Lucas Ramos
-	email = lucas.ramos@gft.com
+	email = lucas.ramos@bnymellon.com
 [credential]
 	helper = store
 [core]
 	autocrlf = input
 [http]
 	cookiefile = /home/lucas/.gitcookies
+	sslVerify = false
