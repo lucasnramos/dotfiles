@@ -1,26 +1,9 @@
 super + Escape
-  pkill -USR1 -x sxhkd
+  pkill -USR1 -x sxhkd && notify-send "sxhkd reloaded"
 super + Return
-  st
+  $TERMINAL
 super + {_, shift} + F1
-  { google-chrome-stable,firefox }
+  { brave, firefox }
 super + {_, shift} + e
   { spacefm, $TERMINAL -e ranger }
-super + ctrl + p
-  killall -q compton
-super + control + q
-  dmenu-exit
   
-# dmenu
-super + c
-  exec dmenu-dotfiles
-super + control + c
-  exec dmenu-suckless-config
-super + ctrl + p
-  exec dmenu-projects
-
-# Rofi
-super + Tab
-  exec rofi -show window
-super + shift + p
-  rofi -modi lpass:rofi-lpass -show lpass

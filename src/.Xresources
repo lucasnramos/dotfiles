@@ -169,7 +169,7 @@ URxvt.cursorBlink: true
 ! =====================
 ! [START] MISC
 ! =====================
-Xft.dpi:             96
+Xft.dpi:             120
 Xft.antialias:       true
 Xft.rgba:            rgb
 Xft.hinting:         true

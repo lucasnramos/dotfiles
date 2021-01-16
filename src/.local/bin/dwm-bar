@@ -12,7 +12,7 @@ get_mem()
 
 get_cpu() 
 {
-	mpstat | awk '/^.*all/ {printf "CPU: %s%%", 100-$12}'
+	mpstat | awk '/^.*all/ {printf "CPU: %s%%", 100-$11}'
 }
 
 get_disk_usage()

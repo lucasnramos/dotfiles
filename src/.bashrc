@@ -56,7 +56,7 @@ if [ -n "$force_color_prompt" ]; then
     fi
 fi
 
-source ~/.local/scripts/git-prompt.sh
+source $SCRIPTS/git-prompt.sh
 if [ "$color_prompt" = yes ]; then
     PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\] \[\033[01;34m\][\w]\[\033[00m\] $(__git_ps1 "(%s)")\n\$ '
 else
@@ -143,3 +143,29 @@ if [ -f '/home/tuxer/.local/google-cloud-sdk/path.bash.inc' ]; then . '/home/tux
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/home/tuxer/.local/google-cloud-sdk/completion.bash.inc' ]; then . '/home/tuxer/.local/google-cloud-sdk/completion.bash.inc'; fi
+
+# Emulate an MS-DOS prompt in your Linux shell.
+# Laszlo Szathmary (jabba.laci@gmail.com), 2011
+# Project home page:
+# https://ubuntuincident.wordpress.com/2011/02/08/emulate-the-ms-dos-prompt/
+#
+#
+# Modified by Soldier of Fortran
+#
+# Add to you ~/.bashrc file with: 'source ~/.themes/95/bashrc'
+
+function msdos_pwd
+{
+    local dir="`pwd`"
+
+    echo $dir | tr '/' '\\'
+}
+
+export PS1='C:`msdos_pwd`> '
+
+echo 
+echo
+echo "Microsoft(R) Windows 95"
+echo "   (C)Copyright Microsoft Corp 1981-1996."
+echo
+

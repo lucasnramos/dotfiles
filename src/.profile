@@ -5,7 +5,7 @@ export EDITOR="nvim"
 export VISUAL="nvim"
 export TERMINAL="st"
 export TERM="xterm-256color"
-export SCRIPTS="$HOME/.local/scripts"
+export SCRIPTS="$HOME/.local/bin"
 export ZDOTDIR="${XDG_CONFIG_HOME:-$HOME/.config}/zsh"
 
 # Android SDK and Studio
