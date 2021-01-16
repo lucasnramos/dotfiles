@@ -97,11 +97,6 @@ alias l='ls -CF'
 #   sleep 10; alert
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
 
-# Alias definitions.
-if [ -f ~/.config/aliasrc ]; then
-    . ~/.config/aliasrc
-fi
-
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
 # sources /etc/bash.bashrc).
@@ -130,14 +125,29 @@ bind 'TAB:menu-complete'
 
 # asdf plugin manager
 if [ -f $HOME/.asdf/asdf.sh ]; then
+
+## IMPORTS
+
+if [ -d $HOME/.asdf ]; then
+>>>>>>> 8fb0d5a8f26a502958b0b9d628afbc79b87599aa
   . $HOME/.asdf/asdf.sh
   . $HOME/.asdf/completions/asdf.bash
 fi
 
 # # Using keychain to save ssh key
-# /usr/bin/keychain --nogui $HOME/.ssh/id_rsa
-# source $HOME/.keychain/$HOSTNAME-sh
+/usr/bin/keychain --nogui $HOME/.ssh/id_rsa
+if [ -f $HOME/.keychain/$HOSTNAME-sh ]; then
+  source $HOME/.keychain/$HOSTNAME-sh
+fi
 
+# Alias definitions.
+# See /usr/share/doc/bash-doc/examples in the bash-doc package.
+
+if [ -f ~/.config/aliasrc ]; then
+    . ~/.config/aliasrc
+fi
+
+>>>>>>> 8fb0d5a8f26a502958b0b9d628afbc79b87599aa
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/home/tuxer/.local/google-cloud-sdk/path.bash.inc' ]; then . '/home/tuxer/.local/google-cloud-sdk/path.bash.inc'; fi
 

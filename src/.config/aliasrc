@@ -16,7 +16,10 @@ alias pkf='pkill -f'
 alias yt='youtube-dl'
 alias unixfy='find . -type f -print0 | xargs -0 dos2unix'
 alias scomp='rm -f config.h && sudo make install'
+<<<<<<< HEAD
 alias ct='contentful'
+=======
+>>>>>>> 8fb0d5a8f26a502958b0b9d628afbc79b87599aa
 # Git
 alias g='git'
 alias gs='git status'
@@ -26,7 +29,10 @@ alias gpl='git pull'
 alias gps='git push'
 alias gacm='git add . ; git commit -m'
 alias gac='git add . ; git commit'
+<<<<<<< HEAD
 alias gd='git --git-dir=$HOME/.dot/ --work-tree=$HOME'
+=======
+>>>>>>> 8fb0d5a8f26a502958b0b9d628afbc79b87599aa
 # systemd
 alias sc="sudo systemctl"
 alias scu="systemctl --user"
@@ -54,6 +60,7 @@ alias ls='ls --color=auto'
 alias ll='ls -lsA'
 alias la='ls -A'
 alias l='ls -CF'
+<<<<<<< HEAD
 # vim & neovim
 alias v='vim'
 alias nv='nvim'
@@ -62,3 +69,19 @@ alias vim='nvim'
 alias fcd='cd $(fnd . d | fzy)'
 alias fvi='vim $(fnd . f | fzy)'
 
+=======
+alias gdot='cd $HOME/dotfiles'
+alias gdoc='cd $HOME/Documents'
+alias gscr='cd $SCRIPTS'
+alias gwh='cd /mnt/c/Users/Lucas'
+alias gproj='cd ~/Projects'
+# vim & neovim
+alias v='vim'
+alias vim='nvim'
+alias valias='vim $ALIASES'
+alias vprofile='vim ~/.profile'
+alias vsuck='vim ~/.local/suckless'
+# Fuzzys
+alias fcd='cd $(fnd . d | fzy)'
+alias fvi='vim $(fnd . f | fzy)'
+>>>>>>> 8fb0d5a8f26a502958b0b9d628afbc79b87599aa
