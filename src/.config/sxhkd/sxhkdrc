@@ -3,7 +3,8 @@ super + Escape
 super + Return
   $TERMINAL
 super + {_, shift} + F1
-  { brave, firefox }
-super + {_, shift} + e
-  { spacefm, $TERMINAL -e ranger }
-  
+  { firefox }
+super + shift + e
+  thunar
+super + p
+  rofi -show drun

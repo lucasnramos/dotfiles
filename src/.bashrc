@@ -123,18 +123,18 @@ shopt -s autocd
 bind 'set show-all-if-ambiguous on'
 bind 'TAB:menu-complete'
 
-# asdf plugin manager
-if [ -f $HOME/.asdf/asdf.sh ]; then
-
 ## IMPORTS
 
 if [ -d $HOME/.asdf ]; then
->>>>>>> 8fb0d5a8f26a502958b0b9d628afbc79b87599aa
   . $HOME/.asdf/asdf.sh
   . $HOME/.asdf/completions/asdf.bash
 fi
 
-# # Using keychain to save ssh key
+if [ -d $HOME/.asdf/plugins/java ]; then
+  . ~/.asdf/plugins/java/set-java-home.bash
+fi
+
+## Using keychain to save ssh key
 /usr/bin/keychain --nogui $HOME/.ssh/id_rsa
 if [ -f $HOME/.keychain/$HOSTNAME-sh ]; then
   source $HOME/.keychain/$HOSTNAME-sh
@@ -147,35 +147,9 @@ if [ -f ~/.config/aliasrc ]; then
     . ~/.config/aliasrc
 fi
 
->>>>>>> 8fb0d5a8f26a502958b0b9d628afbc79b87599aa
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/home/tuxer/.local/google-cloud-sdk/path.bash.inc' ]; then . '/home/tuxer/.local/google-cloud-sdk/path.bash.inc'; fi
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/home/tuxer/.local/google-cloud-sdk/completion.bash.inc' ]; then . '/home/tuxer/.local/google-cloud-sdk/completion.bash.inc'; fi
-
-# Emulate an MS-DOS prompt in your Linux shell.
-# Laszlo Szathmary (jabba.laci@gmail.com), 2011
-# Project home page:
-# https://ubuntuincident.wordpress.com/2011/02/08/emulate-the-ms-dos-prompt/
-#
-#
-# Modified by Soldier of Fortran
-#
-# Add to you ~/.bashrc file with: 'source ~/.themes/95/bashrc'
-
-function msdos_pwd
-{
-    local dir="`pwd`"
-
-    echo $dir | tr '/' '\\'
-}
-
-export PS1='C:`msdos_pwd`> '
-
-echo 
-echo
-echo "Microsoft(R) Windows 95"
-echo "   (C)Copyright Microsoft Corp 1981-1996."
-echo
 
