@@ -56,7 +56,7 @@ if [ -n "$force_color_prompt" ]; then
     fi
 fi
 
-source ~/.local/scripts/git-prompt.sh
+source $SCRIPTS/git-prompt.sh
 if [ "$color_prompt" = yes ]; then
     PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\] \[\033[01;34m\][\w]\[\033[00m\] $(__git_ps1 "(%s)")\n\$ '
 else
@@ -123,7 +123,6 @@ shopt -s autocd
 bind 'set show-all-if-ambiguous on'
 bind 'TAB:menu-complete'
 
-
 ## IMPORTS
 
 if [ -d $HOME/.asdf ]; then
@@ -131,7 +130,11 @@ if [ -d $HOME/.asdf ]; then
   . $HOME/.asdf/completions/asdf.bash
 fi
 
-# # Using keychain to save ssh key
+if [ -d $HOME/.asdf/plugins/java ]; then
+  . ~/.asdf/plugins/java/set-java-home.bash
+fi
+
+## Using keychain to save ssh key
 /usr/bin/keychain --nogui $HOME/.ssh/id_rsa
 if [ -f $HOME/.keychain/$HOSTNAME-sh ]; then
   source $HOME/.keychain/$HOSTNAME-sh
@@ -150,10 +153,6 @@ if [ -f '/home/tuxer/.local/google-cloud-sdk/path.bash.inc' ]; then . '/home/tux
 # The next line enables shell command completion for gcloud.
 if [ -f '/home/tuxer/.local/google-cloud-sdk/completion.bash.inc' ]; then . '/home/tuxer/.local/google-cloud-sdk/completion.bash.inc'; fi
 
-## JAVA HOME from asdf
-if [ -f '~/.asdf/plugins/java/set-java-home.bash' ]; then
-  . ~/.asdf/plugins/java/set-java-home.bash
-fi
 export NVM_DIR="$HOME/.config/nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion

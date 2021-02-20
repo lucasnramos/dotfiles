@@ -240,7 +240,12 @@ nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list.
 nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
 " fugitive
-nnoremap <leader>git :G
+nnoremap <leader>g :G
+
+" Prettier
+command! -nargs=0 Prettier :CocCommand prettier.formatFile
+vnoremap <leader>f  <Plug>(coc-format-selected)
+nnoremap <leader>f  <Plug>(coc-format-selected)
 
 " Vim plug
 nnoremap <leader>pi :PlugInstall<CR>

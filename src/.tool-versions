@@ -1,3 +1,4 @@
 nodejs 14.15.1
 direnv 2.20.0
-java adoptopenjdk-8.0.275+1
+ruby 2.7.2
+java adoptopenjdk-8.0.282+8
