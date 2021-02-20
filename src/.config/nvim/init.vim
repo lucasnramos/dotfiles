@@ -46,6 +46,7 @@ set cursorline                       " Line highlight
 set noswapfile
 set termguicolors                    " Full color support
 filetype indent plugin on
+set scrolloff=10
 
 " Autocmds
 autocmd InsertEnter * norm zz
@@ -241,6 +242,11 @@ nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
 nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
 " fugitive
 nnoremap <leader>g :G
+
+" Prettier
+command! -nargs=0 Prettier :CocCommand prettier.formatFile
+vnoremap <leader>f  <Plug>(coc-format-selected)
+nnoremap <leader>f  <Plug>(coc-format-selected)
 
 " Vim plug
 nnoremap <leader>pi :PlugInstall<CR>

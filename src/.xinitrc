@@ -44,8 +44,7 @@ fi
 sxhkd &
 ~/.screenlayout/screens.sh & 
 nitrogen --restore &
-eval $(/usr/bin/gnome-keyring-daemon --start --components=pkcs11,secrets,ssh)
-export SSH_AUTH_SOCK
-while (true) do
-  ssh-agent dwm
-done
+volumeicon &
+nm-applet &
+
+ssh-agent dwm

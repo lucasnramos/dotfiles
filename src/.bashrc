@@ -56,7 +56,7 @@ if [ -n "$force_color_prompt" ]; then
     fi
 fi
 
-source ~/.local/scripts/git-prompt.sh
+source $SCRIPTS/git-prompt.sh
 if [ "$color_prompt" = yes ]; then
     PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\] \[\033[01;34m\][\w]\[\033[00m\] $(__git_ps1 "(%s)")\n\$ '
 else
@@ -97,7 +97,6 @@ alias l='ls -CF'
 #   sleep 10; alert
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
 
-
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
 # sources /etc/bash.bashrc).
@@ -124,7 +123,6 @@ shopt -s autocd
 bind 'set show-all-if-ambiguous on'
 bind 'TAB:menu-complete'
 
-
 ## IMPORTS
 
 if [ -d $HOME/.asdf ]; then
@@ -132,7 +130,11 @@ if [ -d $HOME/.asdf ]; then
   . $HOME/.asdf/completions/asdf.bash
 fi
 
-# # Using keychain to save ssh key
+if [ -d $HOME/.asdf/plugins/java ]; then
+  . ~/.asdf/plugins/java/set-java-home.bash
+fi
+
+## Using keychain to save ssh key
 /usr/bin/keychain --nogui $HOME/.ssh/id_rsa
 if [ -f $HOME/.keychain/$HOSTNAME-sh ]; then
   source $HOME/.keychain/$HOSTNAME-sh
@@ -150,3 +152,4 @@ if [ -f '/home/tuxer/.local/google-cloud-sdk/path.bash.inc' ]; then . '/home/tux
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/home/tuxer/.local/google-cloud-sdk/completion.bash.inc' ]; then . '/home/tuxer/.local/google-cloud-sdk/completion.bash.inc'; fi
+

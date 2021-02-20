@@ -1,3 +1,0 @@
-#!/bin/sh
-
-mpstat | awk '/^.*all/ { print "CPU: " 100-$12 "%" }'
