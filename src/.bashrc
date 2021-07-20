@@ -135,9 +135,11 @@ if [ -d $HOME/.asdf/plugins/java ]; then
 fi
 
 ## Using keychain to save ssh key
-/usr/bin/keychain --nogui $HOME/.ssh/id_rsa
-if [ -f $HOME/.keychain/$HOSTNAME-sh ]; then
-  source $HOME/.keychain/$HOSTNAME-sh
+if [ ! command /usr/bin/keychain &> /dev/null ]; then
+  /usr/bin/keychain &> /dev/null --nogui $HOME/.ssh/id_rsa 
+  if [ -f $HOME/.keychain/$HOSTNAME-sh ]; then
+    source $HOME/.keychain/$HOSTNAME-sh
+  fi
 fi
 
 # Alias definitions.
@@ -146,10 +148,4 @@ fi
 if [ -f ~/.config/aliasrc ]; then
     . ~/.config/aliasrc
 fi
-
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/home/tuxer/.local/google-cloud-sdk/path.bash.inc' ]; then . '/home/tuxer/.local/google-cloud-sdk/path.bash.inc'; fi
-
-# The next line enables shell command completion for gcloud.
-if [ -f '/home/tuxer/.local/google-cloud-sdk/completion.bash.inc' ]; then . '/home/tuxer/.local/google-cloud-sdk/completion.bash.inc'; fi
 

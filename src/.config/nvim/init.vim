@@ -1,13 +1,13 @@
 " List of plugins
 call plug#begin()
-Plug 'vim-airline/vim-airline'
+"Plug 'vim-airline/vim-airline'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-fugitive'
-Plug 'cloudhead/neovim-fuzzy'
+"Plug 'cloudhead/neovim-fuzzy'
 Plug 'mattn/emmet-vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'sheerun/vim-polyglot'
-Plug 'preservim/nerdtree' 
+"Plug 'preservim/nerdtree' 
 Plug 'Yggdroot/indentLine'
 " Themes
 Plug 'dracula/vim'
@@ -18,8 +18,8 @@ call plug#end()
 colo gruvbox
 
 " Initial sets
-set nocompatible
 syntax on
+set nocompatible
 set noerrorbells
 set t_vb=                            " Disable all visual blink or bell
 set hidden                           " Opening a new file on current buffer, hides the previous one instead of closing (keep changes)
@@ -42,21 +42,30 @@ set expandtab                        " tabs to spaces
 set clipboard+=unnamedplus           " Neovim only - use system clipboard (depends on xclip or xsel)
 set splitbelow splitright            " Split to right and down instead of left and up
 set cursorline                       " Line highlight
-" set cursorcolumn                     " Column highlight
 set noswapfile
 set termguicolors                    " Full color support
-filetype indent plugin on
+set nobackup
+set nowritebackup
+set updatetime=300
+set shortmess+=c
 set scrolloff=10
+filetype indent plugin on
+
+
 
 " Autocmds
 autocmd InsertEnter * norm zz
+autocmd BufWritePost $MYVIMRC so $MYVIMRC
 
-" Custom keybidings
+
+"==================================================
+" Custom keybindings
+"==================================================
 :let mapleader=" "
 :nmap ç :
 :nnoremap ; :
-nnoremap <leader>cf :tabnew $MYVIMRC<CR>
-nnoremap <leader>rf :so $MYVIMRC<CR>
+nnoremap <leader>rco :tabnew $MYVIMRC<CR>
+nnoremap <leader>rcr :so $MYVIMRC<CR>
 vnoremap > >gv
 vnoremap < <gv
 
@@ -82,34 +91,26 @@ noremap <silent> <C-Right> :vertical resize -5<CR>
 noremap <silent> <C-Up> :resize +5<CR>
 noremap <silent> <C-Down> :resize -5<CR>
 
-" fzy
-" nnoremap <C-p> :FuzzyOpen<CR>
-nnoremap <leader>fg :FuzzyGrep<CR>
-nnoremap <C-p> :FuzzyOpen<CR>
-
 " NERDTree
 let g:NERDTreeShowHidden=1
 noremap <C-b> :NERDTreeToggle<CR>
 nnoremap <leader>nr :NERDTreeRefreshRoot<CR>
 
+" Prettier
+command! -nargs=0 Prettier :CocCommand prettier.formatFile
+vnoremap <leader>f  <Plug>(coc-format-selected)
+nnoremap <leader>f  <Plug>(coc-format-selected)
+
+" Vim plug
+nnoremap <leader>pi :PlugInstall<CR>
+
+
+"==================================================
+" Everything down here is Unformatted mess
+"==================================================
+
 "" COC Config
-
-" Some servers have issues with backup files, see #649.
-set nobackup
-set nowritebackup
-
-" Give more space for displaying messages.
-set cmdheight=2
-
-" Having longer updatetime (default is 4000 ms = 4 s) leads to noticeable
-" delays and poor user experience.
-set updatetime=300
-
-" Don't pass messages to |ins-completion-menu|.
-set shortmess+=c
-
-" Always show the signcolumn, otherwise it would shift the text each time
-" diagnostics appear/become resolved.
+" Always show the signcolumn, otherwise it would shift the text each time diagnostics appear/become resolved.
 if has("patch-8.1.1564")
   " Recently vim can merge signcolumn and number column into one
   set signcolumn=number
@@ -243,10 +244,3 @@ nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
 " fugitive
 nnoremap <leader>g :G
 
-" Prettier
-command! -nargs=0 Prettier :CocCommand prettier.formatFile
-vnoremap <leader>f  <Plug>(coc-format-selected)
-nnoremap <leader>f  <Plug>(coc-format-selected)
-
-" Vim plug
-nnoremap <leader>pi :PlugInstall<CR>
