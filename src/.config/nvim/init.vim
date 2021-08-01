@@ -49,6 +49,7 @@ set nowritebackup
 set updatetime=300
 set shortmess+=c
 set scrolloff=10
+set signcolumn=yes
 filetype indent plugin on
 
 
@@ -104,19 +105,17 @@ nnoremap <leader>f  <Plug>(coc-format-selected)
 " Vim plug
 nnoremap <leader>pi :PlugInstall<CR>
 
+" fugitive
+nnoremap <leader>gs :Git<CR>
+nnoremap <leader>gco :Git checkout<space>
+nnoremap <leader>gft :Git fetch --all<CR>
+nnoremap <leader>gpp :Git push<space>
+nnoremap <leader>gpu :Git push -u origin<space>
+nnoremap <leader>gpl :Git pull<space>
 
 "==================================================
 " Everything down here is Unformatted mess
 "==================================================
-
-"" COC Config
-" Always show the signcolumn, otherwise it would shift the text each time diagnostics appear/become resolved.
-if has("patch-8.1.1564")
-  " Recently vim can merge signcolumn and number column into one
-  set signcolumn=number
-else
-  set signcolumn=yes
-endif
 
 " Use tab for trigger completion with characters ahead and navigate.
 " NOTE: Use command ':verbose imap <tab>' to make sure tab is not mapped by
@@ -134,15 +133,6 @@ endfunction
 
 " Use <c-space> to trigger completion.
 inoremap <silent><expr> <C-space> coc#refresh()
-
-" Use <cr> to confirm completion, `<C-g>u` means break undo chain at current
-" position. Coc only does snippet and additional edit on confirm.
-" <cr> could be remapped by other vim plugin, try `:verbose imap <CR>`.
-if exists('*complete_info')
-  inoremap <expr> <cr> complete_info()["selected"] != "-1" ? "\<C-y>" : "\<C-g>u\<CR>"
-else
-  inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
-endif
 
 " Use `[g` and `]g` to navigate diagnostics
 " Use `:CocDiagnostics` to get all diagnostics of current buffer in location list.
@@ -241,6 +231,4 @@ nnoremap <silent><nowait> <space>j  :<C-u>CocNext<CR>
 nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list.
 nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
-" fugitive
-nnoremap <leader>g :G
 
