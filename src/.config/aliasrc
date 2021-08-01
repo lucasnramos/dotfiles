@@ -54,25 +54,10 @@ alias ls='ls --color=auto'
 alias ll='ls -lsA'
 alias la='ls -A'
 alias l='ls -CF'
-# vim & neovim
 alias v='vim'
 alias nv='nvim'
-alias vim='nvim'
-# Fuzzys
-alias fcd='cd $(fnd . d | fzy)'
-alias fvi='vim $(fnd . f | fzy)'
-
 alias gdot='cd $HOME/dotfiles'
 alias gdoc='cd $HOME/Documents'
 alias gscr='cd $SCRIPTS'
 alias gwh='cd /mnt/c/Users/Lucas'
 alias gproj='cd ~/Projects'
-# vim & neovim
-alias v='vim'
-alias vim='nvim'
-alias valias='vim $ALIASES'
-alias vprofile='vim ~/.profile'
-alias vsuck='vim ~/.local/suckless'
-# Fuzzys
-alias fcd='cd $(fnd . d | fzy)'
-alias fvi='vim $(fnd . f | fzy)'
