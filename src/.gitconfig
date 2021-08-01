@@ -7,3 +7,12 @@
 	autocrlf = input
 [http]
 	cookiefile = /home/lucas/.gitcookies
+[alias]
+	co = checkout
+	ft = fetch
+	pp = push
+	pu = push -u
+	pl = pull
+	st = status
+	cp = cherry-pick
+	acm = ! git add . && git commit -m
