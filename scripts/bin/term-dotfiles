@@ -1,6 +1,6 @@
 #!/bin/sh
 
-FILE=$( find ~/dotfiles/src -type f | fzf )
+FILE=$( find ~/.dotfiles/src -type f | fzf )
 
 # -n STRING => STRING lenght is > 0
 if [ -n "$FILE" ]
