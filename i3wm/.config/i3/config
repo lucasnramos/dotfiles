@@ -81,33 +81,34 @@ set_from_resource $darkwhite color7 #D8DEE9
 set_from_resource $white color15 #ffffff
 
 #                       BORDER         BACKGROUND     TEXT          INDICATOR   CHILD_BORDER
-# client.focused          $background      $background      $white      $darkblack  $foreground-alt
-# client.unfocused        $background      $background      $darkwhite    $darkblack  $darkblack
-# client.focused_inactive $background      $background      $darkwhite    $darkblack  $darkblack
-# client.urgent           $darkred       $darkred       $background   $darkred    $darkred
-# client.background       $background
+client.focused          $background    $background    $white        $darkblack  $foreground-alt
+client.unfocused        $background    $background    $darkwhite    $darkblack  $darkblack
+client.focused_inactive $background    $background    $darkwhite    $darkblack  $darkblack
+client.urgent           $darkred       $darkred       $background   $darkred    $darkred
+client.background       $background
 
 # ==========================
 # [START] Startup
 # ==========================
 ## Run only once
-exec --no-startup-id polybar-start
-exec --no-startup-id nitrogen --restore
+exec --no-startup-id sxhkd &
 
 ## Run everytime i3 is reloaded
-exec_always --no-startup-id pkill -i sxhkd && sxhkd &
+# exec_always --no-startup-id <COMMAND>
+exec_always --no-startup-id xset r rate 280 50 &
+exec_always --no-startup-id polybar-start &
 
 # ============================
 # [START] i3-gaps
 # ============================
-#for_window [class=".*"] border pixel 2
-#gaps inner 8
-#smart_borders on
-#smart_gaps on
-#bindsym $mod+z gaps inner current plus 5
-#bindsym $mod+Shift+z gaps inner current minus 5
-#bindsym $mod+x gaps inner all set 20
-#bindsym $mod+Shift+x gaps inner all set 0
+for_window [class=".*"] border pixel 2
+gaps inner 8
+smart_borders on
+smart_gaps on
+bindsym $mod+z gaps inner current plus 5
+bindsym $mod+Shift+z gaps inner current minus 5
+bindsym $mod+x gaps inner all set 20
+bindsym $mod+Shift+x gaps inner all set 0
 
 # ==================================
 # [START] Assign apps to workspaces
@@ -126,9 +127,9 @@ assign [class="Atom"] $ws2
 assign [class="Emacs"] $ws2
 
 # Gaming
-assign [class="Steam"] $ws8
-assign [class="Lutris"] $ws8
-assign [class="Playonlinux"] $ws8
+assign [class="Steam"] $ws5
+assign [class="Lutris"] $ws5
+assign [class="Playonlinux"] $ws5
 
 # ==============================================
 # [START] Setup Floating Windows and Scratchpad
@@ -174,17 +175,6 @@ font pango:NotoSansNerd 12, FontAwesome 12
 # ====================================
 # [START] Especific shortcuts for i3
 # ====================================
-bindsym $mod+Shift+Return exec --no-startup-id kitty
-# bindsym $mod+Ctrl+e  exec --no-startup-id $TERMINAL -n Float -e ranger
-# bindsym $mod+Shift+q exec --no-startup-id $SCRIPTS/i3/dmenu-exit
-bindsym $mod+Shift+d exec --no-startup-id i3-dmenu-desktop
-
-# For usage with XFCE
-bindsym $mod+p exec --no-startup-id rofi -show drun
-bindsym $mod+r exec --no-startup-id rofi -show run
-bindsym $mod+Return exec --no-startup-id $TERMINAL
-bindsym $mod+Shift+q exec --no-startup-id i3-msg exit
-
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
@@ -223,10 +213,20 @@ bindsym $mod+a focus parent
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Control+r restart
 
+# Exit
+bindsym $mod+Shirt+q i3-msg exit
+# =======================================================================
+# [START] General shortcuts (for example if sxhkd is not installed / used 
+# =======================================================================
+bindsym $mod+Return exec --no-startup-id $TERMINAL
+bindsym $mod+Shift+Return exec --no-startup-id xterm
+bindsym $mod+p exec --no-startup-id dmenu_run
+bindsym $mod+Shift+p exec --no-startup-id i3-dmenu-desktop
+
+
 # ===============
 # [START] i3 bar
 # ===============
-bar {
-  position top
-  status_command i3blocks -c ~/.config/i3/i3blocks.conf
-}
+# bar {
+#   position top
+# }
