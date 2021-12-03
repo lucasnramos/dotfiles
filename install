@@ -1,0 +1,51 @@
+#!/bin/bash
+
+HAS_NOT_INSTALLED="false"
+NOT_INSTALLED_LIST=()
+
+is_installed() {
+  if ! command -v $1 &> /dev/null
+  then
+    echo "$1 is not installed"
+    HAS_NOT_INSTALLED="true"
+    NOT_INSTALLED_LIST+=($1)
+  fi
+}
+
+check_dependencies()
+{
+  DEPS="stow rg fzf xargs sed"
+  
+  for i in $DEPS
+  do
+    is_installed $i
+  done
+
+  if [ "$HAS_NOT_INSTALLED" = "true" ]
+  then
+    echo "install the following software and try again"
+    for i in ${!NOT_INSTALLED_LIST[@]}; do
+      echo "${NOT_INSTALLED_LIST[$i]}"
+    done
+    exit 1
+  fi
+}
+
+check_dependencies
+
+# Ready, Set, GOOOOOO!
+
+mkdir ~/.dotfiles-backup
+
+for dir in "$@"
+do
+  echo "$dir"
+  FILES=$(rg --files --hidden $dir | sed "s/$dir\///")
+
+  for file in $FILES
+  do
+    mv $HOME/$file ~/.dotfiles-backup/$file
+  done
+  stow $dir
+  # xargs -I{} mv {} .dotfiles-backup/{}
+done
