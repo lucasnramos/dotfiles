@@ -35,7 +35,7 @@ check_dependencies
 
 # Ready, Set, GOOOOOO!
 
-mkdir ~/.dotfiles-backup
+mkdir -p ~/{.dotfiles-backup,.config,.local}
 
 for dir in "$@"
 do
@@ -44,7 +44,9 @@ do
 
   for file in $FILES
   do
-    mv $HOME/$file ~/.dotfiles-backup/$file
+    if [[ -f "$HOME/$file" ]]; then
+      mv $HOME/$file ~/.dotfiles-backup/$file
+    fi
   done
   stow $dir
   # xargs -I{} mv {} .dotfiles-backup/{}

@@ -1,0 +1,14 @@
+#!/bin/bash
+for dir in "$@"
+do
+  echo "$dir"
+  FILES=$(rg --files --hidden $dir | sed "s/$dir\///")
+
+  for file in $FILES
+  do
+    if [[ -f "$HOME/$file" ]]; then
+      rm $HOME/$file
+    fi
+  done
+  # xargs -I{} mv {} .dotfiles-backup/{}
+done
