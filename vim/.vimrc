@@ -1,8 +1,30 @@
+call plug#begin()
+Plug 'vim-airline/vim-airline'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-fugitive'
+Plug 'mattn/emmet-vim'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'sheerun/vim-polyglot'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+" Plug 'neoclide/coc.nvim', {'branch': 'master', 'do': 'yarn install --frozen-lockfile'}
+
+" Themes
+Plug 'dracula/vim'
+Plug 'gruvbox-community/gruvbox'
+Plug 'tomasiser/vim-code-dark'
+Plug 'joshdick/onedark.vim'
+Plug 'lifepillar/vim-solarized8'
+
+call plug#end()
+
 set background=dark
+colo codedark
 
 " Initial sets
-set nocompatible
 syntax on
+filetype indent plugin on
+set nocompatible
 set noerrorbells
 set t_vb=                            " Disable all visual blink or bell
 set hidden                           " Opening a new file on current buffer, hides the previous one instead of closing (keep changes)
@@ -28,13 +50,11 @@ set termguicolors                    " Full color support
 set scrolloff=8
 set nohlsearch                       " Disables search highlight
 set nowrap                           " Disable word wrapping
-set signcolumn=yes
 set encoding=utf-8
 set nobackup
 set nowritebackup
 set updatetime=300
 set shortmess+=c
-filetype indent plugin on
 
 " Autocmds
 autocmd InsertEnter * norm zz
