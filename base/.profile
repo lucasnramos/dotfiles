@@ -1,12 +1,9 @@
-#!/bin/sh
-
 # Main variables
 export EDITOR="nvim"
 export VISUAL="nvim"
 export TERMINAL="xterm"
 export TERM="xterm-256color"
 export SCRIPTS="$HOME/.local/bin"
-export ZDOTDIR="${XDG_CONFIG_HOME:-$HOME/.config}/zsh"
 
 # Android SDK and Studio
 export ANDROID_BASE="$HOME/.local/android"
@@ -21,8 +18,6 @@ export XDG_CACHE_HOME="$HOME/.cache"
 
 # set PATH so it includes user's private bin directories
 PATH="$SCRIPTS:$HOME/bin:$ANDROID_STUDIO:$HOME/.nvm:$ANDROID_HOME/emulator:$ANDROID_HOME/tools:$ANDROID_HOME/tools/bin:$ANDROID_HOME/platform-tools:$JAVA_HOME/bin:$JAVA_HOME/lib/amd64:$PATH"
-
-
 
 export NVM_DIR="$HOME/.config/nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
