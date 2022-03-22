@@ -2,6 +2,7 @@ local awful = require('awful')
 local gears = require('gears')
 local hotkeys_popup = require('awful.hotkeys_popup')
 local modkey = require('keys.mod').mod_key
+local terminal = 'alacritty'
 
 local globalkeys = gears.table.join(
     awful.key({ modkey }, "Return", function() awful.spawn(terminal) end,
