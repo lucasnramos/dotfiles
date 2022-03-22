@@ -1,7 +1,7 @@
 # Main variables
 export EDITOR="nvim"
 export VISUAL="nvim"
-export TERMINAL="xterm"
+export TERMINAL="alacritty"
 export TERM="xterm-256color"
 export SCRIPTS="$HOME/.local/bin"
 

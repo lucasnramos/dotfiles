@@ -122,15 +122,6 @@ bind 'TAB:menu-complete'
 
 ## IMPORTS
 
-if [ -d $HOME/.asdf ]; then
-  . $HOME/.asdf/asdf.sh
-  . $HOME/.asdf/completions/asdf.bash
-fi
-
-if [ -d $HOME/.asdf/plugins/java ]; then
-  . ~/.asdf/plugins/java/set-java-home.bash
-fi
-
 ## Using keychain to save ssh key
 if [ ! command /usr/bin/keychain &> /dev/null ]; then
   /usr/bin/keychain &> /dev/null --nogui $HOME/.ssh/id_rsa 
@@ -142,6 +133,7 @@ fi
 # Alias definitions.
 # See /usr/share/doc/bash-doc/examples in the bash-doc package.
 
+source /opt/asdf-vm/asdf.sh
 if [ -f ~/.config/aliasrc ]; then
     . ~/.config/aliasrc
 fi
