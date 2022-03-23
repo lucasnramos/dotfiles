@@ -5,7 +5,7 @@
 # Executed by startx (run your window manager from here)
 
 userresources=$HOME/.Xresources
-# usermodmap=$HOME/.Xmodmap
+usermodmap=$HOME/.Xmodmap
 sysresources=/etc/X11/xinit/.Xresources
 sysmodmap=/etc/X11/xinit/.Xmodmap
 
@@ -43,8 +43,8 @@ fi
 
 # sxhkd &
 # ~/.screenlayout/screens.sh & 
-nitrogen --restore &
+xset r rate 280 50 &
+# nitrogen --restore &
 volumeicon &
 nm-applet &
-xset r rate 280 50 &
 ssh-agent awesome
