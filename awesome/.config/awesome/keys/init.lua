@@ -79,12 +79,15 @@ local globalkeys = gears.table.join(
     -- Prompt
     awful.key({ modkey },            "r",     function () awful.screen.focused().mypromptbox:run() end,
               {description = "run prompt", group = "launcher"}),
-    -- Rofi Desktop entries
+    -- Rofi dmenu replace
     awful.key({ modkey, "Shift" }, "p", function() awful.spawn("rofi -show run") end,
               {description = "rofi for Desktop entries only", group = "launcher"}),
-    -- dmenu_run
+    -- Rofi with desktop Entries
     awful.key({ modkey }, "p", function() awful.spawn("rofi -show drun") end,
-              {description = "dmenu", group = "launcher"})
+              {description = "dmenu", group = "launcher"}),
+    -- List opened windows
+    awful.key({ modkey }, "Tab", function() awful.spawn("rofi -show window") end,
+              {description = "Show list of opened windows", group = "launcher"})
     -- Menubar
     -- awful.key({ modkey }, "p", function() menubar.show() end,
     --           {description = "show the menubar", group = "launcher"})

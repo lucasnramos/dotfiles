@@ -46,6 +46,7 @@ end
 -- {{{ Variable definitions
 -- Themes define colours, icons, font and wallpapers.
 beautiful.init(gears.filesystem.get_themes_dir() .. "xresources/theme.lua")
+beautiful.font = "Hack Nerd Mono 10"
 
 -- Default modkey.
 local modkey = require('keys.mod').mod_key
