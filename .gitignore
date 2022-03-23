@@ -4,3 +4,4 @@ xmonad.o
 xmonad.hi
 plugged/
 .zcom*
+awesome/.config/awesome/.vscode/settings.json
