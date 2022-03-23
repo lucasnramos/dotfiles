@@ -18,6 +18,9 @@ export ANDROID_STUDIO="$ANDROID_BASE/studio/bin"
 
 export ZDOTDIR="${XDG_CONFIG_HOME:-$HOME/.config}/zsh"
 
+# MISC
+export FZF_DEFAULT_COMMAND="rg --files --no-ignore-vcs --hidden"
+
 # set PATH so it includes user's private bin directories
 PATH="$SCRIPTS:$HOME/bin:$ANDROID_STUDIO:$HOME/.nvm:$ANDROID_HOME/emulator:$ANDROID_HOME/tools:$ANDROID_HOME/tools/bin:$ANDROID_HOME/platform-tools:$JAVA_HOME/bin:$JAVA_HOME/lib/amd64:$PATH"
 
