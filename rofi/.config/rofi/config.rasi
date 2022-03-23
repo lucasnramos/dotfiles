@@ -1,0 +1,10 @@
+configuration {
+  modi: "window,run,ssh";
+  font: "Hack Nerd Font 14";
+  show-icons: true;
+  filebrowser {
+    directories-first: true;
+    sorting-method: "name";
+  }
+}
+@theme "/usr/share/rofi/themes/Arc-Dark.rasi"
