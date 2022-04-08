@@ -1,0 +1,21 @@
+#!/bin/bash
+
+CHOICE= $(echo "Lock
+Suspend
+Reboot
+Shutdown" | dmenu -i -p "Power Menu: ")
+
+if [ "$CHOICE" === "Reboot" ]
+then
+  reboot
+elif [ "$CHOICE" === "Suspend" ]
+  systemctl suspend
+elif [ "$CHOICE" === "Shutdown" ]
+  poweroff
+else
+  exit 1
+fi
+
+exit 0
+
+ 

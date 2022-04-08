@@ -130,10 +130,18 @@ if [ ! command /usr/bin/keychain &> /dev/null ]; then
   fi
 fi
 
+# asdf
+if [ -f /opt/asdf-vm/asdf.sh ]; then
+  source /opt/asdf-vm/asdf.sh
+fi
+
+## php-version
+if [ -f /usr/lib/php-version/php-version.sh ]; then
+  source /usr/lib/php-version/php-version.sh
+fi
+
 # Alias definitions.
 # See /usr/share/doc/bash-doc/examples in the bash-doc package.
-
-source /opt/asdf-vm/asdf.sh
 if [ -f ~/.config/aliasrc ]; then
     . ~/.config/aliasrc
 fi
