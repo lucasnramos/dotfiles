@@ -18,6 +18,7 @@ export XDG_CACHE_HOME="$HOME/.cache"
 
 # MISC
 export FZF_DEFAULT_COMMAND="rg --files --no-ignore-vcs --hidden"
+export QT_STYLE_OVERRIDE=kvantum
 
 # set PATH so it includes user's private bin directories
 PATH="$SCRIPTS:$HOME/bin:$ANDROID_STUDIO:$HOME/.nvm:$ANDROID_HOME/emulator:$ANDROID_HOME/tools:$ANDROID_HOME/tools/bin:$ANDROID_HOME/platform-tools:$JAVA_HOME/bin:$JAVA_HOME/lib/amd64:$PATH"

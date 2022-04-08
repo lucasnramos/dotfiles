@@ -7,4 +7,5 @@ configuration {
     sorting-method: "name";
   }
 }
-@theme "/usr/share/rofi/themes/Arc-Dark.rasi"
+//@theme "/usr/share/rofi/themes/Arc-Dark.rasi"
+@theme "/usr/share/rofi/themes/gruvbox-dark.rasi"
