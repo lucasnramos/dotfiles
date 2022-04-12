@@ -42,5 +42,6 @@ if [ -d /etc/X11/xinit/xinitrc.d ] ; then
 fi
 
 xset r rate 280 50 &
-nm-applet &
-ssh-agent awesome
+# ssh-agent awesome
+
+exec xfce4-session

@@ -24,6 +24,10 @@ local modkey = "Mod4"
 require("awful.hotkeys_popup.keys")
 require("awful.autofocus")
 
+-- Awesome WM Widgets
+local volume_widget = require('awesome-wm-widgets.volume-widget.volume')
+local logout_menu_widget = require("awesome-wm-widgets.logout-menu-widget.logout-menu")
+
 -- {{{ Error handling
 -- Check if awesome encountered an error during startup and fell back to
 -- another config (This code will only ever execute for the fallback config)
@@ -56,7 +60,7 @@ beautiful.init(gears.filesystem.get_themes_dir() .. "gtk/theme.lua")
 beautiful.useless_gap = 7
 beautiful.border_width = 2
 beautiful.gap_single_client = false
-beautiful.font = "Hack Nerd Font 12"
+beautiful.font = "Hack Nerd Font 10"
 
 -- Table of layouts to cover with awful.layout.inc, order matters.
 awful.layout.layouts = {
@@ -164,6 +168,9 @@ awful.screen.connect_for_each_screen(function(s)
         layout_suit.spiral, -- 8
         layout_suit.max,  -- 9
     }
+
+
+
     -- tag_layouts = awful.layout.layouts[1]
 
     -- Each screen has its own tag table.
@@ -194,7 +201,7 @@ awful.screen.connect_for_each_screen(function(s)
     }
 
     -- Create the wibox
-    s.mywibox = awful.wibar({ position = "top", screen = s, font })
+    s.mywibox = awful.wibar({ position = "top", screen = s, font = beautiful.font })
 
     -- Add widgets to the wibox
     s.mywibox:setup {
@@ -209,8 +216,10 @@ awful.screen.connect_for_each_screen(function(s)
             layout = wibox.layout.fixed.horizontal,
             mykeyboardlayout,
             mytextclock,
+            volume_widget({ widget_type = 'icon_and_text' }),
             wibox.widget.systray(),
             s.mylayoutbox,
+            logout_menu_widget(),
         },
     }
 end)
@@ -281,7 +290,6 @@ local globalkeys = gears.table.join(
         {description = "reload awesome", group = "awesome"}),
     awful.key({ modkey, "Shift"   }, "q", awesome.quit,
         {description = "quit awesome", group = "awesome"}),
-
     awful.key({ modkey,           }, "l",     function () awful.tag.incmwfact( 0.05)          end,
         {description = "increase master width factor", group = "layout"}),
     awful.key({ modkey,           }, "h",     function () awful.tag.incmwfact(-0.05)          end,
@@ -327,15 +335,21 @@ local globalkeys = gears.table.join(
         {description = "lua execute prompt", group = "awesome"}),
     -- Menubar
     -- awful.key({ modkey }, "p", function() menubar.show() end,
-    --           {description = "show the menubar", group = "launcher"}),
+
     -- ROFI
-    awful.key({ modkey }, "p", function() awful.spawn("rofi -show drun") end),
+    awful.key({ modkey          }, "p", function() awful.spawn("rofi -show drun") end),
     awful.key({ modkey, "Shift" }, "p", function() awful.spawn("rofi -show run") end),
-    awful.key({ modkey }, "Tab", function() awful.spawn("rofi -show window") end),
-    awful.key({}, "XF86AudioRaiseVolume", function() os.execute("pactl set-sink-volume 0 +5%") end),
-    awful.key({}, "XF86AudioLowerVolume", function() os.execute("pactl set-sink-volume 0 -5%") end),
-    awful.key({}, "XF86AudioMute", function() os.execute("pactl set-sink-mute 0 toggle") end)
+    awful.key({ modkey          }, "Tab", function() awful.spawn("rofi -show window") end)
+
+    -- Media Keys
+    -- awful.key({}, "XF86AudioRaiseVolume", function() os.execute("pactl set-sink-volume 0 +5%") end),
+    -- awful.key({}, "XF86AudioLowerVolume", function() os.execute("pactl set-sink-volume 0 -5%") end),
+    -- awful.key({}, "XF86AudioMute", function() os.execute("pactl set-sink-mute 0 toggle") end),
+
+    -- dmenu
+    -- awful.key({ modkey }, "p", function() awful.spawn("dmenu_run") end),
     )
+
 
 clientkeys = gears.table.join(
     awful.key({ modkey,           }, "f",

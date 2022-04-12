@@ -214,8 +214,6 @@ bindsym $mod+a focus parent
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Control+r restart
 
-# Exit
-bindsym $mod+Shirt+q i3-msg exit
 # =======================================================================
 # [START] General shortcuts (for example if sxhkd is not installed / used 
 # =======================================================================
@@ -231,5 +229,6 @@ bindsym $mod+Shift+q exec --no-startup-id i3-msg exit
 # ===============
 bar {
   position top
-  status_command i3blocks -c ~/.config/i3/i3blocks.conf
+  tray_output none
+  status_command SCRIPT_DIR=$HOME/.config/i3blocks/ i3blocks -c $HOME/.config/i3/i3blocks.conf
 }
