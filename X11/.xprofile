@@ -1,2 +1,2 @@
 source $HOME/.profile
-xset r rate 280 40
+xset r rate 250 50

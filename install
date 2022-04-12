@@ -3,7 +3,8 @@
 HAS_NOT_INSTALLED="false"
 NOT_INSTALLED_LIST=()
 
-is_installed() {
+is_installed()
+{
   if ! command -v $1 &> /dev/null
   then
     echo "$1 is not installed"
@@ -33,13 +34,10 @@ check_dependencies()
 
 check_dependencies
 
-# Ready, Set, GOOOOOO!
-
 mkdir -p ~/{.dotfiles-backup,.config,.local}
 
 for dir in "$@"
 do
-  echo "$dir"
   FILES=$(rg --files --hidden $dir | sed "s/$dir\///")
 
   for file in $FILES
@@ -49,5 +47,5 @@ do
     fi
   done
   stow $dir
-  # xargs -I{} mv {} .dotfiles-backup/{}
+  echo "$dir installed"
 done
