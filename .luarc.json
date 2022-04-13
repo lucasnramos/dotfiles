@@ -3,6 +3,7 @@
     "Lua.diagnostics.globals": [
         "awesome",
         "client",
-        "screen"
+        "screen",
+        "vim"
     ]
 }
