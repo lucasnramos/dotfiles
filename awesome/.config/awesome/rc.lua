@@ -25,7 +25,7 @@ require("awful.hotkeys_popup.keys")
 require("awful.autofocus")
 
 -- Awesome WM Widgets
-local volume_widget = require('awesome-wm-widgets.volume-widget.volume')
+local volume_widget = require("awesome-wm-widgets.volume-widget.volume")
 local logout_menu_widget = require("awesome-wm-widgets.logout-menu-widget.logout-menu")
 
 -- {{{ Error handling

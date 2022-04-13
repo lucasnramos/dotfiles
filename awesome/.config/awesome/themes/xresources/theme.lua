@@ -14,7 +14,7 @@ local themes_path = gfs.get_themes_dir()
 local theme = dofile(themes_path.."default/theme.lua")
 -- load vector assets' generators for this theme
 
-theme.font          = "Montserrat 14"
+theme.font          = "Hack Nerd Font 14"
 
 theme.bg_normal     = xrdb.background
 theme.bg_focus      = xrdb.color12
