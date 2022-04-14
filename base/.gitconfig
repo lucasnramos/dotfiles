@@ -16,5 +16,7 @@
 	st = status
 	cp = cherry-pick
 	acm = ! git add . && git commit -m
+	cm = git commit
+	rb = rebase
 [pull]
 	rebase = true
