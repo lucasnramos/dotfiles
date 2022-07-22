@@ -1,6 +1,6 @@
 [user]
 	name = Lucas Ramos
-	email = lucasnramos@gmail.com
+	email = lucas.nogueira.gft@youse.com.br
 [credential]
 	helper = store
 [core]
@@ -17,7 +17,10 @@
 	st = status
 	cp = cherry-pick
 	acm = ! git add . && git commit -m
-	cm = git commit
+	cm = commit
+	cane = commit --no-edit --amend
+	cne = commit --no-edit
 	rb = rebase
+	wt = worktree
 [pull]
 	rebase = true
