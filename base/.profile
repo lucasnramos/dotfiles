@@ -17,7 +17,7 @@ export XDG_DATA_HOME="$HOME/.local/share"
 export XDG_CACHE_HOME="$HOME/.cache"
 
 # MISC
-export FZF_DEFAULT_COMMAND="rg --files --ignore-svc --hidden"
+export FZF_DEFAULT_COMMAND="rg --files --hidden --ignore-svc"
 export QT_STYLE_OVERRIDE=kvantum
 
 # set PATH so it includes user's private bin directories
