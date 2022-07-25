@@ -23,3 +23,5 @@
 	wt = worktree
 [pull]
 	rebase = true
+[init]
+	defaultBranch = master
