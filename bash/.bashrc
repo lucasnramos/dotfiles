@@ -108,7 +108,7 @@ fi
 ##############
 # USER CONFIGS
 ##############
-set -o vi
+set -o emacs
 
 # clear screen with <C-l> when in insert mode of bash vi
 bind -m vi-insert "\C-l":clear-screen
