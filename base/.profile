@@ -17,7 +17,9 @@ export XDG_DATA_HOME="$HOME/.local/share"
 export XDG_CACHE_HOME="$HOME/.cache"
 
 # MISC
-export FZF_DEFAULT_COMMAND="rg --files --hidden --ignore-svc"
+
+# export FZF_DEFAULT_COMMAND="rg --files --hidden --no-ignore-svc -g !{.git,node_modules}"
+export FZF_DEFAULT_COMMAND="rg --files --hidden --follow --ignore-vcs -g '!{node_modules,.git,.cache,.npm}'"
 export QT_STYLE_OVERRIDE=kvantum
 
 # set PATH so it includes user's private bin directories
