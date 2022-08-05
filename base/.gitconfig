@@ -5,6 +5,7 @@
 	helper = store
 [core]
 	autocrlf = input
+	editor = nvim
 [http]
 	cookiefile = /home/lucas/.gitcookies
 	sslVerify = false
