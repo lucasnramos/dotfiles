@@ -21,7 +21,7 @@ export ZDOTDIR="${XDG_CONFIG_HOME:-$HOME/.config}/zsh"
 # MISC
 
 # export FZF_DEFAULT_COMMAND="rg --files --hidden --no-ignore-svc -g !{.git,node_modules}"
-export FZF_DEFAULT_COMMAND="rg --files --hidden --follow --ignore-vcs -g '!{node_modules,.git,.cache,.npm}'"
+export FZF_DEFAULT_COMMAND="rg --files --hidden --follow --no-ignore-vcs -g '!{node_modules,.git,.cache,.npm}'"
 export QT_STYLE_OVERRIDE=kvantum
 
 # set PATH so it includes user's private bin directories
