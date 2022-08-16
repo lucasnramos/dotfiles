@@ -61,3 +61,5 @@ alias gdoc='cd $HOME/Documents'
 alias gscr='cd $SCRIPTS'
 alias gwh='cd /mnt/c/Users/Lucas'
 alias gproj='cd ~/Projects'
+# WSL
+alias Ex='explorer.exe'
