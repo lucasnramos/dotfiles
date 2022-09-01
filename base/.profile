@@ -18,9 +18,6 @@ export ANDROID_STUDIO="$ANDROID_BASE/studio/bin"
 
 export ZDOTDIR="${XDG_CONFIG_HOME:-$HOME/.config}/zsh"
 
-# MISC
-export DISPLAY=$(cat /etc/resolv.conf | grep nameserver | awk '{print $2; exit;}'):0.0
-
 # export FZF_DEFAULT_COMMAND="rg --files --hidden --no-ignore-svc -g !{.git,node_modules}"
 export FZF_DEFAULT_COMMAND="rg --files --hidden -g '!{node_modules,.git,.cache,.npm}'"
 export QT_STYLE_OVERRIDE=kvantum
