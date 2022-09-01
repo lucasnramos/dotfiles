@@ -4,7 +4,6 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-sensible'
 Plug 'mattn/emmet-vim'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'sheerun/vim-polyglot'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
@@ -19,7 +18,7 @@ Plug 'lifepillar/vim-solarized8'
 call plug#end()
 
 set background=dark
-colo codedark
+colo desert
 
 " Initial sets
 syntax on
@@ -37,7 +36,7 @@ set mouse=a                          " Enable mouse support on different modes, 
 set cmdheight=2                      " Number of lines allocated for the command line
 set number                           " display line number
 set relativenumber                   " Display relative line numbers
-set notimeout ttimeout ttimeoutlen=0 " time to wait when using chord commands
+set notimeout ttimeout ttimeoutlen=400 " time to wait when using chord commands
 set pastetoggle=<F11>                " Keybind for paste toggle
 set shiftwidth=2                     " Jump two spaces when shift + >
 set softtabstop=2                    " Tabs - 2 width
@@ -55,6 +54,7 @@ set nobackup
 set nowritebackup
 set updatetime=300
 set shortmess+=c
+set incsearch
 
 " Autocmds
 autocmd InsertEnter * norm zz
