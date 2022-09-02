@@ -1,7 +1,7 @@
 # Main variables
-export EDITOR="nvim"
-export VISUAL="nvim"
-export TERMINAL="alacritty"
+export EDITOR="vim"
+export VISUAL="emacs"
+export TERMINAL="kitty"
 export TERM="xterm-256color"
 export SCRIPTS="$HOME/.local/bin"
 
@@ -16,7 +16,6 @@ export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_DATA_HOME="$HOME/.local/share"
 export XDG_CACHE_HOME="$HOME/.cache"
 
-# export FZF_DEFAULT_COMMAND="rg --files --hidden --no-ignore-svc -g !{.git,node_modules}"
 export FZF_DEFAULT_COMMAND="rg --files --hidden -g '!{node_modules,.git,.cache,.npm}'"
 export QT_STYLE_OVERRIDE=kvantum
 

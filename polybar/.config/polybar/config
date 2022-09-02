@@ -18,14 +18,17 @@
 
 [colors]
 ;background = ${xrdb:color0:#222}
-background = #222
+background = #282c34
 background-alt = #444
 ;foreground = ${xrdb:color7:#222}
-foreground = #dfdfdf
+foreground = #ABB2BF
 foreground-alt = #555
-primary = #ffb52a
-secondary = #e60053
-alert = #bd2c40
+primary = #C678DD
+primary-alt = #61AFEF 
+secondary = #98C379
+warning = #D19A66
+secondary-alt = #56B6C2
+alert = #E06C75
 
 [bar/default]
 ;monitor = ${env:MONITOR:HDMI-1}
@@ -40,28 +43,28 @@ background = ${colors.background}
 foreground = ${colors.foreground}
 
 line-size = 3
-line-color = #f00
+line-color = ${colors.primary}
 
-border-size = 4
-border-color = #00000000
+border-size = 0
+border-color = ${colors.foreground}
 
-padding-left = 0
+padding-left = 2
 padding-right = 2
 
-module-margin-left = 1
+module-margin-left = 2
 module-margin-right = 2
 
 font-0 = fixed:pixelsize=10;1
 font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
 font-2 = siji:pixelsize=10;1
 
-modules-left = bspwm i3
-modules-center = mpd
-modules-right = filesystem xbacklight alsa pulseaudio xkeyboard memory cpu wlan eth battery temperature date powermenu
+modules-left = bspwm i3 xwindow
+modules-center = 
+modules-right = filesystem xbacklight pulseaudio xkeyboard cpu wlan memory eth battery temperature date powermenu
 
 tray-position = right
 tray-padding = 2
-;tray-background = #0063ff
+tray-background = ${color.primary-alt}
 
 ;wm-restack = bspwm
 ;wm-restack = i3
@@ -102,8 +105,6 @@ type = internal/fs
 interval = 25
 
 mount-0 = /
-mount-1 = /home
-mount-2 = /run/media/biggs
 
 label-mounted = %{F#0a81f5}%mountpoint%%{F-}: %percentage_used%%
 label-unmounted = %mountpoint% not mounted
@@ -140,7 +141,7 @@ wrapping-scroll = false
 ; Only show workspaces on the same output as the bar
 ;pin-workspaces = true
 
-label-mode-padding = 2
+label-mode-padding = 4
 label-mode-foreground = #000
 label-mode-background = ${colors.primary}
 
@@ -207,17 +208,17 @@ card = intel_backlight
 [module/cpu]
 type = internal/cpu
 interval = 2
-format-prefix = " "
+format-prefix = "CPU "
 format-prefix-foreground = ${colors.foreground-alt}
-format-underline = #f90000
+format-underline = ${colors.primary}
 label = %percentage:2%%
 
 [module/memory]
 type = internal/memory
 interval = 2
-format-prefix = " "
+format-prefix = "RAM "
 format-prefix-foreground = ${colors.foreground-alt}
-format-underline = #4bffdc
+format-underline = ${colors.secondary}
 label = %percentage_used%%
 
 [module/wlan]
@@ -244,7 +245,7 @@ ramp-signal-foreground = ${colors.foreground-alt}
 
 [module/eth]
 type = internal/network
-interface = virbr0
+interface = wlp0s18f2u1
 interval = 3.0
 
 format-connected-underline = #55aa55
@@ -262,15 +263,15 @@ format-disconnected =
 type = internal/date
 interval = 5
 
-date =
+date = "%d %b %Y"
 date-alt = " %Y-%m-%d"
 
 time = %H:%M
-time-alt = %H:%M:%S
+time-alt = %H:%M
 
 format-prefix = 
 format-prefix-foreground = ${colors.foreground-alt}
-format-underline = #0a6cf5
+format-underline = ${colors.primary-alt}
 
 label = %date% %time%
 

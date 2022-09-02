@@ -95,8 +95,8 @@ set_from_resource $white color15 #ffffff
 
 ## Run everytime i3 is reloaded
 # exec_always --no-startup-id <COMMAND>
-# exec_always --no-startup-id xset r rate 280 50 &
-# exec_always --no-startup-id polybar-start &
+exec_always --no-startup-id xset r rate 280 50 &
+exec_always --no-startup-id polybar-start &
 
 # ============================
 # [START] i3-gaps
@@ -217,18 +217,18 @@ bindsym $mod+Control+r restart
 # =======================================================================
 # [START] General shortcuts (for example if sxhkd is not installed / used 
 # =======================================================================
-bindsym $mod+Return exec --no-startup-id alacritty
+bindsym $mod+Return exec --no-startup-id kitty
 bindsym $mod+Shift+Return exec --no-startup-id xterm
-bindsym $mod+p exec --no-startup-id dmenu_run
-bindsym $mod+Shift+p exec --no-startup-id i3-dmenu-desktop
+bindsym $mod+p exec --no-startup-id rofi -show drun
+bindsym $mod+Shift+p exec --no-startup-id rofi -show run
 bindsym $mod+Shift+q exec --no-startup-id i3-msg exit
 
 
 # ===============
 # [START] i3 bar
 # ===============
-bar {
-  position top
-  tray_output none
-  status_command SCRIPT_DIR=$HOME/.config/i3blocks/ i3blocks -c $HOME/.config/i3/i3blocks.conf
-}
+# bar {
+#   position top
+#   tray_output none
+#   status_command SCRIPT_DIR=$HOME/.config/i3blocks/ i3blocks -c $HOME/.config/i3/i3blocks.conf
+# }
