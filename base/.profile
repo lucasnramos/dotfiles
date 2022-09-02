@@ -19,6 +19,9 @@ export XDG_CACHE_HOME="$HOME/.cache"
 export FZF_DEFAULT_COMMAND="rg --files --hidden -g '!{node_modules,.git,.cache,.npm}'"
 export QT_STYLE_OVERRIDE=kvantum
 
+# ssh-agent
+export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
+
 # set PATH so it includes user's private bin directories
 PATH="$SCRIPTS:$HOME/bin:$ANDROID_STUDIO:$HOME/.nvm:$ANDROID_HOME/emulator:$ANDROID_HOME/tools:$ANDROID_HOME/tools/bin:$ANDROID_HOME/platform-tools:$JAVA_HOME/bin:$JAVA_HOME/lib/amd64:$PATH"
 
