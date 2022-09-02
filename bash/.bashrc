@@ -123,12 +123,12 @@ bind 'TAB:menu-complete'
 ## IMPORTS
 
 ## Using keychain to save ssh key
-if [ ! command /usr/bin/keychain &> /dev/null ]; then
+# eval $(keychain --eval --quiet id_ed25519 id_rsa ~/.keys/my_custom_key)
   /usr/bin/keychain &> /dev/null --nogui $HOME/.ssh/id_rsa 
   if [ -f $HOME/.keychain/$HOSTNAME-sh ]; then
     source $HOME/.keychain/$HOSTNAME-sh
   fi
-fi
+
 
 ## php-version
 if [ -f /usr/lib/php-version/php-version.sh ]; then
