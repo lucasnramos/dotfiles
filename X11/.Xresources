@@ -21,28 +21,46 @@
 ! #define WHITE2          #ebdbb2
 
 ! Arc darkish pallete
-#define BLACK1          #353945
-#define BLACK2          #7c818c
-#define RED1            #fc4138
-#define RED2            #f04a50
-#define GREEN1          #73d216
-#define GREEN2          #73d216
-#define YELLOW1         #ffe817
-#define YELLOW2         #ffe817
-#define BLUE1           #5294e2
-#define BLUE2           #4dadd4
-#define MAGENTA1        #c61c6f
-#define MAGENTA2        #5956ba
-#define CYAN1           #259286
-#define CYAN2           #819090
-#define WHITE1          #f5f6f7
-#define WHITE2          #ffffff
+! #define BLACK1          #353945
+! #define BLACK2          #7c818c
+! #define RED1            #fc4138
+! #define RED2            #f04a50
+! #define GREEN1          #73d216
+! #define GREEN2          #73d216
+! #define YELLOW1         #ffe817
+! #define YELLOW2         #ffe817
+! #define BLUE1           #5294e2
+! #define BLUE2           #4dadd4
+! #define MAGENTA1        #c61c6f
+! #define MAGENTA2        #5956ba
+! #define CYAN1           #259286
+! #define CYAN2           #819090
+! #define WHITE1          #f5f6f7
+! #define WHITE2          #ffffff
+
+! One Dark
+#define BLACK:    #1E2127 
+#define BLACK2:   #5C6370       
+#define RED:      #E06C75 
+#define RED2:     #E06C75       
+#define GREEN:    #98C379 
+#define GREEN2:   #98C379       
+#define YELLOW:   #D19A66 
+#define YELLOW2:  #D19A66       
+#define BLUE:     #61AFEF 
+#define BLUE2:    #61AFEF      
+#define MAGENTA:  #C678DD 
+#define MAGENTA2: #C678DD      
+#define CYAN:     #56B6C2 
+#define CYAN2:    #56B6C2      
+#define WHITE:    #ABB2BF 
+#define WHITE2:   #FFFFFF       
 
 #define FOREGROUND	    WHITE2
 #define BACKGROUND	    BLACK1
 #define SELFOREGROUND	  BLACK1
 #define SELBACKGROUND	  BLUE1
-#define CURSORCOLOR     WHITE2
+#define CURSORCOLOR     BLUE
 #define NORMBGCOLOR	    BACKGROUND
 #define NORMFGCOLOR	    FOREGROUND
 #define SELBGCOLOR	    SELBACKGROUND
