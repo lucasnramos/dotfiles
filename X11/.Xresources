@@ -39,22 +39,22 @@
 ! #define WHITE2          #ffffff
 
 ! One Dark
-#define BLACK:    #1E2127 
-#define BLACK2:   #5C6370       
-#define RED:      #E06C75 
-#define RED2:     #E06C75       
-#define GREEN:    #98C379 
-#define GREEN2:   #98C379       
-#define YELLOW:   #D19A66 
-#define YELLOW2:  #D19A66       
-#define BLUE:     #61AFEF 
-#define BLUE2:    #61AFEF      
-#define MAGENTA:  #C678DD 
-#define MAGENTA2: #C678DD      
-#define CYAN:     #56B6C2 
-#define CYAN2:    #56B6C2      
-#define WHITE:    #ABB2BF 
-#define WHITE2:   #FFFFFF       
+#define BLACK1   #1E2127 
+#define BLACK2   #5C6370       
+#define RED1     #E06C75 
+#define RED2     #E06C75       
+#define GREEN1   #98C379 
+#define GREEN2   #98C379       
+#define YELLOW1  #D19A66 
+#define YELLOW2  #D19A66       
+#define BLUE1    #61AFEF 
+#define BLUE2    #61AFEF      
+#define MAGENTA  #C678DD 
+#define MAGENTA2 #C678DD      
+#define CYAN1    #56B6C2 
+#define CYAN2    #56B6C2      
+#define WHITE1   #ABB2BF 
+#define WHITE2   #FFFFFF       
 
 #define FOREGROUND	    WHITE2
 #define BACKGROUND	    BLACK1
