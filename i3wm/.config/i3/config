@@ -217,7 +217,7 @@ bindsym $mod+Control+r restart
 # =======================================================================
 # [START] General shortcuts (for example if sxhkd is not installed / used 
 # =======================================================================
-bindsym $mod+Return exec --no-startup-id kitty
+bindsym $mod+Return exec --no-startup-id $TERMINAL
 bindsym $mod+Shift+Return exec --no-startup-id xterm
 bindsym $mod+p exec --no-startup-id rofi -show drun
 bindsym $mod+Shift+p exec --no-startup-id rofi -show run

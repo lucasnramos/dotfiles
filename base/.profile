@@ -1,7 +1,7 @@
 # Main variables
 export EDITOR="vim"
 export VISUAL="emacs"
-export TERMINAL="kitty"
+export TERMINAL="alacritty"
 export TERM="xterm-256color"
 export SCRIPTS="$HOME/.local/bin"
 
@@ -19,6 +19,7 @@ export ANDROID_STUDIO="$ANDROID_BASE/studio/bin"
 export ZDOTDIR="${XDG_CONFIG_HOME:-$HOME/.config}/zsh"
 
 export FZF_DEFAULT_COMMAND="rg --files --hidden -g '!{node_modules,.git,.cache,.npm}'"
+export FZF_CTRL_T_COMMAND=$FZF_DEFAULT_COMMAND
 export QT_STYLE_OVERRIDE=kvantum
 
 # ssh-agent

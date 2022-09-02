@@ -27,6 +27,8 @@ alias gps='git push'
 alias gacm='git add . ; git commit -m'
 alias gac='git add . ; git commit'
 alias gd='git --git-dir=$HOME/.dot/ --work-tree=$HOME'
+alias gchk='git checkout $(git branch --all | fzf | tr -d "[:space:]")'
+alias gmrg='git merge $(git branch --all | fzf | tr -d "[:space:]")'
 # systemd
 alias sc="sudo systemctl"
 alias scu="systemctl --user"
