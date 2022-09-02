@@ -18,7 +18,7 @@ Plug 'lifepillar/vim-solarized8'
 call plug#end()
 
 set background=dark
-colo gruvbox
+colo onedark
 
 " Initial sets
 syntax on
@@ -45,7 +45,7 @@ set splitbelow splitright            " Split to right and down instead of left a
 set cursorline                       " Line highlight
 set colorcolumn=80                   " Show colored column at X
 set noswapfile
-set termguicolors                    " Full color support
+" set termguicolors                    " Full color support
 set scrolloff=8
 set nohlsearch                       " Disables search highlight
 set nowrap                           " Disable word wrapping
