@@ -131,8 +131,8 @@ bind 'TAB:menu-complete'
 
 
 ## php-version
-if [ -f /usr/lib/php-version/php-version.sh ]; then
-  source /usr/lib/php-version/php-version.sh
+if [ -f $HOME/.local/share/php-version/php-version.sh ]; then
+  source $HOME/.local/share/php-version/php-version.sh
 fi
 
 # Alias definitions.
@@ -149,11 +149,12 @@ export NVM_DIR="$HOME/.config/nvm"
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
 
-# asdf
-
-if [ -s "$HOME/.asdf/asdf.sh" ]; then
-  . $HOME/.asdf/asdf.sh
-  . $HOME/.asdf/completions/asdf.bash
-fi
-
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
+
+# phpenv https://github.com/phpenv/phpenv
+export PHPENV_ROOT="/home/lucas/.phpenv"
+if [ -d "${PHPENV_ROOT}" ]; then
+    export PATH="${PHPENV_ROOT}/bin:${PATH}"
+      eval "$(phpenv init -)"
+fi

@@ -79,9 +79,6 @@ nnoremap <leader>Y "*Y
 vnoremap <leader>y "*y
 vnoremap <leader>Y "*Y
 inoremap <S-Insert> <C-R>*
-imap jj <ESC>
-imap jk <ESC>
-imap fj <ESC>
 nnoremap <leader>ex :Ex<CR>
 nnoremap <leader>sex :Sex<CR>
 
