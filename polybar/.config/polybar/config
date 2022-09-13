@@ -1,34 +1,15 @@
-;==========================================================
-;
-;
-;   ██████╗  ██████╗ ██╗  ██╗   ██╗██████╗  █████╗ ██████╗
-;   ██╔══██╗██╔═══██╗██║  ╚██╗ ██╔╝██╔══██╗██╔══██╗██╔══██╗
-;   ██████╔╝██║   ██║██║   ╚████╔╝ ██████╔╝███████║██████╔╝
-;   ██╔═══╝ ██║   ██║██║    ╚██╔╝  ██╔══██╗██╔══██║██╔══██╗
-;   ██║     ╚██████╔╝███████╗██║   ██████╔╝██║  ██║██║  ██║
-;   ╚═╝      ╚═════╝ ╚══════╝╚═╝   ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝
-;
-;
-;   To learn more about how to configure Polybar
-;   go to https://github.com/polybar/polybar
-;
-;   The README contains a lot of information
-;
-;==========================================================
-
 [colors]
-;background = ${xrdb:color0:#222}
-background = #282c34
-background-alt = #444
-;foreground = ${xrdb:color7:#222}
-foreground = #ABB2BF
-foreground-alt = #555
-primary = #C678DD
-primary-alt = #61AFEF 
+background = ${xrdb:background:#222}
+background-alt = ${xrdb:color8:#444}
+foreground = ${xrdb:foreground:#ABB2BF}
+foreground-alt = ${xrdb:color15:#E6E6E6}
+
+primary = ${xrdb:color4:#BD93F9}
+primary-alt = #61AFEF
 secondary = #98C379
 warning = #D19A66
 secondary-alt = #56B6C2
-alert = #E06C75
+alert = ${xrdb:color1:#E06C75}
 
 [bar/default]
 ;monitor = ${env:MONITOR:HDMI-1}
@@ -60,10 +41,10 @@ font-2 = siji:pixelsize=10;1
 
 modules-left = bspwm i3 xwindow
 modules-center = 
-modules-right = filesystem xbacklight pulseaudio xkeyboard cpu wlan memory eth battery temperature date powermenu
+modules-right = filesystem xbacklight xkeyboard cpu wlan memory eth battery temperature date powermenu
 
 tray-position = right
-tray-padding = 2
+tray-padding = 0
 tray-background = ${color.primary-alt}
 
 ;wm-restack = bspwm
@@ -102,17 +83,14 @@ label-indicator-underline = ${colors.secondary}
 
 [module/filesystem]
 type = internal/fs
-interval = 25
-
+interval = 250
 mount-0 = /
-
-label-mounted = %{F#0a81f5}%mountpoint%%{F-}: %percentage_used%%
+label-mounted = %percentage_used%% used in " %mountpoint% "
 label-unmounted = %mountpoint% not mounted
 label-unmounted-foreground = ${colors.foreground-alt}
 
 [module/bspwm]
 type = internal/bspwm
-
 label-focused = %index%
 label-focused-background = ${colors.background-alt}
 label-focused-underline= ${colors.primary}
