@@ -39,34 +39,55 @@
 ! #define WHITE2          #ffffff
 
 ! One Dark
-#define BLACK1   #1E2127 
-#define BLACK2   #5C6370       
-#define RED1     #E06C75 
-#define RED2     #E06C75       
-#define GREEN1   #98C379 
-#define GREEN2   #98C379       
-#define YELLOW1  #D19A66 
-#define YELLOW2  #D19A66       
-#define BLUE1    #61AFEF 
-#define BLUE2    #61AFEF      
-#define MAGENTA  #C678DD 
-#define MAGENTA2 #C678DD      
-#define CYAN1    #56B6C2 
-#define CYAN2    #56B6C2      
-#define WHITE1   #ABB2BF 
-#define WHITE2   #FFFFFF       
+! #define BLACK1   #1E2127 
+! #define BLACK2   #5C6370       
+! #define RED1     #E06C75 
+! #define RED2     #E06C75       
+! #define GREEN1   #98C379 
+! #define GREEN2   #98C379       
+! #define YELLOW1  #D19A66 
+! #define YELLOW2  #D19A66       
+! #define BLUE1    #61AFEF 
+! #define BLUE2    #61AFEF      
+! #define MAGENTA1 #C678DD 
+! #define MAGENTA2 #C678DD      
+! #define CYAN1    #56B6C2 
+! #define CYAN2    #56B6C2      
+! #define WHITE1   #ABB2BF 
+! #define WHITE2   #FFFFFF       
 
-#define FOREGROUND	    WHITE2
-#define BACKGROUND	    BLACK1
-#define SELFOREGROUND	  BLACK1
-#define SELBACKGROUND	  BLUE1
-#define CURSORCOLOR     BLUE
-#define NORMBGCOLOR	    BACKGROUND
-#define NORMFGCOLOR	    FOREGROUND
-#define SELBGCOLOR	    SELBACKGROUND
-#define SELFGCOLOR	    SELFOREGROUND
-#define NORMBORDERCOLOR	BLACK2
-#define SELBORDERCOLOR  SELBACKGROUND
+! Dracula 
+#define BLACK1     #000000
+#define BLACK2     #4D4D4D
+#define RED1       #FF5555
+#define RED2       #FF6E67
+#define GREEN1     #50FA7B
+#define GREEN2     #5AF78E
+#define YELLOW1    #F1FA8C
+#define YELLOW2    #F4F99D
+#define BLUE1      #BD93F9
+#define BLUE2      #CAA9FA
+#define MAGENTA1   #FF79C6
+#define MAGENTA2   #FF92D0
+#define CYAN1      #8BE9FD
+#define CYAN2      #9AEDFE
+#define WHITE1     #BFBFBF
+#define WHITE2     #E6E6E6
+
+! #define FOREGROUND	    WHITE2
+! #define BACKGROUND	    BLACK1
+
+#define FOREGROUND	      #F8F8F2
+#define BACKGROUND	      #282A36
+#define SELFOREGROUND	    BLACK1
+#define SELBACKGROUND	    BLUE1
+#define CURSORCOLOR       BLUE2
+#define NORMBGCOLOR	      BACKGROUND
+#define NORMFGCOLOR	      FOREGROUND
+#define SELBGCOLOR	      SELBACKGROUND
+#define SELFGCOLOR	      SELFOREGROUND
+#define NORMBORDERCOLOR   BLACK2
+#define SELBORDERCOLOR    SELBACKGROUND
 
 *.foreground: FOREGROUND
 *.background: BACKGROUND
