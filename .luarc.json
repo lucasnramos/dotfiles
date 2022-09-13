@@ -4,6 +4,7 @@
         "awesome",
         "client",
         "screen",
-        "vim"
+        "vim",
+	"augroup"
     ]
 }
