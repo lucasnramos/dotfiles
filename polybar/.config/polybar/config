@@ -85,7 +85,7 @@ label-indicator-underline = ${colors.secondary}
 type = internal/fs
 interval = 250
 mount-0 = /
-label-mounted = %percentage_used%% used in " %mountpoint% "
+label-mounted = %mountpoint% : %percentage_used%%
 label-unmounted = %mountpoint% not mounted
 label-unmounted-foreground = ${colors.foreground-alt}
 
