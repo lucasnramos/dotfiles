@@ -6,3 +6,5 @@ source ~/.bashrc
 # if [[ "$(tty)" == "/dev/tty1" ]]; then
 #   pgrep dwm || startx "$XDG_CONFIG_HOME/.xinitrc"
 # fi
+#
+eval "$($HOME/.rbenv/bin/rbenv init - bash)"
