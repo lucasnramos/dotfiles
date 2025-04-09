@@ -156,20 +156,6 @@ for_window [window_type="menu"] floating enable
 for_window [class="QjackCtl"] floating enable
 for_window [class="pritunl"] floating enable
 
-# KDE Plasma
-for_window [title="Desktop — Plasma"] kill; floating enable; border none
-for_window [class="plasmashell"] floating enable;
-for_window [class="kdeconnect-app"] floating enable;
-for_window [class="kdeconnect.app"] floating enable;
-for_window [class="Plasma"] floating enable; border none
-for_window [title="plasma-desktop"] floating enable; border none
-for_window [title="win7"] floating enable; border none
-for_window [class="krunner"] floating enable; border none
-for_window [class="Kmix"] floating enable; border none
-for_window [class="Klipper"] floating enable; border none
-for_window [class="Plasmoidviewer"] floating enable; border none
-for_window [class="(?i)*nextcloud*"] floating disable
-for_window [class="plasmashell" window_type="notification"] floating enable, border none, move right 700px, move down 450px, no_focus
 # ============================================
 # [END] Setup Floating Windows and Scratchpad
 # ============================================
@@ -222,7 +208,7 @@ bindsym $mod+Control+r restart
 # [START] General shortcuts (for example if sxhkd is not installed / used 
 # =======================================================================
 bindsym $mod+Return exec --no-startup-id $TERMINAL
-bindsym $mod+Shift+Return exec --no-startup-id xterm
+bindsym $mod+Shift+Return exec --no-startup-id konsole
 bindsym $mod+p exec --no-startup-id rofi -show drun
 bindsym $mod+Shift+w exec --no-startup-id rofi -show window
 bindsym $mod+Shift+p exec --no-startup-id rofi -show run
@@ -233,8 +219,8 @@ bindsym $mod+Shift+s exec --no-startup-id xfce4-screenshooter
 # ===============
 # [START] i3 bar
 # ===============
-# bar {
-#   position top
-#   tray_output none
-#   status_command SCRIPT_DIR=$HOME/.config/i3blocks/ i3blocks -c $HOME/.config/i3/i3blocks.conf
-# }
+bar {
+  position top
+  tray_output none
+  status_command SCRIPT_DIR=$HOME/.config/i3blocks/ i3blocks -c $HOME/.config/i3/i3blocks.conf
+}

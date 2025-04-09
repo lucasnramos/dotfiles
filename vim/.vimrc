@@ -18,7 +18,7 @@ Plug 'lifepillar/vim-solarized8'
 call plug#end()
 
 set background=dark
-colo onedark
+colo desert
 
 " Initial sets
 syntax on
