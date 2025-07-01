@@ -111,7 +111,7 @@ window:
 font:
   # Normal (roman) font face
   normal:
-    family: "Source Code Pro"
+    family: "Monospace"
     style: Regular
 
   # Bold font face
