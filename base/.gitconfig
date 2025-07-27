@@ -23,6 +23,6 @@
 	rb = rebase
 	wt = worktree
 [pull]
-	rebase = true
+	rebase = false
 [init]
 	defaultBranch = master

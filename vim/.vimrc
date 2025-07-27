@@ -8,17 +8,10 @@ Plug 'sheerun/vim-polyglot'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 
-" Themes
-Plug 'dracula/vim'
-Plug 'gruvbox-community/gruvbox'
-Plug 'tomasiser/vim-code-dark'
-Plug 'joshdick/onedark.vim'
-Plug 'lifepillar/vim-solarized8'
-
 call plug#end()
 
 set background=dark
-colo onedark
+colo desert
 
 " Initial sets
 syntax on
