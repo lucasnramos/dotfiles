@@ -70,26 +70,6 @@ bindsym $mod+o resize grow    width   5 px or 5 ppt
 # ==========================
 
 # ==========================
-# [START] Colors
-# ==========================
-set_from_resource $background background 
-set_from_resource $foreground foreground 
-set_from_resource $foreground_alt color4 
-set_from_resource $darkred color9 
-set_from_resource $darkblack color0 
-set_from_resource $darkwhite color7 
-set_from_resource $white color15 
-set_from_resource $border color4
-set_from_resource $border_alt color4
-
-#                       BORDER         BACKGROUND     TEXT          INDICATOR   CHILD_BORDER
-client.focused          $border        $background    $white        $border      $border_alt
-client.unfocused        $background    $background    $darkwhite    $background  $darkblack
-client.focused_inactive $background    $background    $darkwhite    $darkblack   $darkblack
-client.urgent           $darkred       $darkred       $background   $darkred     $darkred
-client.background       $background
-
-# ==========================
 # [START] Startup
 # ==========================
 ## Run only once
@@ -97,7 +77,6 @@ client.background       $background
 exec --no-startup-id /bin/gnome-keyring-daemon --start --components=ssh,secrets,pkcs11
 exec --no-startup-id /usr/lib/polkit-1/polkitd --no-debug
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
-exec --no-startup-id /bin/kdeconnect-indicator
 exec --no-startup-id /bin/nm-applet
 
 ## Run everytime i3 is reloaded
@@ -156,20 +135,6 @@ for_window [window_type="menu"] floating enable
 for_window [class="QjackCtl"] floating enable
 for_window [class="pritunl"] floating enable
 
-# KDE Plasma
-for_window [title="Desktop — Plasma"] kill; floating enable; border none
-for_window [class="plasmashell"] floating enable;
-for_window [class="kdeconnect-app"] floating enable;
-for_window [class="kdeconnect.app"] floating enable;
-for_window [class="Plasma"] floating enable; border none
-for_window [title="plasma-desktop"] floating enable; border none
-for_window [title="win7"] floating enable; border none
-for_window [class="krunner"] floating enable; border none
-for_window [class="Kmix"] floating enable; border none
-for_window [class="Klipper"] floating enable; border none
-for_window [class="Plasmoidviewer"] floating enable; border none
-for_window [class="(?i)*nextcloud*"] floating disable
-for_window [class="plasmashell" window_type="notification"] floating enable, border none, move right 700px, move down 450px, no_focus
 # ============================================
 # [END] Setup Floating Windows and Scratchpad
 # ============================================
@@ -222,7 +187,7 @@ bindsym $mod+Control+r restart
 # [START] General shortcuts (for example if sxhkd is not installed / used 
 # =======================================================================
 bindsym $mod+Return exec --no-startup-id $TERMINAL
-bindsym $mod+Shift+Return exec --no-startup-id xterm
+bindsym $mod+Shift+Return exec --no-startup-id konsole
 bindsym $mod+p exec --no-startup-id rofi -show drun
 bindsym $mod+Shift+w exec --no-startup-id rofi -show window
 bindsym $mod+Shift+p exec --no-startup-id rofi -show run
@@ -233,8 +198,6 @@ bindsym $mod+Shift+s exec --no-startup-id xfce4-screenshooter
 # ===============
 # [START] i3 bar
 # ===============
-# bar {
-#   position top
-#   tray_output none
-#   status_command SCRIPT_DIR=$HOME/.config/i3blocks/ i3blocks -c $HOME/.config/i3/i3blocks.conf
-# }
+bar {
+  position top
+}
