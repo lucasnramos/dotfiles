@@ -82,7 +82,7 @@ exec --no-startup-id /bin/nm-applet
 ## Run everytime i3 is reloaded
 # exec_always --no-startup-id <COMMAND>
 exec_always --no-startup-id xset r rate 250 50 &
-exec_always --no-startup-id polybar-start &
+# exec_always --no-startup-id polybar-start &
 
 # ============================
 # [START] i3-gaps
@@ -150,6 +150,7 @@ floating_modifier $mod
 
 # kill focused window
 bindsym $mod+Shift+c kill
+bindsym $mod+q kill
 
 # split in horizontal orientation
 bindsym $mod+Shift+v split h
@@ -199,5 +200,7 @@ bindsym $mod+Shift+s exec --no-startup-id xfce4-screenshooter
 # [START] i3 bar
 # ===============
 bar {
-  position top
+  position bottom
+  # on xfce, I disable the system tray
+  tray_output none
 }
