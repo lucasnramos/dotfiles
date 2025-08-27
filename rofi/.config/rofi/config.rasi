@@ -7,4 +7,4 @@ configuration {
     sorting-method: "name";
   }
 }
-@theme "~/.config/rofi/dracula-dark.rasi"
+@theme "~/.config/rofi/matcha-dark-sea.rasi"

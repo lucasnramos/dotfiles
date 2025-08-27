@@ -36,3 +36,15 @@
 
 GRUB_CMDLINE_LINUX_DEFAULT="quiet splash radeon.cik_support=0 amdgpu.cik_support=1 modprobe.blacklist=radeon"
 
+## Bluetooth on Manjaro
+
+Sometimes bluetooth does not start automatically on Manjaro. One fix working now is to unload and reload the btusb module.
+
+```bash
+sudo modprobe -r btusb
+sudo modprobe btusb
+```
+
+See also:
+
+[Bluetooth](https://wiki.archlinux.org/title/Bluetooth)
