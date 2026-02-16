@@ -45,10 +45,13 @@ autocmd BufWritePost $MYVIMRC so $MYVIMRC
 " Custom keybidings
 " ====================
 :let mapleader=" "
-:nmap ç :
-:nnoremap ; :
-:vmap ç :
-:vnoremap ; :
+:nmap Ç :
+:nmap ç ;
+:vmap Ç :
+:vmap ç ;
+:xmap Ç :
+:xmap ç ;
+
 nnoremap <leader>rco :tabnew $MYVIMRC<CR>
 nnoremap <leader>rcr :so $MYVIMRC<CR>
 nnoremap <leader>grco :tabnew ~\AppData\Local\nvim\ginit.vim<CR>
@@ -63,21 +66,12 @@ inoremap <S-Insert> <C-R>*
 nnoremap <leader>ex :Ex<CR>
 nnoremap <leader>sex :Sex<CR>
 
-" Auto close brackets in insert mode
-" inoremap "" ""<left>
-" inoremap '' ''<left>
-" inoremap (( ()<left>
-" inoremap [[ []<left>
-" inoremap {{ {}<left>
-" inoremap {<CR> {<CR>}<ESC>O
-" inoremap {;<CR> {<CR>};<ESC>O
-
 " Splits
 " Navigation
-nnoremap <C-h> <C-w>h
-nnoremap <C-j> <C-w>j
-nnoremap <C-k> <C-w>k
-nnoremap <C-l> <C-w>l
+nnoremap <leader>h <C-w>h
+nnoremap <leader>j <C-w>j
+nnoremap <leader>k <C-w>k
+nnoremap <leader>l <C-w>l
 
 " Resize
 noremap <silent> <C-Left> :vertical resize +5<CR>
