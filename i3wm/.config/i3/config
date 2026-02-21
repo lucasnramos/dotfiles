@@ -107,9 +107,12 @@ assign [class="Microsoft Teams"] $ws9
 
 # Gaming
 assign [class="Steam"] $ws5
+assign [class="steam"] $ws5
 assign [class="steamhelper"] $ws5
 assign [class="Lutris"] $ws5
 assign [class="Playonlinux"] $ws5
+assign [class="hydralauncher"] $ws5
+assign [class="heroic"] $ws5
 
 # ==============================================
 # [START] Setup Floating Windows and Scratchpad
@@ -119,12 +122,14 @@ for_window [instance="__scratchpad"] move scratchpad
 for_window [class="Float"] floating enable
 for_window [class="Xfce4-panel"] floating enable
 for_window [class="Pavucontrol"] floating enable
+for_window [class="pavucontrol"] floating enable
 for_window [class="xcalc"] floating enable
 for_window [class="Lxappearance"] floating enable
 for_window [class="Pamac-manager"] floating enable
 for_window [class="Blueman-manager"] floating enable
 for_window [class="Microsoft Teams - Preview"] floating enable
 for_window [class="Microsoft Teams"] floating enable
+for_window [class="retroarch"] floating enable
 for_window [class="Nitrogen"] floating enable
 for_window [instance="Gparted"] floating enable
 for_window [instance="ranger"] floating enable

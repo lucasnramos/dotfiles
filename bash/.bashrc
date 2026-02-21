@@ -158,3 +158,17 @@ if [ -d "${PHPENV_ROOT}" ]; then
     export PATH="${PHPENV_ROOT}/bin:${PATH}"
       eval "$(phpenv init -)"
 fi
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/home/lramos/Downloads/google-cloud-sdk/path.bash.inc' ]; then . '/home/lramos/Downloads/google-cloud-sdk/path.bash.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/home/lramos/Downloads/google-cloud-sdk/completion.bash.inc' ]; then . '/home/lramos/Downloads/google-cloud-sdk/completion.bash.inc'; fi
+
+# pnpm
+export PNPM_HOME="/home/lramos/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
