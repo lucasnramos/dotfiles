@@ -2,7 +2,6 @@
 export EDITOR="vim"
 export VISUAL="emacs"
 export TERMINAL="alacritty"
-export TERM="xterm-256color"
 export SCRIPTS="$HOME/.local/bin"
 
 # Android SDK and Studio
@@ -23,8 +22,11 @@ export QT_STYLE_OVERRIDE=kvantum
 # ssh-agent
 export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
 
+# opencode
+export OPENCODE=$HOME/.opencode/bin
+
 # set PATH so it includes user's private bin directories
-PATH="$SCRIPTS:$HOME/bin:$ANDROID_STUDIO:$HOME/.nvm:$ANDROID_HOME/emulator:$ANDROID_HOME/tools:$ANDROID_HOME/tools/bin:$ANDROID_HOME/platform-tools:$JAVA_HOME/bin:$JAVA_HOME/lib/amd64:$PATH"
+PATH="$OPENCODE:$SCRIPTS:$HOME/bin:$ANDROID_STUDIO:$HOME/.nvm:$ANDROID_HOME/emulator:$ANDROID_HOME/tools:$ANDROID_HOME/tools/bin:$ANDROID_HOME/platform-tools:$JAVA_HOME/bin:$JAVA_HOME/lib/amd64:$PATH"
 
 export NVM_DIR="$HOME/.config/nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
